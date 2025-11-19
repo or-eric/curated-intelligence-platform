@@ -1,18 +1,18 @@
-import { GoogleGenerativeAI, SchemaType } from '@google/generative-ai';
+import { GoogleGenerativeAI, SchemaType, Schema } from '@google/generative-ai';
 
 const genAI = new GoogleGenerativeAI(process.env['GEMINI_API_KEY'] || '');
 
-const summarySchema = {
+const summarySchema: Schema = {
     type: SchemaType.OBJECT,
     properties: {
         summary: { type: SchemaType.STRING },
         accountableEntity: { type: SchemaType.STRING },
-        strategicImportance: { type: SchemaType.STRING, enum: ["HIGH", "MEDIUM", "LOW"] }
+        strategicImportance: { type: SchemaType.STRING, format: 'enum', enum: ["HIGH", "MEDIUM", "LOW"] }
     },
     required: ["summary", "accountableEntity", "strategicImportance"]
 };
 
-const analysisSchema = {
+const analysisSchema: Schema = {
     type: SchemaType.OBJECT,
     properties: {
         executiveOwner: { type: SchemaType.STRING },
