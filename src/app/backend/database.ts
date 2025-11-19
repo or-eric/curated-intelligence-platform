@@ -1,0 +1,196 @@
+import { ContentItem } from '../models/content-item.model';
+
+// This file simulates a database table containing our content items.
+// In a real backend, this would be a connection to a SQL or NoSQL database.
+
+export const MOCK_DATA: ContentItem[] = [
+    {
+        id: '1',
+        title: 'Identity Security: AI Agents & Maturity Gaps',
+        source: 'Microsoft',
+        category: 'Security',
+        format: 'Article',
+        publishedDate: new Date('2025-10-17T09:00:00Z').toISOString(),
+        url: 'https://thehackernews.com/2025/1',
+        summary: 'A new report highlights that less than 40% of autonomous AI agents are governed by identity security policies, exposing enterprises to significant risks as these agents operate with unprecedented system access.',
+        imageUrl: `https://picsum.photos/seed/cybersec1/600/400`,
+        tags: ['CAIO', 'CISO', 'CRO'],
+        advisoryJudgement: 'Important - Monitor',
+        stakeholders: ['Enterprises', 'Government', 'Technology', 'Workforce'],
+        executiveSummary: {
+            accountableEntity: "Enterprise IT & Security Leadership",
+            stakeholders: ['Enterprises', 'Technology', 'Workforce'],
+            eventSummary: "A recent Microsoft report reveals a critical security blindspot: less than 40% of autonomous AI agents are governed by enterprise identity security policies. This gap allows these agents, which often have high levels of system access, to operate without proper oversight, creating significant potential for misuse or compromise.",
+            whyWeHighlightThis: "The proliferation of AI agents represents a fundamental shift in the enterprise attack surface. Without identity governance, these agents become powerful, unmonitored insiders. This issue is critical for C-level executives as a failure to secure AI agent identities could lead to data breaches, operational disruption, and compliance failures at an unprecedented scale.",
+            eventAnalysis: "The maturity gap stems from traditional identity and access management (IAM) systems not being designed for non-human, autonomous entities. Organizations are struggling to apply principles of least privilege, monitoring, and lifecycle management to agents that can be created and deployed in minutes. This trend will accelerate, forcing a paradigm shift in security strategy from user-centric to entity-centric, where every agent, human or AI, is a distinct identity to be managed."
+        },
+        lessonsForCSuite: {
+            title: "How to Govern the Rise of Autonomous AI Agents",
+            primaryOwners: ['CISO', 'CAIO'],
+            supportingOwners: ['CIO', 'CRO'],
+            lifecycleStages: ['Strategy', 'Design', 'Monitor'],
+            accountableEntityImpact: "Failure to govern AI agents exposes the organization to severe operational risks, including unauthorized data access, system manipulation, and complete process disruption caused by rogue or compromised agents. Reputational damage from a breach caused by an 'unmanaged' AI would be immense.",
+            stakeholderRequirements: "Stakeholders, including customers, regulators, and the board, will demand assurance that AI agents are secure and auditable. They will expect clear evidence of identity lifecycle management, access controls, and activity logging for all autonomous systems.",
+            risksWithoutAssurance: "Proceeding without assurance introduces systemic risks of widespread, automated security failures. Financially, the cost of remediation could be catastrophic. Legally, the organization could be found negligent for failing to secure powerful agents operating on its network, leading to fines and lawsuits.",
+            bestPractices: [
+                { title: "Verified Assurance Best Practice #1: Extend IAM to AI Agents", description: "Mandate that all AI agents be registered within a centralized Identity and Access Management (IAM) system. Each agent must have a unique, manageable identity with clearly defined roles, permissions, and lifecycle policies (creation, rotation, decommissioning)." },
+                { title: "Verified Assurance Best practice #2: Implement Agent Observability", description: "Deploy comprehensive monitoring to log and audit all actions taken by AI agents. Use anomaly detection to flag suspicious behavior, such as accessing unusual data or performing actions outside of normal operational parameters." },
+                { title: "Verified Assurance Best practice #3: Establish an AI Agent Governance Committee", description: "Create a cross-functional committee, including security, AI, legal, and business leaders, to set policies for the secure development, deployment, and operation of autonomous agents, ensuring alignment with corporate risk appetite." }
+            ]
+        }
+    },
+    {
+        id: '2',
+        title: 'AI-Enabled Nation-State Cyber Ops',
+        source: 'Microsoft Digital Defense',
+        category: 'Security',
+        format: 'Article',
+        publishedDate: new Date('2025-10-17T08:00:00Z').toISOString(),
+        url: 'https://thehackernews.com/2025/2',
+        summary: 'New research indicates that nation-state actors affiliated with Russia, China, Iran, and North Korea are rapidly scaling their use of AI to enhance the speed, scale, and effectiveness of cyber operations.',
+        imageUrl: `https://picsum.photos/seed/cybersec2/600/400`,
+        tags: ['CISO', 'CRO', 'CTO'],
+        advisoryJudgement: 'Critical - Act',
+        stakeholders: ['Enterprises', 'Global & Multilateral', 'Government']
+    },
+    {
+        id: '3',
+        title: 'MI5 Warns Of AI Security Risks',
+        source: 'UK Home Office',
+        category: 'Humans',
+        format: 'Article',
+        publishedDate: new Date('2025-10-16T11:00:00Z').toISOString(),
+        url: 'https://thehackernews.com/2025/3',
+        summary: 'The head of the UK’s MI5 spy agency, Ken McCallum, warned that autonomous AI systems could one day pose a security threat by evading human oversight and control, urging proactive measures.',
+        imageUrl: 'https://picsum.photos/seed/humansec1/600/400',
+        tags: ['Board', 'CISO', 'CRO'],
+        advisoryJudgement: 'Relevant - Track',
+        stakeholders: ['Civil Society', 'Government', 'Technology']
+    },
+    {
+        id: '4',
+        title: 'Cisco Open-Sources AI Code Sec.',
+        source: 'Cisco',
+        category: 'Technology',
+        format: 'Article',
+        publishedDate: new Date('2025-10-16T15:00:00Z').toISOString(),
+        url: 'https://thehackernews.com/2025/4',
+        summary: 'Cisco open-sourced an AI-generated code security framework, Project CodeGuard, to embed secure-by-default rules into AI coding workflows, aiming to mitigate vulnerabilities such as missing input validation.',
+        imageUrl: 'https://picsum.photos/seed/techsec1/600/400',
+        tags: ['CISO', 'CTO'],
+        advisoryJudgement: 'Important - Monitor',
+        stakeholders: ['Enterprises', 'Technology', 'Workforce']
+    },
+    {
+        id: '5',
+        title: 'The Quantum Computing Race: Hype vs. Reality',
+        source: 'MIT Tech Review',
+        category: 'Technology',
+        format: 'Article',
+        publishedDate: new Date('2025-10-15T10:00:00Z').toISOString(),
+        url: 'https://en.wikipedia.org/wiki/Quantum_computing',
+        summary: 'Separating the facts from the fiction in the current state of quantum computing, with a realistic timeline for practical applications.',
+        imageUrl: 'https://picsum.photos/seed/quantum1/600/400',
+        tags: ['CTO', 'Board'],
+        advisoryJudgement: 'Relevant - Track',
+        stakeholders: ['Technology', 'Government']
+    },
+    {
+        id: '6',
+        title: 'Geopolitical Implications of Arctic Ice Melt',
+        source: 'Foreign Affairs',
+        category: 'Humans',
+        format: 'Article',
+        publishedDate: new Date('2025-10-14T14:00:00Z').toISOString(),
+        url: 'https://en.wikipedia.org/wiki/Arctic_sea_ice_decline',
+        summary: 'Analysis of the new shipping lanes, resource competition, and military posturing among world powers in the rapidly changing Arctic region.',
+        imageUrl: 'https://picsum.photos/seed/geo1/600/400',
+        tags: ['Board', 'CRO'],
+        advisoryJudgement: 'Important - Monitor',
+        stakeholders: ['Global & Multilateral', 'Government']
+    },
+    {
+        id: '7',
+        title: 'Deepfake Regulations Proposed by EU Commission',
+        source: 'Reuters',
+        category: 'Humans',
+        format: 'Article',
+        publishedDate: new Date('2025-10-13T18:00:00Z').toISOString(),
+        url: 'https://en.wikipedia.org/wiki/Deepfake',
+        summary: 'The European Commission has proposed a new set of regulations aimed at curbing the malicious use of deepfake technology, requiring clear labeling of synthetic media.',
+        imageUrl: 'https://picsum.photos/seed/deepfake/600/400',
+        tags: ['Board', 'CLO'],
+        advisoryJudgement: 'Relevant - Track',
+        stakeholders: ['Government', 'Civil Society', 'Global & Multilateral']
+    },
+    {
+        id: '8',
+        title: 'Next-Gen Encryption Standards Facing AI Threat',
+        source: 'NIST',
+        category: 'Security',
+        format: 'Article',
+        publishedDate: new Date('2025-10-12T09:30:00Z').toISOString(),
+        url: 'https://en.wikipedia.org/wiki/Post-quantum_cryptography',
+        summary: 'A report from NIST warns that current encryption standards could be broken by future quantum computers and AI algorithms, accelerating the need for post-quantum cryptography.',
+        imageUrl: 'https://picsum.photos/seed/nistpqc/600/400',
+        tags: ['CISO', 'CTO', 'CIO'],
+        advisoryJudgement: 'Critical - Act',
+        stakeholders: ['Technology', 'Government', 'Enterprises']
+    },
+    {
+        id: '9',
+        title: 'The Rise of Autonomous Supply Chains',
+        source: 'Harvard Business Review',
+        category: 'Technology',
+        format: 'Article',
+        publishedDate: new Date('2025-10-11T12:00:00Z').toISOString(),
+        url: 'https://en.wikipedia.org/wiki/Supply_chain',
+        summary: 'How AI and IoT are creating self-managing supply chains that can predict demand, manage inventory, and optimize logistics with minimal human intervention.',
+        imageUrl: 'https://picsum.photos/seed/supplychain/600/400',
+        tags: ['CIO', 'CRO'],
+        advisoryJudgement: 'Important - Monitor',
+        stakeholders: ['Enterprises', 'Workforce', 'Technology']
+    },
+    {
+        id: '10',
+        title: 'Ethical AI Frameworks in Healthcare',
+        source: 'The Lancet',
+        category: 'Humans',
+        format: 'Article',
+        publishedDate: new Date('2025-10-10T16:45:00Z').toISOString(),
+        url: 'https://en.wikipedia.org/wiki/AI_in_healthcare',
+        summary: 'A comprehensive review of emerging ethical frameworks for deploying AI in clinical settings, focusing on patient data privacy, algorithmic bias, and accountability.',
+        imageUrl: 'https://picsum.photos/seed/healthai/600/400',
+        tags: ['CAIO', 'CLO', 'Board'],
+        advisoryJudgement: 'Important - Monitor',
+        stakeholders: ['Civil Society', 'Government', 'Enterprises']
+    },
+    {
+        id: '11',
+        title: 'Vulnerability in Widely Used Open-Source Library',
+        source: 'The Hacker News',
+        category: 'Security',
+        format: 'Article',
+        publishedDate: new Date('2025-10-09T11:00:00Z').toISOString(),
+        url: 'https://en.wikipedia.org/wiki/Software_supply_chain',
+        summary: 'A critical remote code execution vulnerability has been discovered in a popular open-source library, affecting thousands of applications downstream. Immediate patching is required.',
+        imageUrl: 'https://picsum.photos/seed/log4j/600/400',
+        tags: ['CISO', 'CTO'],
+        advisoryJudgement: 'Critical - Act',
+        stakeholders: ['Enterprises', 'Technology', 'Workforce']
+    },
+    {
+        id: '12',
+        title: 'Generative AI and the Future of Content Creation',
+        source: 'Wired',
+        category: 'Technology',
+        format: 'Article',
+        publishedDate: new Date('2025-10-08T19:00:00Z').toISOString(),
+        url: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence',
+        summary: 'An exploration of how generative AI models are transforming creative industries, from automated journalism to AI-generated art, and the implications for creators.',
+        imageUrl: 'https://picsum.photos/seed/genaiart/600/400',
+        tags: ['CAIO', 'Board'],
+        advisoryJudgement: 'Relevant - Track',
+        stakeholders: ['Workforce', 'Civil Society', 'Enterprises']
+    }
+];

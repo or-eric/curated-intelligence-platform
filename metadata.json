@@ -1,0 +1,5 @@
+{
+  "name": "Curated Intelligence Platform",
+  "description": "A subscription-based web application that curates online content (articles, videos, podcasts, discussions) and assigns objective quality scores (0–100) using AI. Users control their feed via a Quality Threshold Slider.",
+  "requestFramePermissions": []
+}

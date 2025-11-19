@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS content_items (
+  id SERIAL PRIMARY KEY,
+  title TEXT NOT NULL,
+  url TEXT UNIQUE NOT NULL,
+  published_at TIMESTAMP WITH TIME ZONE,
+  summary JSONB,
+  analysis JSONB,
+  status TEXT DEFAULT 'pending',
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
