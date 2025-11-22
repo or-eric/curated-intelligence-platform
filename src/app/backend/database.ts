@@ -15,6 +15,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'A new report highlights that less than 40% of autonomous AI agents are governed by identity security policies, exposing enterprises to significant risks as these agents operate with unprecedented system access.',
         imageUrl: `https://picsum.photos/seed/cybersec1/600/400`,
         tags: ['CAIO', 'CISO', 'CRO'],
+        topics: ['Security', 'AI'],
         advisoryJudgement: 'Important - Monitor',
         stakeholders: ['Enterprises', 'Government', 'Technology', 'Workforce'],
         executiveSummary: {
@@ -50,6 +51,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'New research indicates that nation-state actors affiliated with Russia, China, Iran, and North Korea are rapidly scaling their use of AI to enhance the speed, scale, and effectiveness of cyber operations.',
         imageUrl: `https://picsum.photos/seed/cybersec2/600/400`,
         tags: ['CISO', 'CRO', 'CTO'],
+        topics: ['Security', 'Geopolitics'],
         advisoryJudgement: 'Critical - Act',
         stakeholders: ['Enterprises', 'Global & Multilateral', 'Government']
     },
@@ -64,6 +66,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'The head of the UK’s MI5 spy agency, Ken McCallum, warned that autonomous AI systems could one day pose a security threat by evading human oversight and control, urging proactive measures.',
         imageUrl: 'https://picsum.photos/seed/humansec1/600/400',
         tags: ['Board', 'CISO', 'CRO'],
+        topics: ['Security', 'Government'],
         advisoryJudgement: 'Relevant - Track',
         stakeholders: ['Civil Society', 'Government', 'Technology']
     },
@@ -78,6 +81,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'Cisco open-sourced an AI-generated code security framework, Project CodeGuard, to embed secure-by-default rules into AI coding workflows, aiming to mitigate vulnerabilities such as missing input validation.',
         imageUrl: 'https://picsum.photos/seed/techsec1/600/400',
         tags: ['CISO', 'CTO'],
+        topics: ['Technology', 'Security'],
         advisoryJudgement: 'Important - Monitor',
         stakeholders: ['Enterprises', 'Technology', 'Workforce']
     },
@@ -92,6 +96,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'Separating the facts from the fiction in the current state of quantum computing, with a realistic timeline for practical applications.',
         imageUrl: 'https://picsum.photos/seed/quantum1/600/400',
         tags: ['CTO', 'Board'],
+        topics: ['Technology', 'Science'],
         advisoryJudgement: 'Relevant - Track',
         stakeholders: ['Technology', 'Government']
     },
@@ -106,6 +111,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'Analysis of the new shipping lanes, resource competition, and military posturing among world powers in the rapidly changing Arctic region.',
         imageUrl: 'https://picsum.photos/seed/geo1/600/400',
         tags: ['Board', 'CRO'],
+        topics: ['Geopolitics', 'Environment'],
         advisoryJudgement: 'Important - Monitor',
         stakeholders: ['Global & Multilateral', 'Government']
     },
@@ -120,6 +126,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'The European Commission has proposed a new set of regulations aimed at curbing the malicious use of deepfake technology, requiring clear labeling of synthetic media.',
         imageUrl: 'https://picsum.photos/seed/deepfake/600/400',
         tags: ['Board', 'CLO'],
+        topics: ['Regulation', 'Technology'],
         advisoryJudgement: 'Relevant - Track',
         stakeholders: ['Government', 'Civil Society', 'Global & Multilateral']
     },
@@ -134,6 +141,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'A report from NIST warns that current encryption standards could be broken by future quantum computers and AI algorithms, accelerating the need for post-quantum cryptography.',
         imageUrl: 'https://picsum.photos/seed/nistpqc/600/400',
         tags: ['CISO', 'CTO', 'CIO'],
+        topics: ['Security', 'Technology'],
         advisoryJudgement: 'Critical - Act',
         stakeholders: ['Technology', 'Government', 'Enterprises']
     },
@@ -148,6 +156,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'How AI and IoT are creating self-managing supply chains that can predict demand, manage inventory, and optimize logistics with minimal human intervention.',
         imageUrl: 'https://picsum.photos/seed/supplychain/600/400',
         tags: ['CIO', 'CRO'],
+        topics: ['Business', 'Technology'],
         advisoryJudgement: 'Important - Monitor',
         stakeholders: ['Enterprises', 'Workforce', 'Technology']
     },
@@ -162,6 +171,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'A comprehensive review of emerging ethical frameworks for deploying AI in clinical settings, focusing on patient data privacy, algorithmic bias, and accountability.',
         imageUrl: 'https://picsum.photos/seed/healthai/600/400',
         tags: ['CAIO', 'CLO', 'Board'],
+        topics: ['Ethics', 'Healthcare'],
         advisoryJudgement: 'Important - Monitor',
         stakeholders: ['Civil Society', 'Government', 'Enterprises']
     },
@@ -176,6 +186,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'A critical remote code execution vulnerability has been discovered in a popular open-source library, affecting thousands of applications downstream. Immediate patching is required.',
         imageUrl: 'https://picsum.photos/seed/log4j/600/400',
         tags: ['CISO', 'CTO'],
+        topics: ['Security', 'Technology'],
         advisoryJudgement: 'Critical - Act',
         stakeholders: ['Enterprises', 'Technology', 'Workforce']
     },
@@ -190,6 +201,7 @@ export const MOCK_DATA: ContentItem[] = [
         summary: 'An exploration of how generative AI models are transforming creative industries, from automated journalism to AI-generated art, and the implications for creators.',
         imageUrl: 'https://picsum.photos/seed/genaiart/600/400',
         tags: ['CAIO', 'Board'],
+        topics: ['AI', 'Creativity'],
         advisoryJudgement: 'Relevant - Track',
         stakeholders: ['Workforce', 'Civil Society', 'Enterprises']
     }
