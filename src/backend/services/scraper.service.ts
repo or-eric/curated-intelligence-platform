@@ -81,7 +81,7 @@ export class ScraperService {
     /**
      * Fetches a specific article page and extracts its content using Readability.
      */
-    async fetchArticleContent(url: string): Promise<{ content: string, title: string, excerpt: string } | null> {
+    async fetchArticleContent(url: string): Promise<{ content: string, title: string, excerpt: string, image?: string } | null> {
         try {
             const response = await fetch(url, {
                 headers: {
@@ -100,7 +100,8 @@ export class ScraperService {
                 return {
                     content: article.content, // HTML content
                     title: article.title,
-                    excerpt: article.excerpt
+                    excerpt: article.excerpt,
+                    image: this.extractImage(doc.window.document)
                 };
             }
             return null;
@@ -108,6 +109,11 @@ export class ScraperService {
             console.error(`Error parsing article ${url}:`, error);
             return null;
         }
+    }
+
+    private extractImage(document: Document): string | undefined {
+        const getMeta = (prop: string) => document.querySelector(`meta[property="${prop}"], meta[name="${prop}"]`)?.getAttribute('content');
+        return getMeta('og:image') || getMeta('twitter:image') || undefined;
     }
 }
 

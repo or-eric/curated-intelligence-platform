@@ -90,7 +90,7 @@ export class ApiService {
 
         // 4. Image Handling
         // Use curated images based on keywords if no specific image is available
-        let imageUrl = this.getRelevantImage(summaryData.title || backendItem.title, summaryData.accountable_entity);
+        let imageUrl = backendItem.image_url || this.getRelevantImage(summaryData.title || backendItem.title, summaryData.accountable_entity);
 
         return {
             id: backendItem.id.toString(),
@@ -104,7 +104,8 @@ export class ApiService {
             imageUrl: imageUrl,
             imagePrompt: summaryData.cover_image?.cover_image_prompt,
             imageAlt: summaryData.cover_image?.cover_image_alt_text,
-            tags: [summaryData.accountable_entity].filter(Boolean),
+            tags: backendItem.tags || [], // Personas
+            topics: backendItem.topics || [], // Domains
             advisoryJudgement: judgement,
             stakeholders: summaryData.stakeholders || [],
             executiveSummary: execSummary,

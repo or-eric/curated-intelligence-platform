@@ -39,8 +39,9 @@ export async function runExtraction(limit: number = 5) {
                     risk_sensitivity = $8,
                     summary = $9,
                     analysis = $10,
+                    tags = $11,
                     status = 'extracted'
-                WHERE id = $11
+                WHERE id = $12
             `, [
                 metadata.topics,
                 metadata.category,
@@ -52,6 +53,7 @@ export async function runExtraction(limit: number = 5) {
                 metadata.risk_sensitivity,
                 richAnalysis.executive_summary_tab,
                 richAnalysis.strategic_implications_tab,
+                metadata.personas, // Save personas to tags column
                 item.id
             ]);
 

@@ -1,55 +1,73 @@
 <div class="space-y-8">
   <!-- Filters and Sorter Section -->
-  <div class="bg-slate-800/50 p-4 sm:p-6 rounded-lg border border-slate-700 space-y-4">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-      <!-- Topic Filters -->
-      <div class="flex items-center gap-2 flex-wrap">
-        @for(topic of topics; track topic) {
-        <button (click)="selectTopic(topic)" [class.bg-blue-600]="selectedTopic() === topic"
-          [class.text-white]="selectedTopic() === topic" [class.bg-slate-700]="selectedTopic() !== topic"
-          class="px-3 py-1 text-sm rounded-full transition-colors hover:bg-blue-500">
-          {{ topic }}
+  <div class="bg-slate-800/50 p-4 sm:p-6 rounded-lg border    <!-- Filters Section -->
+    <div class=" mb-8 space-y-6">
+
+    <!-- Domain Filter Grid -->
+    <div class="space-y-2">
+      <h3 class="text-sm font-medium text-gray-400 uppercase tracking-wider">Domains</h3>
+      <div class="flex flex-wrap gap-2">
+        @for (domain of domains; track domain) {
+        <button (click)="toggleDomain(domain)" [class.bg-blue-600]="selectedDomains().has(domain)"
+          [class.text-white]="selectedDomains().has(domain)" [class.bg-gray-800]="!selectedDomains().has(domain)"
+          [class.text-gray-400]="!selectedDomains().has(domain)"
+          class="px-3 py-1.5 rounded-full text-xs font-medium transition-colors hover:bg-gray-700 border border-gray-700/50">
+          {{ domain }}
         </button>
         }
       </div>
-      <!-- Sort Options -->
-      <div class="flex items-center gap-2 flex-wrap bg-slate-800 p-1 rounded-lg">
-        <span class="text-sm font-medium text-slate-400 pl-2 hidden md:inline">Sort by:</span>
-        @for(option of sortOptions; track option) {
-        <button (click)="setSortBy(option)" [class.bg-blue-600]="sortBy() === option"
-          [class.text-white]="sortBy() === option"
-          class="px-3 py-1 text-sm rounded-md transition-colors text-slate-300 hover:bg-slate-700">
+    </div>
+
+    <!-- Quality Threshold Slider -->
+    <div class="space-y-2">
+      <div class="flex justify-between items-center">
+        <label for="quality-threshold" class="text-sm font-medium text-gray-400 uppercase tracking-wider">
+          Quality Threshold
+        </label>
+        <div class="text-sm font-mono">
+          <span class="text-white">{{ qualityThreshold() }}</span>
+          <span class="mx-2 text-gray-600">|</span>
+          <span [class]="getScoreBand(qualityThreshold()).class" class="font-bold">
+            {{ getScoreBand(qualityThreshold()).label }}
+          </span>
+        </div>
+      </div>
+      <input id="quality-threshold" type="range" min="0" max="100" [value]="qualityThreshold()"
+        (input)="setQualityThreshold($event)"
+        class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-blue-500" />
+      <div class="flex justify-between text-xs text-gray-500 px-1">
+        <span>0</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </div>
+
+    <!-- View Options -->
+    <div class="flex justify-between items-center pt-4 border-t border-gray-800">
+      <div class="flex gap-4">
+        @for (option of sortOptions; track option) {
+        <button (click)="setSortBy(option)" [class.text-blue-400]="sortBy() === option"
+          [class.text-gray-400]="sortBy() !== option" class="text-sm font-medium hover:text-white transition-colors">
           {{ option }}
         </button>
         }
       </div>
 
-      <!-- Score Filter -->
-      <div class="flex items-center gap-3 bg-slate-800 p-2 rounded-lg">
-        <span class="text-sm font-medium text-slate-400">Min Score: {{ minScore() }}</span>
-        <input type="range" min="0" max="90" step="10" [value]="minScore()" (input)="setMinScore($event)"
-          class="w-32 h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-500">
-      </div>
-    </div>
-  </div>
-
-  <!-- View switcher and content -->
-  <div class="space-y-4">
-    <div class="flex items-center justify-between">
-      <h2 class="text-xl font-bold text-slate-100">Feed</h2>
-      <div class="flex items-center space-x-1 bg-slate-800 p-1 rounded-lg">
-        <button (click)="setLayout('grid')" title="Grid View" [class.bg-blue-600]="layout() === 'grid'"
+      <div class="flex gap-2 bg-gray-800 p-1 rounded-lg">
+        <button (click)="setLayout('grid')" [class.bg-gray-700]="layout() === 'grid'"
           [class.text-white]="layout() === 'grid'"
-          class="p-2 rounded-md transition-colors text-slate-400 hover:text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          class="p-1.5 rounded text-gray-400 hover:text-white transition-colors" title="Grid View">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
             <path
-              d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+              d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2h-2zM11 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2z" />
           </svg>
         </button>
-        <button (click)="setLayout('list')" title="List View" [class.bg-blue-600]="layout() === 'list'"
+        <button (click)="setLayout('list')" [class.bg-gray-700]="layout() === 'list'"
           [class.text-white]="layout() === 'list'"
-          class="p-2 rounded-md transition-colors text-slate-400 hover:text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          class="p-1.5 rounded text-gray-400 hover:text-white transition-colors" title="List View">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
               d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
               clip-rule="evenodd" />
@@ -57,79 +75,78 @@
         </button>
       </div>
     </div>
-
-    <!-- Content Feed -->
-    @if (contentService.loading()) {
-    @if (layout() === 'grid') {
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-      @for (_ of [1,2,3,4,5,6]; track _) {
-      <div class="bg-slate-800/50 rounded-lg border border-slate-700 h-full flex flex-col animate-pulse">
-        <div class="h-40 bg-slate-700"></div>
-        <div class="p-5 flex-grow flex flex-col">
-          <div class="h-4 bg-slate-700 rounded w-1/4 mb-2"></div>
-          <div class="h-5 bg-slate-700 rounded w-full mb-1"></div>
-          <div class="h-5 bg-slate-700 rounded w-5/6 mb-4"></div>
-          <div class="h-10 bg-slate-700 rounded w-full flex-grow"></div>
-        </div>
+  </div>!-- Content Feed -->
+  @if (contentService.loading()) {
+  @if (layout() === 'grid') {
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+    @for (_ of [1,2,3,4,5,6]; track _) {
+    <div class="bg-slate-800/50 rounded-lg border border-slate-700 h-full flex flex-col animate-pulse">
+      <div class="h-40 bg-slate-700"></div>
+      <div class="p-5 flex-grow flex flex-col">
+        <div class="h-4 bg-slate-700 rounded w-1/4 mb-2"></div>
+        <div class="h-5 bg-slate-700 rounded w-full mb-1"></div>
+        <div class="h-5 bg-slate-700 rounded w-5/6 mb-4"></div>
+        <div class="h-10 bg-slate-700 rounded w-full flex-grow"></div>
       </div>
-      }
-    </div>
-    } @else {
-    <div class="bg-slate-800/50 rounded-lg border border-slate-700 animate-pulse">
-      @for (_ of [1,2,3,4,5,6,7,8]; track _) {
-      <div class="flex items-center p-4 border-b border-slate-800 last:border-b-0">
-        <div class="flex items-center flex-1 min-w-0 space-x-4">
-          <div class="w-2 h-2 rounded-full bg-slate-700"></div>
-          <div class="h-4 bg-slate-700 rounded w-3/4"></div>
-        </div>
-        <div class="flex items-center space-x-4 flex-shrink-0 ml-6">
-          <div class="h-3 bg-slate-700 rounded w-24 hidden md:block"></div>
-          <div class="h-3 bg-slate-700 rounded w-10"></div>
-          <div class="w-8 h-8 rounded-full bg-slate-700"></div>
-        </div>
-      </div>
-      }
     </div>
     }
-    } @else {
-    @if (layout() === 'grid') {
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-      @for (item of paginatedContent(); track item.id; let i = $index) {
-      <app-content-card [item]="item" [index]="i" (click)="onItemClicked(item)" (saveToggled)="toggleSave($event)">
-      </app-content-card>
-      } @empty {
-      <div class="col-span-full text-center py-16 bg-slate-800/50 rounded-lg border border-dashed border-slate-700">
-        <svg class="mx-auto h-12 w-12 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-          aria-hidden="true">
-          <path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-        </svg>
-        <h3 class="mt-2 text-sm font-medium text-slate-300">No content found</h3>
-        <p class="mt-1 text-sm text-slate-400">Try adjusting your topic filter.</p>
+  </div>
+  } @else {
+  <div class="bg-slate-800/50 rounded-lg border border-slate-700 animate-pulse">
+    @for (_ of [1,2,3,4,5,6,7,8]; track _) {
+    <div class="flex items-center p-4 border-b border-slate-800 last:border-b-0">
+      <div class="flex items-center flex-1 min-w-0 space-x-4">
+        <div class="w-2 h-2 rounded-full bg-slate-700"></div>
+        <div class="h-4 bg-slate-700 rounded w-3/4"></div>
       </div>
-      }
-    </div>
-    } @else {
-    <div class="bg-slate-800/50 rounded-lg border border-slate-700">
-      @for (item of paginatedContent(); track item.id) {
-      <app-content-list-item [item]="item" (click)="onItemClicked(item)"></app-content-list-item>
-      } @empty {
-      <div class="col-span-full text-center p-16">
-        <svg class="mx-auto h-12 w-12 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-          aria-hidden="true">
-          <path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-        </svg>
-        <h3 class="mt-2 text-sm font-medium text-slate-300">No content found</h3>
-        <p class="mt-1 text-sm text-slate-400">Try adjusting your topic filter.</p>
+      <div class="flex items-center space-x-4 flex-shrink-0 ml-6">
+        <div class="h-3 bg-slate-700 rounded w-24 hidden md:block"></div>
+        <div class="h-3 bg-slate-700 rounded w-10"></div>
+        <div class="w-8 h-8 rounded-full bg-slate-700"></div>
       </div>
-      }
     </div>
     }
-
-    @if (visibleItemCount() < filteredContent().length) { <div class="h-10" appObserveVisibility (visible)="loadMore()">
   </div>
   }
+  } @else {
+  @if (layout() === 'grid') {
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+    @for (item of paginatedContent(); track item.id; let i = $index) {
+    <app-content-card [item]="item" [index]="i" (click)="onItemClicked(item)" (saveToggled)="toggleSave($event)">
+    </app-content-card>
+    } @empty {
+    <div class="col-span-full text-center py-16 bg-slate-800/50 rounded-lg border border-dashed border-slate-700">
+      <svg class="mx-auto h-12 w-12 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        aria-hidden="true">
+        <path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+      <h3 class="mt-2 text-sm font-medium text-slate-300">No content found</h3>
+      <p class="mt-1 text-sm text-slate-400">Try adjusting your topic filter.</p>
+    </div>
+    }
+  </div>
+  } @else {
+  <div class="bg-slate-800/50 rounded-lg border border-slate-700">
+    @for (item of paginatedContent(); track item.id) {
+    <app-content-list-item [item]="item" (click)="onItemClicked(item)"></app-content-list-item>
+    } @empty {
+    <div class="col-span-full text-center p-16">
+      <svg class="mx-auto h-12 w-12 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        aria-hidden="true">
+        <path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+      <h3 class="mt-2 text-sm font-medium text-slate-300">No content found</h3>
+      <p class="mt-1 text-sm text-slate-400">Try adjusting your topic filter.</p>
+    </div>
+    }
+  </div>
   }
+
+  @if (visibleItemCount() < filteredContent().length) { <div class="h-10" appObserveVisibility (visible)="loadMore()">
+</div>
+}
+}
 </div>
 </div>

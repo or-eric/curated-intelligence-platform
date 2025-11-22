@@ -1,20 +1,68 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Curated Intelligence Platform
 
-# Run and deploy your AI Studio app
+A sophisticated intelligence platform designed for C-suite executives, providing AI-curated insights on AI, Technology, Security, and Governance.
 
-This contains everything you need to run your app locally.
+## Overview
 
-View your app in AI Studio: https://ai.studio/apps/drive/1CYHYAz4mw-q-RZ3Fc7LcuiD5Jo9UQQ9k
+This platform ingests content from high-value sources (RSS, Web), uses Google's Gemini 1.5 Flash to analyze and score it, and presents it in a premium, executive-friendly dashboard.
 
-## Run Locally
+### Key Features
 
-**Prerequisites:**  Node.js
+*   **AI-Powered Curation**: Automatically scores content (0-100) based on Insight Density, Strategic Alignment, and more.
+*   **Executive Summaries**: Generates "Bottom Line Up Front" summaries and strategic implications.
+*   **C-Suite Lessons**: Extracts actionable best practices and governance requirements for specific roles (CISO, CAIO, etc.).
+*   **Dynamic Filtering**: Filter by specific domains (AI, Geopolitics, etc.) and set a "Quality Threshold" to cut through the noise.
+*   **Rich Analysis**: Detailed breakdown of scoring metrics and metadata.
 
+## Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+*   **Frontend**: Angular 17+, TailwindCSS
+*   **Backend**: Node.js, TypeScript
+*   **Database**: Neon (Serverless Postgres)
+*   **AI**: Google Gemini API
+*   **Deployment**: Vercel
+
+## Setup & Development
+
+### Prerequisites
+
+*   Node.js (v18+)
+*   PostgreSQL (Neon)
+*   Google Gemini API Key
+
+### Installation
+
+1.  Clone the repository.
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Configure environment variables in `.env`:
+    ```env
+    POSTGRES_URL="your_neon_db_url"
+    GEMINI_API_KEY="your_gemini_key"
+    ```
+
+### Running Locally
+
+1.  **Start the Backend & Frontend**:
+    ```bash
+    npm start
+    ```
+    This runs the local API server (port 3001) and the Angular dev server (port 4200) with proxy configuration.
+
+2.  **Run the Ingestion Pipeline**:
+    ```bash
+    npx tsx scripts/run-pipeline.ts
+    ```
+
+## Project Structure
+
+*   `src/app`: Angular Frontend
+*   `src/backend`: Backend Logic (Workflows, Services)
+*   `scripts`: Utility scripts (Ingestion, Debugging)
+*   `api`: Vercel Serverless Functions
+
+## License
+
+Proprietary.

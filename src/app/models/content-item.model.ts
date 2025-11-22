@@ -32,7 +32,8 @@ export interface ContentItem {
   imageUrl: string;
   imageAlt?: string;
   imagePrompt?: string;
-  tags: string[]; // e.g., 'CAIO', 'CISO', 'CRO'
+  tags: string[]; // e.g., 'CAIO', 'CISO', 'CRO' (Personas)
+  topics: string[]; // e.g., 'AI', 'Business' (Domains)
   advisoryJudgement: 'Critical - Act' | 'Important - Monitor' | 'Relevant - Track';
   stakeholders: string[]; // For the detail view pills
   executiveSummary?: ExecutiveSummary;

@@ -1,17 +1,18 @@
 import { db } from '../src/backend/services/db.service.js';
-import * as dotenv from 'dotenv';
-import * as path from 'path';
+import dotenv from 'dotenv';
+import path from 'path';
 
-// Load production env vars
-dotenv.config({ path: path.resolve(process.cwd(), '.env.production') });
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
 async function resetDb() {
-    console.log('Clearing content_items table...');
+    console.log('Resetting database...');
     try {
-        await db.query('DELETE FROM content_items');
-        console.log('Table cleared.');
+        await db.query('TRUNCATE TABLE content_items RESTART IDENTITY CASCADE');
+        console.log('Database reset successfully.');
     } catch (error) {
-        console.error('Failed to clear table:', error);
+        console.error('Error resetting database:', error);
+    } finally {
+        await db.end();
     }
 }
 

@@ -46,11 +46,14 @@ export async function runIngestion(limit: number = 10) {
                     let content = item.contentSnippet || item.content || '';
 
                     // If WEB, we might need to fetch full content now to normalize/filter properly
+                    let imageUrl = item.enclosure?.url || item.image?.url; // Try RSS image first
+
                     if (feed.type === 'WEB') {
                         const article = await scraperService.fetchArticleContent(item.link);
                         if (article) {
                             content = article.content;
                             if (article.title) item.title = article.title;
+                            if (article.image) imageUrl = article.image; // Use scraped image if available
                         }
                     }
 
@@ -64,15 +67,16 @@ export async function runIngestion(limit: number = 10) {
                         const normalizedText = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 
                         await db.query(
-                            `INSERT INTO content_items (title, url, published_at, status, source_id, media_type, normalized_text, author)
-                             VALUES ($1, $2, $3, 'raw', $4, 'article', $5, $6)`,
+                            `INSERT INTO content_items (title, url, published_at, status, source_id, media_type, normalized_text, author, image_url)
+                             VALUES ($1, $2, $3, 'raw', $4, 'article', $5, $6, $7)`,
                             [
                                 item.title,
                                 item.link,
                                 pubDate,
                                 feed.id,
                                 normalizedText,
-                                item.creator || 'Unknown'
+                                item.creator || 'Unknown',
+                                imageUrl
                             ]
                         );
                         results.added++;

@@ -99,14 +99,15 @@ export class GeminiService {
             Content: ${content.substring(0, 10000)}...
 
             Return a JSON object with these exact keys:
-            1. topics: List of strings (e.g., ["AI", "Security"]).
+            1. topics: List of strings from this EXACT list ONLY: ["AI", "Books", "Business", "Creativity", "Culture", "Cybersecurity", "Ethics", "Futurecast", "Governance", "Geopolitics", "Innovation", "National Security", "Philosophy", "Productivity", "Science", "Society", "Technology", "Writing"]. Select all that apply.
             2. category: ONE string from ["SECURITY", "TECHNOLOGY", "HUMANS", "IDEAS"].
-            3. reading_time: Integer (minutes).
-            4. complexity: String ["Low", "Medium", "High"].
-            5. evidence_quality: String ["High", "Medium", "Low"].
-            6. novelty: String ["High", "Medium", "Low"].
-            7. bias_slant: String description.
-            8. risk_sensitivity: String description.
+            3. personas: List of C-Suite roles relevant to this content (e.g., ["CISO", "CAIO", "CEO", "CRO", "CTO"]).
+            4. reading_time: Integer (minutes).
+            5. complexity: String ["Low", "Medium", "High"].
+            6. evidence_quality: String ["High", "Medium", "Low"].
+            7. novelty: String ["High", "Medium", "Low"].
+            8. bias_slant: String description.
+            9. risk_sensitivity: String description.
         `;
 
         const result = await this.model.generateContent({

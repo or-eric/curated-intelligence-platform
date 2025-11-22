@@ -2,7 +2,8 @@ import dotenv from 'dotenv';
 import path from 'path';
 
 // Load production env vars
-dotenv.config({ path: path.resolve(process.cwd(), '.env.production') });
+// Load env vars
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
 async function runPipeline() {
     // Dynamic imports to ensure env vars are loaded first
