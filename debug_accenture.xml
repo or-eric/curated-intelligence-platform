@@ -1,0 +1,1249 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin  - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>cybersecurity | Accenture Banking Blog</title>
+	<meta name="description" content="Learn more about with the latest thinking from the Accenture Banking bloggers." />
+	<link rel="canonical" href="https://bankingblog.accenture.com/tag/cybersecurity" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="cybersecurity Archives" />
+	<meta property="og:description" content="Learn more about with the latest thinking from the Accenture Banking bloggers." />
+	<meta property="og:url" content="https://bankingblog.accenture.com/tag/cybersecurity" />
+	<meta property="og:site_name" content="Accenture Banking Blog" />
+	<meta property="og:image" content="https://bankingblog.accenture.com/wp-content/uploads/2018/06/Accenture-Banking-Blog-FB-LI.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://bankingblog.accenture.com/tag/cybersecurity","url":"https://bankingblog.accenture.com/tag/cybersecurity","name":"cybersecurity | Accenture Banking Blog","isPartOf":{"@id":"https://bankingblog.accenture.com/#website"},"primaryImageOfPage":{"@id":"https://bankingblog.accenture.com/tag/cybersecurity#primaryimage"},"image":{"@id":"https://bankingblog.accenture.com/tag/cybersecurity#primaryimage"},"thumbnailUrl":"https://bankingblog.accenture.com/wp-content/uploads/2025/03/Featured-image.png","description":"Learn more about with the latest thinking from the Accenture Banking bloggers.","breadcrumb":{"@id":"https://bankingblog.accenture.com/tag/cybersecurity#breadcrumb"},"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://bankingblog.accenture.com/tag/cybersecurity#primaryimage","url":"https://bankingblog.accenture.com/wp-content/uploads/2025/03/Featured-image.png","contentUrl":"https://bankingblog.accenture.com/wp-content/uploads/2025/03/Featured-image.png","width":1027,"height":672},{"@type":"BreadcrumbList","@id":"https://bankingblog.accenture.com/tag/cybersecurity#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bankingblog.accenture.com/"},{"@type":"ListItem","position":2,"name":"cybersecurity"}]},{"@type":"WebSite","@id":"https://bankingblog.accenture.com/#website","url":"https://bankingblog.accenture.com/","name":"Accenture Banking Blog","description":"Accenture","publisher":{"@id":"https://bankingblog.accenture.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://bankingblog.accenture.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://bankingblog.accenture.com/#organization","name":"Accenture","url":"https://bankingblog.accenture.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://bankingblog.accenture.com/#/schema/logo/image/","url":"https://bankingblog.accenture.com/wp-content/uploads/2020/03/Accenture-logo-abm.png","contentUrl":"https://bankingblog.accenture.com/wp-content/uploads/2020/03/Accenture-logo-abm.png","width":100,"height":27,"caption":"Accenture"},"image":{"@id":"https://bankingblog.accenture.com/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//js.maxmind.com' />
+<meta name="theme-color" content="#A100FF" ><link rel="manifest" href="/wp-json/pwa/v1/manifest" ><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Accenture Banking Blog"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="alternate" type="application/rss+xml" title="Accenture Banking Blog &raquo; cybersecurity Tag Feed" href="https://bankingblog.accenture.com/tag/cybersecurity/feed" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bankingblog.accenture.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=63f108"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='segment-variants-css' href='https://bankingblog.accenture.com/wp-content/plugins/acc-client-segment-page/css/segment-variants.css?ver=78d5ad' type='text/css' media='all' />
+<link rel='stylesheet' id='acc-author-widget-style-d75171398898-css' href='https://bankingblog.accenture.com/wp-content/uploads/siteorigin-widgets/acc-author-widget-style-d75171398898.css?ver=0177b9' type='text/css' media='all' />
+<link rel='stylesheet' id='acc-popular-posts-style-d75171398898-css' href='https://bankingblog.accenture.com/wp-content/uploads/siteorigin-widgets/acc-popular-posts-style-d75171398898.css?ver=7b2efd' type='text/css' media='all' />
+<link rel='stylesheet' id='acc-subscribe-style-75c79a9574b0-css' href='https://bankingblog.accenture.com/wp-content/uploads/siteorigin-widgets/acc-subscribe-style-75c79a9574b0.css?ver=1b917d' type='text/css' media='all' />
+<link rel='stylesheet' id='swiftype-css' href='https://bankingblog.accenture.com/wp-content/plugins/swiftype-search-braveaccentureblog/assets/autocomplete.css?ver=24dc5f' type='text/css' media='all' />
+<link rel='stylesheet' id='accenturepress/css-css' href='https://bankingblog.accenture.com/wp-content/themes/accenturepress/dist/styles/main-6c70e7dc07.css' type='text/css' media='all' />
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-includes/js/jquery/jquery.min.js?ver=c40f91" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=0daead" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/themes/accenturepress/widgets/popular-posts/js/popular-posts.js?ver=37f8d0" id="acc-popular-posts-js"></script>
+<script type="text/javascript" id="swiftype-js-extra">
+/* <![CDATA[ */
+var swiftypeParams = {"engineKey":"DVti-qHNkBBc-8X9yjL3","documentTypes":["english"]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/plugins/swiftype-search-braveaccentureblog/assets/install_swiftype.min.js?ver=9a2390" id="swiftype-js"></script>
+<script type="text/javascript" src="//js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js?ver=ad45d1" id="geoip2" crossorigin="anonymous" integrity="sha256-mJjduM2VC+Qum0r8vCpWnw37gXrVP/vbkItdkk69MXI="></script><script type="text/javascript" id="accenturepress/js-js-extra">
+/* <![CDATA[ */
+var accenturepress = {"ajax":"https:\/\/bankingblog.accenture.com\/wp-admin\/admin-ajax.php","blogName":"Accenture Banking Blog","dtmSiteData":{"abbrv":"abb","homepage":"abblog","categories":false,"onetrust":"4166cbfb-0b1e-4da1-90ba-5b024f889943","content_owner_default":"Banking","industry_default":"Banking","service_capability_default":"Strategy and Consulting","market":"UnitedStates"},"serviceWorkerScope":"\/","serviceWorkerURI":"https:\/\/bankingblog.accenture.com\/wp-content\/themes\/accenturepress\/dist\/scripts\/service-worker-8cc5ac109c.js","serviceWorkerCache":["https:\/\/bankingblog.accenture.com\/wp-content\/themes\/accenturepress\/dist\/scripts\/main-b5f6eb92ba.js","https:\/\/bankingblog.accenture.com\/wp-content\/themes\/accenturepress\/dist\/styles\/main-6c70e7dc07.css","\/"],"marketoCategories":[],"templateDirURI":"https:\/\/bankingblog.accenture.com\/wp-content\/themes\/accenturepress\/","translatedText":{"Next":"Next","Previous":"Previous"},"clientGeoLocation":"us-en","clientLang":"en"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/themes/accenturepress/dist/scripts/main-b5f6eb92ba.js?ver=939c9f" id="accenturepress/js-js"></script>
+<link rel="https://api.w.org/" href="https://bankingblog.accenture.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://bankingblog.accenture.com/wp-json/wp/v2/tags/109" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bankingblog.accenture.com/xmlrpc.php?rsd" />
+
+
+	<!--onetrust geo IP work around-->
+	<script>
+        function acnSetUserGeo(locationJson) {
+            window.otUserLocation = locationJson.country;
+        }
+    </script>
+    <script src="https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/acnSetUserGeo"></script>
+
+	<!-- OneTrust Cookies Consent Notice start -->
+	<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="4166cbfb-0b1e-4da1-90ba-5b024f889943"></script>
+	<script type="text/javascript">
+		function OptanonWrapper() {}
+	</script>
+	<!-- OneTrust Cookies Consent Notice end -->
+
+    <!--sat_track implementation-->
+    <script>
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+        }
+    </script>
+
+    <script>
+        (function () {
+            // check if sat_track cookie exists
+            var check = (typeof getCookie !== "undefined") ? getCookie("sat_track") : undefined;
+            if (check === undefined) {
+                // list of geos where only strictly necessary cookies are allowed
+                let SNGeos = ["GB", "BE", "IE", "FR", "RU", "ES", "IT", "DE", "AT", "CH"];
+                if (SNGeos.indexOf(window.otUserLocation) !== -1) {
+                    document.cookie = "sat_track=false;path=/;secure;max-age=31536000";
+                }
+                else {
+                    document.cookie = "sat_track=true;path=/;secure;max-age=31536000";
+                }
+                console.log("creating sat_track");
+            }
+        }());
+    </script>
+	<script src="//scripts.demandbase.com/adobeanalytics/wDq4Hx70.min.js"></script><script> digitalData = {"pageInstanceId":"abb:tag:cybersecurity","version":"1.0","category":{"primaryCategory":"abb"},"page":{"pageId":"abb:tag:cybersecurity","pageName":"abb:tag:cybersecurity","language":"en_US","geoRegion":"en_US","countryLanguage":"en_US","uniquePageName":"navigating-cybersecurity-banking","publishedDate":"2025-03-11 01:00:16","contentDate":"2025-03-11 01:00:16","title":"Guardians of Trust: Navigating Cybersecurity in Banking","description":"Despite significant investments in cybersecurity, customers lack trust in the banking system\u2019s ability to protect their data. \"Trust is the bedrock of business. It transforms transactions into relationships and clients into loyal advocates.\u201d According to Accenture\u2019s recent Banking Consumer Study surveying 49,000 respondents across 39 countries, 58% of banking customers are concerned about the security&#8230;","author":"","article":{"thumbnailUrl":{"tnSmall1x1":"https:\/\/bankingblog.accenture.com\/wp-content\/uploads\/2025\/03\/Featured-image.png","tnLarge1x1":"https:\/\/bankingblog.accenture.com\/wp-content\/uploads\/2025\/03\/Featured-image-581x380.png","tn16x9":"https:\/\/bankingblog.accenture.com\/wp-content\/uploads\/2025\/03\/Featured-image-960x540.png"}},"siteBranch":"blogs"}}; dataModel = {"enableLaunch":true,"page":{"pageInstanceId":"abb:tag:cybersecurity","version":"1.0","category":{"primaryCategory":"abb"},"pageInfo":{"siteID":"abb","siteBranch":"acn banking blog","pageId":"abb:tag:cybersecurity","pageName":"abb:tag:cybersecurity","pageType":"","responsiveLayout":"lg","errorMessage":"","language":"en","country":"us","sitecoreTemplateName":"template not available - acn banking blog","sitecorePublishDate":"publish date not available - acn banking blog","author":""},"meta":{"contentTypeMeta":"m81","serviceMeta":"","industryMeta":"","contentFormatMeta":"","pageCategoryMeta":"","externalMarketingCampaignsMeta":"","appliedNowThemeMeta":""}},"product":null,"events":null,"component":[{"componentInfo":{"componentID":"","componentName":""}},{"componentInfo":{"componentID":"","componentName":""}}],"category":null,"user":{"loginStatus":"anon","visitorGroup":"client","accentureEmployeeType":"","candidateId":"","candidateType":"","guid":"","profileIndustry":"","profileSkill":"","socialIndustry":"","socialSkill":""},"privacy":null}; dataModel.page.pageInfo.responsiveLayout = window.getResponsiveLayout(); </script><script>
+        let setScript3Runs = 0;
+        let setScript3 = function () {
+            setScript3Runs++;
+            if (typeof _satellite !== "undefined" && typeof _satellite["_runScript3"] == "function") {
+                _satellite["_runScript3"](function (event, target, Promise) {
+                    function isDataModelReady() {
+                        // Wait for blogs
+                        if (document.location.href.indexOf("/blogs/") > -1 && dataModel.page.pageInfo.blogs) return true;
+                        // Wait for user
+                        return !!dataModel.user;
+                    }
+                });
+            } else {
+                if (typeof _satellite !== "undefined" && typeof _satellite["_runScript3"] !== "function") console.warn(' _satellite["_runScript3"] is not a function. ');
+                if (setScript3Runs <= 3) setTimeout(setScript3, 5000);
+            }
+        }; setScript3();
+    </script><script src="//assets.adobedtm.com/launch-EN664f8f34ad5946f8a0f7914005f717cf.min.js"></script><script type="text/plain" class="optanon-category-2">
+	var demandbaseCDC_script = document.createElement("script");
+	demandbaseCDC_script.type = "text/javascript";
+	demandbaseCDC_script.async = true;
+	demandbaseCDC_script.writeSecureCookies = true;
+	demandbaseCDC_script.src = "//api.demandbase.com/api/v2/ip.json?key=4RB1W8tybpJRLdkTK0TRQcWfhYutivBKD5dyciDa&callback=Dmdbase_CDC.callback";
+	document.getElementsByTagName("head")[0].appendChild(demandbaseCDC_script);
+	console.log("functional - demandbaseCDC_callback script added");
+</script><link rel="amphtml" href="https://bankingblog.accenture.com/tag/cybersecurity?amp"><link rel="icon" href="https://bankingblog.accenture.com/wp-content/uploads/2019/08/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://bankingblog.accenture.com/wp-content/uploads/2019/08/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://bankingblog.accenture.com/wp-content/uploads/2019/08/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://bankingblog.accenture.com/wp-content/uploads/2019/08/cropped-favicon-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.banking-meet-our-bloggers .acc-author-grid-base .acc-author-grid-block .acc-author-grid-content .acc-author-grid-img {
+	height: auto !important;
+}
+
+.single-german .page-header.has-image .page-header-content {
+	min-height: 600px !important;
+}
+
+
+.single-german .page-header.has-image .overlay {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.single-german .page-header.has-image .page-header-content {
+		min-height: 25vh !important;
+		margin-top: 0px !important;
+	}
+}
+
+.so-widget-acc-popular-posts .acc-popular-posts-base .acc-popular-posts-tabs a.active {
+	color: #FFF;
+}
+.post-password-form input[type="password"] {
+  border: 2px solid #a100ff;
+  padding: 12px 5px 9px 5px;
+}
+
+.so-widget-acc-posts-carousel-style-d75171398898-23674 .acc-posts-carousel-base .acc-posts-carousel-block > a {
+    display: block;
+    height: auto !important;
+}		</style>
+		</head>
+	<body class="archive tag tag-cybersecurity tag-109 wp-theme-accenturepress enable-marketo">
+		<!--[if IE]>
+			<div class="alert alert-warning">
+				You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.			</div>
+		<![endif]-->
+		<div class="acc-nav-container">
+    <div class="acc-status">
+        <!-- Popular title -->
+        <div class="popular-title">
+                            <h6>Popular</h6>
+                    </div>
+
+        <!-- Popular Items Ticker -->
+        <div class="popular-items">
+            <div class="ticker">
+                                        <h6><a href="https://bankingblog.accenture.com/agentic-payments-commerce"
+                                 data-analytics-link-name="Agentic payments in commerce—the future is here" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">Agentic payments in commerce—the future is here</a>
+                        </h6>
+                                            <h6><a href="https://bankingblog.accenture.com/sibos-2025-future-of-money"
+                                 data-analytics-link-name="Sibos 2025 reveals where the future of money is heading" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">Sibos 2025 reveals where the future of money is heading</a>
+                        </h6>
+                                            <h6><a href="https://bankingblog.accenture.com/banks-reimagine-winning-loyalty-strategy"
+                                 data-analytics-link-name="How banks can reimagine a winning loyalty strategy" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">How banks can reimagine a winning loyalty strategy</a>
+                        </h6>
+                                            <h6><a href="https://bankingblog.accenture.com/commercial-banking-top-trends-2025"
+                                 data-analytics-link-name="Commercial Banking Top Trends for 2025 and beyond" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">Commercial Banking Top Trends for 2025 and beyond</a>
+                        </h6>
+                                            <h6><a href="https://bankingblog.accenture.com/cloud-ai-banking-growth"
+                                 data-analytics-link-name="Why cloud and AI are the keys to banking’s long-term growth" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">Why cloud and AI are the keys to banking’s long-term growth</a>
+                        </h6>
+                                                </div>
+        </div>
+
+        <!-- Cookie Button -->
+        <div id="optanon-minimize-wrapper" class="optanon-toggle-display cookie-settings"
+             data-analytics-template-zone="consent manager" data-analytics-module-name="consent manager">
+            <a id="optanon-minimize-button" title="Cookie Settings" data-analytics-link-name="cookie settings"
+               data-analytics-content-type="cta" aria-label="Cookie Settings">Cookie Settings <i
+                    class="icon-settings"></i></a>
+        </div>
+
+        <!-- Blog Switcher -->
+        <div class="blog-switcher">
+            <h5>Accenture Banking Blog
+                                    <div class="acc-dropdown">
+                        <span
+                            class="btn btn--dropdown-inline"  data-analytics-link-name="Other Blogs" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">Other Blogs</span>
+                        <div class="acc-dropdown-list">
+                                                            <a class="acc-dropdown-item" href="https://bankingblog.accenture.com" target="_blank" title="Banking Blog"  data-analytics-link-name="Banking Blog" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">Banking Blog</a><a class="acc-dropdown-item" href="https://capitalmarketsblog.accenture.com" target="_blank" title="Capital Markets Blog"  data-analytics-link-name="Capital Markets Blog" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">Capital Markets Blog</a><a class="acc-dropdown-item" href="https://insuranceblog.accenture.com" target="_blank" title="Insurance Blog"  data-analytics-link-name="Insurance Blog" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">Insurance Blog</a>                        </div>
+                    </div>
+                
+
+            </h5>
+        </div>
+
+    </div>
+    <!-- acc-status End -->
+
+    <!-- acc-nav Start -->
+    <div class="acc-nav">
+
+        <div class="acc-nav-item acc-nav-left">
+                        <a class="logo-link" href="https://bankingblog.accenture.com"  data-analytics-link-name="Logo" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">
+                <svg width="143" height="38" viewBox="0 0 143 38" version="1.1" xmlns="http://www.w3.org/2000/svg"><title>logo</title><g id="Accenture" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Home" transform="translate(-23 -60)"><g id="Group-6"><g id="logo" transform="translate(23 60)"><path d="M5.755 37.75c-2.947 0-5.397-1.495-5.397-4.785v-.19c0-4.007 3.487-5.32 7.751-5.32h2.04v-.777c0-1.615-.723-2.591-2.415-2.591a2.264 2.264 0 0 0-1.698.53c-.469.4-.75.973-.778 1.586H.898c.314-3.61 3.2-5.38 7.09-5.38 3.888 0 6.783 1.675 6.783 5.717v10.88h-4.49v-1.865a5.25 5.25 0 0 1-4.526 2.194zm4.36-5.752v-1.555H8.292c-2.258 0-3.418.622-3.418 2.082v.155c0 1.123.689 1.9 2.232 1.9 1.544 0 3.044-.898 3.044-2.625l-.035.043zm14.971 5.752c-4.552 0-7.848-2.799-7.848-8.3v-.216c0-5.501 3.488-8.42 7.848-8.42 3.732 0 6.81 1.865 7.185 6.123h-4.36c-.279-1.58-1.099-2.591-2.703-2.591-1.944 0-3.296 1.52-3.296 4.724v.5c0 3.3 1.195 4.785 3.331 4.785 1.57 0 2.73-1.148 2.982-2.919h4.177c-.28 3.67-2.825 6.314-7.281 6.314h-.035zm17.073 0c-4.552 0-7.848-2.799-7.848-8.3v-.216c0-5.501 3.488-8.42 7.848-8.42 3.732 0 6.81 1.865 7.185 6.123h-4.36c-.28-1.58-1.099-2.591-2.703-2.591-1.945 0-3.296 1.52-3.296 4.724v.5c0 3.3 1.195 4.785 3.33 4.785 1.57 0 2.73-1.148 2.983-2.919h4.177c-.28 3.67-2.817 6.314-7.281 6.314h-.035zm17.203 0c-4.743 0-7.97-2.799-7.97-8.205v-.31c0-5.442 3.419-8.421 7.848-8.421 4.081 0 7.5 2.271 7.5 7.643v1.96H56.074c.192 2.92 1.448 4.042 3.418 4.042a2.832 2.832 0 0 0 3.017-2.116h4.238c-.48 3.066-3.052 5.407-7.35 5.407h-.036zm-3.26-10.364h6.155c-.096-2.392-1.194-3.455-3.017-3.455-1.412.044-2.729.82-3.104 3.464l-.035-.01zm13.436-6.244h4.578v2.427a5.356 5.356 0 0 1 4.961-2.764c2.982 0 4.962 1.77 4.962 5.717v10.882h-4.587v-10.2c0-1.9-.785-2.737-2.45-2.737a2.76 2.76 0 0 0-2.149.844 2.704 2.704 0 0 0-.737 2.17v9.914h-4.578V21.142zm23.072-4.914v4.914h3.139v3.385h-3.14v7.713c0 1.209.568 1.77 1.631 1.77a3.984 3.984 0 0 0 1.596-.276v3.54a9.45 9.45 0 0 1-2.616.346c-3.575 0-5.231-1.615-5.231-4.914v-8.179H86.07v-3.385h1.997v-3.006l4.543-1.908zm20.404 21.167h-4.587v-2.392a5.013 5.013 0 0 1-4.77 2.738c-2.947 0-5.118-1.77-5.118-5.596V21.142h4.613v10.363c0 1.866.75 2.738 2.389 2.738a2.778 2.778 0 0 0 2.142-.85c.555-.58.826-1.37.744-2.164V21.142h4.587v16.253zm3.33-16.262h4.578v2.988c.738-2.036 2.747-3.342 4.927-3.204v4.474c-3.104 0-4.927.933-4.927 3.636v8.36h-4.578V21.133zm18.93 16.6c-4.743 0-7.97-2.799-7.97-8.205v-.311c0-5.441 3.419-8.42 7.848-8.42 4.081 0 7.5 2.27 7.5 7.643v1.96H131.97c.192 2.92 1.447 4.042 3.418 4.042a2.832 2.832 0 0 0 3.017-2.116h4.238c-.515 3.083-3.044 5.424-7.342 5.424l-.026-.018zm-3.26-10.364h6.155c-.096-2.393-1.194-3.455-3.017-3.455-1.42.06-2.737.838-3.112 3.48l-.027-.025z" id="Shape" fill="#000" fill-rule="nonzero"/><path id="Path" fill="#A100FF" d="M83.289 10.977l8.187-3.014-8.187-3.17V.596l14.03 5.596v3.455l-14.03 5.63z"/></g></g></g></g></svg>            </a>
+        </div>
+
+        <!-- acc-nav items -->
+        <div class="acc-nav-item acc-nav-center show-inline-desktop">
+            <ul id="menu-primary-navigation" class="main-menu"><li id="menu-item-2756" class="data-global-header menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2756"><a href="https://bankingblog.accenture.com/" data-ps2id-api="true" data-analytics-link-name="Home" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">Home</a></li>
+<li id="menu-item-2758" class="data-global-header menu-item menu-item-type-post_type menu-item-object-page menu-item-2758"><a href="https://bankingblog.accenture.com/banking-meet-our-bloggers" data-ps2id-api="true" data-analytics-link-name="Meet Our Bloggers" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">Meet Our Bloggers</a></li>
+<li id="menu-item-2757" class="data-global-header menu-item menu-item-type-post_type menu-item-object-page menu-item-2757"><a href="https://bankingblog.accenture.com/archives" data-ps2id-api="true" data-analytics-link-name="Archives" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">Archives</a></li>
+<li id="menu-item-14565" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14565"><a target="_blank" href="https://info.accenture.com/fs-blog-subscription-center" data-ps2id-api="true" data-analytics-link-name="Subscribe" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">Subscribe</a></li>
+<li id="menu-item-9605" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9605"><a target="_blank" href="https://www.accenture.com/us-en/industries/banking-index" data-ps2id-api="true" data-analytics-link-name="More From Banking" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">More From Banking</a></li>
+</ul>        </div>
+
+        <!-- acc-nav items -->
+        <div class="acc-nav-item acc-nav-center show-inline-mobile">
+            <div role="navigation" class="acc-dropdown"                 tabindex="1">
+                <div class="btn btn--dropdown no-arrow"><span class="icon-menu"></span></div>
+                <ul id="menu-primary-navigation-1" class="acc-dropdown-list"><li class="data-global-header menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2756"><a href="https://bankingblog.accenture.com/" data-ps2id-api="true" data-analytics-link-name="Home" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">Home</a></li>
+<li class="data-global-header menu-item menu-item-type-post_type menu-item-object-page menu-item-2758"><a href="https://bankingblog.accenture.com/banking-meet-our-bloggers" data-ps2id-api="true" data-analytics-link-name="Meet Our Bloggers" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">Meet Our Bloggers</a></li>
+<li class="data-global-header menu-item menu-item-type-post_type menu-item-object-page menu-item-2757"><a href="https://bankingblog.accenture.com/archives" data-ps2id-api="true" data-analytics-link-name="Archives" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">Archives</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14565"><a target="_blank" href="https://info.accenture.com/fs-blog-subscription-center" data-ps2id-api="true" data-analytics-link-name="Subscribe" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">Subscribe</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9605"><a target="_blank" href="https://www.accenture.com/us-en/industries/banking-index" data-ps2id-api="true" data-analytics-link-name="More From Banking" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content">More From Banking</a></li>
+</ul>            </div>
+        </div>
+
+                    <div class="acc-nav-item acc-nav-search">
+                <div class="acc-header-search-toggle">
+                    <img src="https://bankingblog.accenture.com/wp-content/themes/accenturepress/dist/images/search.svg"
+                         alt="Search Toggle" />
+                </div>
+            </div>
+        
+
+        <!-- Language Switcher -->
+                    <div class="acc-nav-item acc-nav-right">
+                <ul>
+                    <li>
+                                                <div role="navigation"
+                             class="acc-dropdown" class="acc-dropdown"                             tabindex="2">
+                            <div
+                                class="btn btn--dropdown btn--allcaps"  data-analytics-link-name="Select Language" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">English <span
+                                    id="langauge-block">US</span></div>
+                            <ul class="acc-dropdown-list acc-dropdown-list-langauge">
+                                                                        <a href="https://bankingblog.accenture.com"
+                                           class="acc-dropdown-item lang-english"
+                                             data-analytics-link-name="English" data-analytics-module-name="abb-header" data-analytics-component-name="abb-header" data-analytics-template-zone="header" data-analytics-content-type="nav/paginate" data-analytics-link-type="nav/paginate" analytics-no-content-click="true" data-analytics-content-class="Content" data-analytics-engagement="">
+                                            English                                        </a>
+                                                                </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
+    </div>
+    <!-- acc-nav End -->
+
+            <div class="acc-floating-search" id="acc-floating-search">
+            <div class="widget widget_acc-search"><div
+			
+			class="so-widget-acc-search so-widget-"
+			
+		><div class="acc-search-base">
+	<form role="search" method="get" class="search-form" action="https://bankingblog.accenture.com/">
+		<label for="s">
+            <span class="screen-reader-text hide">Search for:</span>
+            <!--<i class="icon-search"></i>-->
+            <span class="search-icon"></span>
+		</label>
+		<input type="search" class="search-field"
+				value="" name="s"
+				title="Search for:"				placeholder="Search Accenture Banking Blog..."/>
+		<input type="submit" class="search-submit" value="Search &nbsp; >"  data-analytics-link-name="Search" data-analytics-module-name="abb-search-form" data-analytics-component-name="abb-search-form" data-analytics-template-zone="search-form" data-analytics-link-type="search" data-analytics-content-class="Content" data-analytics-engagement="1"/>
+					<input type="hidden" name="lang" value="en_US" />
+		</form>
+</div>
+</div></div>        </div>
+    
+</div>
+
+
+		<div class="wrap container" role="document">
+			<div class="content row">
+				<main class="main">
+					<div class="acc-search-alternative-wrapper">
+    <div class="acc-search-alternative-top-bar">
+        <div class="acc-search-alternative-top-bar-left">
+            <h1>CYBERSECURITY</h1>
+                        <!-- <h1>PAYMENTS</h1> -->
+            <span>Accenture</span>
+        </div>
+        <div class="acc-search-alternative-top-bar-right">
+            <form role="search" method="get" id="acc-search-alternative-top" class="search-form" action="https://bankingblog.accenture.com/">
+                <label for="s">
+                    <span class="screen-reader-text hide">Search for:</span>
+                    <!--<i class="icon-search"></i>-->
+                    <span class="search-icon"></span>
+                </label>
+                <input name="s" type="search" class="search-field acc-search-alternative-search-form"
+                        value="" name="s"
+                        title="SEARCH"                        placeholder="SEARCH"/>
+                                    <input type="hidden" name="lang" value="en_US" />
+                                                </form>
+        </div>
+    </div>
+</div>
+<div class="entry-content">
+    <h1 class="text-center">cybersecurity</h1>
+</div>
+<div class="topic-tag-cloud">
+<a href='https://bankingblog.accenture.com/tag/customer-experience'>Customer Experience</a><br><a href='https://bankingblog.accenture.com/tag/customer-trust'>Customer Trust</a><br><a href='https://bankingblog.accenture.com/tag/guardians-of-trust'>Guardians of Trust</a><br><a href='https://bankingblog.accenture.com/tag/digital-payments'>Digital Payments</a><br><a href='https://bankingblog.accenture.com/tag/payment-predictions'>Payment predictions</a><br><a href='https://bankingblog.accenture.com/tag/payments-trends'>Payments Trends</a><br><a href='https://bankingblog.accenture.com/tag/sibos'>Sibos</a><br><a href='https://bankingblog.accenture.com/tag/payments'>Payments</a><br><a href='https://bankingblog.accenture.com/tag/payments-innovation'>Payments Innovation</a><br></div>
+<div>
+<div class="widget widget_acc-grid"><div
+			
+			class="so-widget-acc-grid so-widget-acc-grid-style-d75171398898"
+			
+		>
+			
+			<div class="widget-grid" data-hash="1d8c2acf" >
+								<div class="grid-content">
+					<script type="application/javascript"> window.acc_grids = window.acc_grids || {}; window.acc_grids["1d8c2acf"] = {"post_type":["post"],"tag":"cybersecurity","tag_id":109,"fields":"all","tag_slug__in":["cybersecurity"],"posts_per_page":"6","order":"DESC","paged":1,"comments_per_page":0,"lazy_load_term_meta":true,"cache_results":true,"post_status":["publish"]};</script>        <div class="grid-wrapper col-16 col-md-8" data-id="27509">
+            <article class="acc-grid-post dark">
+                <div class="acc-grid-post-left" style="background-image: url('https://bankingblog.accenture.com/wp-content/uploads/2025/03/Featured-image-581x380.png')">
+                    <div class="acc-post-byline">
+                                                    <h6 class="author">
+                                <a class="d-flex" title="Accenture Banking" href="https://bankingblog.accenture.com/author/nicole_lanza"  data-analytics-link-name="305" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                                    <div class="author-thumb">
+                                        <div class="author-mask">
+                                            <img src="https://bankingblog.accenture.com/wp-content/uploads/2019/08/cropped-favicon.png" alt="Accenture Banking" class="photo" />                                        </div>
+                                    </div>
+                                    <div class="author-details">
+                                        <span>Accenture Banking                                        </span><br/>
+                                        <span class="date"><time class="EN" datetime="2025-03-11T01:00:16+00:00"><span class="day">11</span> <span class="month">Mar</span> <span class="year">2025</span></time></span>
+                                    </div>
+                                </a>
+                            </h6>
+                        
+                                                </div>
+                </div>
+
+                <div class="acc-grid-post-right">
+                    <div class="acc-post-content">
+                        <h4 class="acc-post-title">
+                            <a href="https://bankingblog.accenture.com/navigating-cybersecurity-banking" title="Guardians of Trust: Navigating Cybersecurity in Banking"  data-analytics-link-name="Guardians of Trust: Navigating Cybersecurity in Banking" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                                Guardians of Trust: Navigating Cybersecurity in Banking                            </a>
+                        </h4>
+                                            </div>
+                    <a class="button" href="https://bankingblog.accenture.com/navigating-cybersecurity-banking"  data-analytics-link-name="Guardians of Trust: Navigating Cybersecurity in Banking" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                    <div class="clearfix"></div>
+                </div>
+                                    <span class="views">3850 Views</span>
+                
+                
+
+            </article>
+        </div>
+	        <div class="grid-wrapper col-16 col-md-8" data-id="24308">
+            <article class="acc-grid-post dark">
+                <div class="acc-grid-post-left" style="background-image: url('https://bankingblog.accenture.com/wp-content/uploads/2022/11/ACC_HeaderImage_1280px-x-480px_Op01v014-scaled-e1667497570637-878x380.jpg')">
+                    <div class="acc-post-byline">
+                                                    <h6 class="author">
+                                <a class="d-flex" title="Sulabh Agarwal" href="https://bankingblog.accenture.com/author/sulabhagarwal"  data-analytics-link-name="25" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                                    <div class="author-thumb">
+                                        <div class="author-mask">
+                                            <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/25.jpg" alt="Sulabh Agarwal" width="250" height="250" class="photo" />                                        </div>
+                                    </div>
+                                    <div class="author-details">
+                                        <span>Sulabh Agarwal                                        </span><br/>
+                                        <span class="date"><time class="EN" datetime="2022-11-02T00:09:39+00:00"><span class="day">2</span> <span class="month">Nov</span> <span class="year">2022</span></time></span>
+                                    </div>
+                                </a>
+                            </h6>
+                        
+                                                </div>
+                </div>
+
+                <div class="acc-grid-post-right">
+                    <div class="acc-post-content">
+                        <h4 class="acc-post-title">
+                            <a href="https://bankingblog.accenture.com/whats-next-for-payments-5-takeaways-from-sibos" title="What’s next for payments? 5 takeaways from Sibos"  data-analytics-link-name="What’s next for payments? 5 takeaways from Sibos" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                                What’s next for payments? 5 takeaways from Sibos                            </a>
+                        </h4>
+                                            </div>
+                    <a class="button" href="https://bankingblog.accenture.com/whats-next-for-payments-5-takeaways-from-sibos"  data-analytics-link-name="What’s next for payments? 5 takeaways from Sibos" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                    <div class="clearfix"></div>
+                </div>
+                                    <span class="views">2822 Views</span>
+                
+                
+
+            </article>
+        </div>
+	        <div class="grid-wrapper col-16 col-md-8" data-id="22847">
+            <article class="acc-grid-post dark">
+                <div class="acc-grid-post-left" style="background-image: url('https://bankingblog.accenture.com/wp-content/uploads/2022/08/Accenture_Can_payments_balance-588x380.jpg')">
+                    <div class="acc-post-byline">
+                                                    <h6 class="author">
+                                <a class="d-flex" title="Accenture Banking" href="https://bankingblog.accenture.com/author/accenturebanking"  data-analytics-link-name="18" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                                    <div class="author-thumb">
+                                        <div class="author-mask">
+                                            <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/18.jpg" alt="Accenture Banking" width="250" height="250" class="photo" />                                        </div>
+                                    </div>
+                                    <div class="author-details">
+                                        <span>Accenture Banking                                        </span><br/>
+                                        <span class="date"><time class="EN" datetime="2022-08-11T00:00:04+00:00"><span class="day">11</span> <span class="month">Aug</span> <span class="year">2022</span></time></span>
+                                    </div>
+                                </a>
+                            </h6>
+                        
+                                                </div>
+                </div>
+
+                <div class="acc-grid-post-right">
+                    <div class="acc-post-content">
+                        <h4 class="acc-post-title">
+                            <a href="https://bankingblog.accenture.com/can-payments-embrace-both-innovation-and-security" title="Can payments embrace both innovation and security?"  data-analytics-link-name="Can payments embrace both innovation and security?" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                                Can payments embrace both innovation and security?                            </a>
+                        </h4>
+                                            </div>
+                    <a class="button" href="https://bankingblog.accenture.com/can-payments-embrace-both-innovation-and-security"  data-analytics-link-name="Can payments embrace both innovation and security?" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                    <div class="clearfix"></div>
+                </div>
+                                    <span class="views">3839 Views</span>
+                
+                
+
+            </article>
+        </div>
+	        <div class="grid-wrapper col-16 col-md-8" data-id="20715">
+            <article class="acc-grid-post dark">
+                <div class="acc-grid-post-left" style="background-image: url('https://bankingblog.accenture.com/wp-content/uploads/2022/04/Accenture-6-common-mistakes-banks-make-SWIFT-CSP-hero-676x380.jpeg')">
+                    <div class="acc-post-byline">
+                                                    <h6 class="author">
+                                <a class="d-flex" title="Amit Agashe" href="https://bankingblog.accenture.com/author/amit-agashe"  data-analytics-link-name="284" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                                    <div class="author-thumb">
+                                        <div class="author-mask">
+                                            <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/284.jpg" alt="Amit Agashe" width="250" height="250" class="photo" />                                        </div>
+                                    </div>
+                                    <div class="author-details">
+                                        <span>Amit Agashe                                        </span><br/>
+                                        <span class="date"><time class="EN" datetime="2022-04-08T00:00:58+00:00"><span class="day">8</span> <span class="month">Apr</span> <span class="year">2022</span></time></span>
+                                    </div>
+                                </a>
+                            </h6>
+                        
+                                                </div>
+                </div>
+
+                <div class="acc-grid-post-right">
+                    <div class="acc-post-content">
+                        <h4 class="acc-post-title">
+                            <a href="https://bankingblog.accenture.com/the-6-common-mistakes-banks-make-in-swift-csp" title="The 6 common mistakes banks make in SWIFT CSP"  data-analytics-link-name="The 6 common mistakes banks make in SWIFT CSP" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                                The 6 common mistakes banks make in SWIFT CSP                            </a>
+                        </h4>
+                                            </div>
+                    <a class="button" href="https://bankingblog.accenture.com/the-6-common-mistakes-banks-make-in-swift-csp"  data-analytics-link-name="The 6 common mistakes banks make in SWIFT CSP" data-analytics-module-name="abb-post-grid" data-analytics-component-name="abb-post-grid" data-analytics-template-zone="post-grid" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                    <div class="clearfix"></div>
+                </div>
+                                    <span class="views">3703 Views</span>
+                
+                
+
+            </article>
+        </div>
+					</div>
+				
+				<div class="grid-pagination">
+									</div>
+
+					<script type="text/javascript">window.acc_grids = window.acc_grids || {};window.acc_grids["1d8c2acf_extra"] = {"total_result_count":4};</script>
+							</div>
+			</div></div></div>
+<div class="topics-tags-latest-posts-carousel-header">
+    <h1>Suggested for you</h1>
+</div>
+<div class="topics-tags-latest-posts-carousel">
+<div class="widget widget_acc-latest-posts-carousel"><div
+			
+			class="so-widget-acc-latest-posts-carousel so-widget-acc-latest-posts-carousel-style-60b3dcfd9c87"
+			
+		><div class="acc-latest-posts-carousel-base">
+    <div class="acc-latest-posts-carousel-title-wrapper">
+            </div>
+            <div id="slider-id-acc-latest-carousel-latest" class="acc-latest-posts-carousel-wrapper" data-slick='{ "slidesToScroll": 2, "slidesToShow": 2, "initialSlide": 0, "centerMode": false, "focusOnSelect": true, "arrows": true, "autoplay": true, "autoplaySpeed": 3000, "pauseOnHover": true, "speed": 400, "adaptiveHeight": true, "responsive": [ { "breakpoint": 600, "settings": { "slidesToShow": 1, "slidesToScroll": 1 } } ] }'>
+                            <div class="acc-latest-posts-carousel-block">
+                    <div class="widget widget_acc-post"><div
+			
+			class="so-widget-acc-post so-widget-acc-post-style-d75171398898"
+			
+		><article class="acc-post largertext ">
+    <div class="acc-post-top">
+        <img class="top-image" src="https://bankingblog.accenture.com/wp-content/uploads/2025/05/Banking-Top-Trends-2025-Hero-Image_3840x2160px-676x380.jpg" alt="Background Image"/>
+        <div class="acc-post-byline">
+                            <div class="author-thumb multiple-authors">
+                    <div class="author-mask">
+                        <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/404.thumbnail.jpg" alt="">
+                    </div>
+                                                                        <div class="author-mask">
+                                                            </div>
+                                                            </div>
+                <h6 class="author">
+                    <a title="Humad Ahmed" href="https://bankingblog.accenture.com/author/humad-ahmed"
+                         data-analytics-link-name="Humad Ahmed" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Humad Ahmed</a>
+                    & <a title="Rishi Chawla" href="https://bankingblog.accenture.com/author/rishi-chawla"  data-analytics-link-name="Rishi Chawla" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Rishi Chawla</a>
+                                                    				</h6>
+			
+							<div class="date"><time class="EN" datetime="2025-05-16T18:02:44+00:00"><span class="day">16</span> <span class="month">May</span> <span class="year">2025</span></time></div>
+			        </div>
+
+        <div class="acc-post-categories">
+                            <a href="https://bankingblog.accenture.com/category/commercial-banking-2">
+                    <h5>Commercial Banking<span class="separator">,</span></h5>
+                </a>
+                            <a href="https://bankingblog.accenture.com/category/nsight">
+                    <h5>nSight<span class="separator">,</span></h5>
+                </a>
+                    </div>
+
+    </div>
+	<div class="acc-post-body">
+		<div class="acc-post-content">
+            <h3 class="acc-post-title">
+                <a class=""                    href="https://bankingblog.accenture.com/commercial-banking-top-trends-2025" target="_blank"
+                   title="Commercial Banking Top Trends for 2025 and beyond"  data-analytics-link-name="Commercial Banking Top Trends for 2025 and beyond" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    Commercial Banking Top Trends for 2025 and beyond                </a>
+            </h3>
+
+            <p class="acc-post-excerpt">Commercial banking is at a strategic inflection point. As we look ahead to the next five years and beyond, the question is no longer how to keep pace with change—but how to lead it. Commercial banks h...</p>
+            <div class="acc-post-tags">
+                                    <a href="https://bankingblog.accenture.com/tag/agentic-ai">
+                        <h5>Agentic AI<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/generative-ai">
+                        <h5>Generative AI<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/nsight">
+                        <h5>nSight<span class="separator">,</span></h5>
+                    </a>
+                            </div>
+        </div>
+
+        <div class="acc-post-footer">
+            <a class="read-more "  href="https://bankingblog.accenture.com/commercial-banking-top-trends-2025" target="_blank"  data-analytics-link-name="Commercial Banking Top Trends for 2025 and beyond" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                            <span class="views">3894 Views</span>
+                    </div>
+		<div class="clearfix"></div>
+	</div>
+</article>
+</div></div>                </div>
+                            <div class="acc-latest-posts-carousel-block">
+                    <div class="widget widget_acc-post"><div
+			
+			class="so-widget-acc-post so-widget-acc-post-style-d75171398898"
+			
+		><article class="acc-post largertext ">
+    <div class="acc-post-top">
+        <img class="top-image" src="https://bankingblog.accenture.com/wp-content/uploads/2025/03/Featured-image-581x380.png" alt="Background Image"/>
+        <div class="acc-post-byline">
+                            <div class="author-thumb">
+                    <div class="author-mask">
+                        <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/" alt="">
+                    </div>
+                                    </div>
+                <h6 class="author">
+                    <a title="Accenture Banking" href="https://bankingblog.accenture.com/author/nicole_lanza"
+                         data-analytics-link-name="Accenture Banking" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Accenture Banking</a>
+                    				</h6>
+			
+							<div class="date"><time class="EN" datetime="2025-03-11T01:00:16+00:00"><span class="day">11</span> <span class="month">Mar</span> <span class="year">2025</span></time></div>
+			        </div>
+
+        <div class="acc-post-categories">
+                            <a href="https://bankingblog.accenture.com/category/customer-experience">
+                    <h5>Customer Experience<span class="separator">,</span></h5>
+                </a>
+                            <a href="https://bankingblog.accenture.com/category/nsight">
+                    <h5>nSight<span class="separator">,</span></h5>
+                </a>
+                    </div>
+
+    </div>
+	<div class="acc-post-body">
+		<div class="acc-post-content">
+            <h3 class="acc-post-title">
+                <a class=""                    href="https://bankingblog.accenture.com/navigating-cybersecurity-banking" target="_blank"
+                   title="Guardians of Trust: Navigating Cybersecurity in Banking"  data-analytics-link-name="Guardians of Trust: Navigating Cybersecurity in Banking" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    Guardians of Trust: Navigating Cybersecurity in Banking                </a>
+            </h3>
+
+            <p class="acc-post-excerpt">Despite significant investments in cybersecurity, customers lack trust in the banking system’s ability to protect their data. "Trust is the bedrock of business. It transforms transactions into relatio...</p>
+            <div class="acc-post-tags">
+                                    <a href="https://bankingblog.accenture.com/tag/customer-experience">
+                        <h5>Customer Experience<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/customer-trust">
+                        <h5>Customer Trust<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/cybersecurity">
+                        <h5>cybersecurity<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/guardians-of-trust">
+                        <h5>Guardians of Trust<span class="separator">,</span></h5>
+                    </a>
+                            </div>
+        </div>
+
+        <div class="acc-post-footer">
+            <a class="read-more "  href="https://bankingblog.accenture.com/navigating-cybersecurity-banking" target="_blank"  data-analytics-link-name="Guardians of Trust: Navigating Cybersecurity in Banking" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                            <span class="views">3850 Views</span>
+                    </div>
+		<div class="clearfix"></div>
+	</div>
+</article>
+</div></div>                </div>
+                            <div class="acc-latest-posts-carousel-block">
+                    <div class="widget widget_acc-post"><div
+			
+			class="so-widget-acc-post so-widget-acc-post-style-d75171398898"
+			
+		><article class="acc-post largertext ">
+    <div class="acc-post-top">
+        <img class="top-image" src="https://bankingblog.accenture.com/wp-content/uploads/2025/02/Unlocking-the-value-of-generative-AI-in-commercial-payments_1200x786px-580x380.jpg" alt="Background Image"/>
+        <div class="acc-post-byline">
+                            <div class="author-thumb multiple-authors">
+                    <div class="author-mask">
+                        <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/208.thumbnail.jpg" alt="">
+                    </div>
+                                                                        <div class="author-mask">
+                                                            </div>
+                                                            </div>
+                <h6 class="author">
+                    <a title="Amit Mallick" href="https://bankingblog.accenture.com/author/amit-mallick"
+                         data-analytics-link-name="Amit Mallick" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Amit Mallick</a>
+                    & <a title="Manish Kohli" href="https://bankingblog.accenture.com/author/manish-kohli"  data-analytics-link-name="Manish Kohli" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Manish Kohli</a>
+                                                    				</h6>
+			
+							<div class="date"><time class="EN" datetime="2025-02-25T13:39:26+00:00"><span class="day">25</span> <span class="month">Feb</span> <span class="year">2025</span></time></div>
+			        </div>
+
+        <div class="acc-post-categories">
+                            <a href="https://bankingblog.accenture.com/category/nsight">
+                    <h5>nSight<span class="separator">,</span></h5>
+                </a>
+                            <a href="https://bankingblog.accenture.com/category/payments">
+                    <h5>Payments<span class="separator">,</span></h5>
+                </a>
+                    </div>
+
+    </div>
+	<div class="acc-post-body">
+		<div class="acc-post-content">
+            <h3 class="acc-post-title">
+                <a class=""                    href="https://bankingblog.accenture.com/unlocking-gen-ai-commercial-payments" target="_blank"
+                   title="Unlocking the value of generative AI in commercial payments"  data-analytics-link-name="Unlocking the value of generative AI in commercial payments" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    Unlocking the value of generative AI in commercial payments                </a>
+            </h3>
+
+            <p class="acc-post-excerpt">The use of AI in the payments industry is not a new phenomenon. In fact, Accenture’s recent Payments Technology Reinvention Study shows that leading banks are already investing significantly in AI and...</p>
+            <div class="acc-post-tags">
+                                    <a href="https://bankingblog.accenture.com/tag/commercial-payments">
+                        <h5>Commercial payments<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/digital-payments">
+                        <h5>Digital Payments<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/generative-ai">
+                        <h5>Generative AI<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/payments-reinvention">
+                        <h5>Payments Reinvention<span class="separator">,</span></h5>
+                    </a>
+                            </div>
+        </div>
+
+        <div class="acc-post-footer">
+            <a class="read-more "  href="https://bankingblog.accenture.com/unlocking-gen-ai-commercial-payments" target="_blank"  data-analytics-link-name="Unlocking the value of generative AI in commercial payments" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                            <span class="views">2725 Views</span>
+                    </div>
+		<div class="clearfix"></div>
+	</div>
+</article>
+</div></div>                </div>
+                            <div class="acc-latest-posts-carousel-block">
+                    <div class="widget widget_acc-post"><div
+			
+			class="so-widget-acc-post so-widget-acc-post-style-d75171398898"
+			
+		><article class="acc-post largertext ">
+    <div class="acc-post-top">
+        <img class="top-image" src="https://bankingblog.accenture.com/wp-content/uploads/2025/09/Agentic-Payments-in-Commerce_Featured-1200x728-1-626x380.jpg" alt="Background Image"/>
+        <div class="acc-post-byline">
+                            <div class="author-thumb">
+                    <div class="author-mask">
+                        <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/25.thumbnail.jpg" alt="">
+                    </div>
+                                    </div>
+                <h6 class="author">
+                    <a title="Sulabh Agarwal" href="https://bankingblog.accenture.com/author/sulabhagarwal"
+                         data-analytics-link-name="Sulabh Agarwal" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Sulabh Agarwal</a>
+                    				</h6>
+			
+							<div class="date"><time class="EN" datetime="2025-09-24T16:19:38+00:00"><span class="day">24</span> <span class="month">Sep</span> <span class="year">2025</span></time></div>
+			        </div>
+
+        <div class="acc-post-categories">
+                            <a href="https://bankingblog.accenture.com/category/sibos-page/accenture-at-sibos">
+                    <h5>Accenture at Sibos<span class="separator">,</span></h5>
+                </a>
+                            <a href="https://bankingblog.accenture.com/category/commercial-banking-2">
+                    <h5>Commercial Banking<span class="separator">,</span></h5>
+                </a>
+                            <a href="https://bankingblog.accenture.com/category/payments">
+                    <h5>Payments<span class="separator">,</span></h5>
+                </a>
+                    </div>
+
+    </div>
+	<div class="acc-post-body">
+		<div class="acc-post-content">
+            <h3 class="acc-post-title">
+                <a class=""                    href="https://bankingblog.accenture.com/agentic-payments-commerce" target="_blank"
+                   title="Agentic payments in commerce—the future is here"  data-analytics-link-name="Agentic payments in commerce—the future is here" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    Agentic payments in commerce—the future is here                </a>
+            </h3>
+
+            <p class="acc-post-excerpt">Imagine a world where your personal AI assistant can effortlessly find and book flights, manage your budget and even negotiate the best deals on your behalf—all while keeping your financial data secur...</p>
+            <div class="acc-post-tags">
+                                    <a href="https://bankingblog.accenture.com/tag/agentic-ai">
+                        <h5>Agentic AI<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/payments-trends">
+                        <h5>Payments Trends<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/sibos-2025">
+                        <h5>Sibos 2025<span class="separator">,</span></h5>
+                    </a>
+                            </div>
+        </div>
+
+        <div class="acc-post-footer">
+            <a class="read-more "  href="https://bankingblog.accenture.com/agentic-payments-commerce" target="_blank"  data-analytics-link-name="Agentic payments in commerce—the future is here" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                            <span class="views">1686 Views</span>
+                    </div>
+		<div class="clearfix"></div>
+	</div>
+</article>
+</div></div>                </div>
+                            <div class="acc-latest-posts-carousel-block">
+                    <div class="widget widget_acc-post"><div
+			
+			class="so-widget-acc-post so-widget-acc-post-style-d75171398898"
+			
+		><article class="acc-post largertext ">
+    <div class="acc-post-top">
+        <img class="top-image" src="https://bankingblog.accenture.com/wp-content/uploads/2025/09/Cloud-AI-Bankig-Growth_Featured-1200x728-1-626x380.jpg" alt="Background Image"/>
+        <div class="acc-post-byline">
+                            <div class="author-thumb">
+                    <div class="author-mask">
+                        <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/35.thumbnail.jpg" alt="">
+                    </div>
+                                    </div>
+                <h6 class="author">
+                    <a title="Frederic Brunier" href="https://bankingblog.accenture.com/author/fbrunier10"
+                         data-analytics-link-name="Frederic Brunier" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Frederic Brunier</a>
+                    				</h6>
+			
+							<div class="date"><time class="EN" datetime="2025-09-25T03:00:59+00:00"><span class="day">25</span> <span class="month">Sep</span> <span class="year">2025</span></time></div>
+			        </div>
+
+        <div class="acc-post-categories">
+                            <a href="https://bankingblog.accenture.com/category/core-banking">
+                    <h5>Core Banking<span class="separator">,</span></h5>
+                </a>
+                            <a href="https://bankingblog.accenture.com/category/deutsch/future-of-banking-de">
+                    <h5>Future of Banking<span class="separator">,</span></h5>
+                </a>
+                    </div>
+
+    </div>
+	<div class="acc-post-body">
+		<div class="acc-post-content">
+            <h3 class="acc-post-title">
+                <a class=""                    href="https://bankingblog.accenture.com/cloud-ai-banking-growth" target="_blank"
+                   title="Why cloud and AI are the keys to banking’s long-term growth"  data-analytics-link-name="Why cloud and AI are the keys to banking’s long-term growth" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    Why cloud and AI are the keys to banking’s long-term growth                </a>
+            </h3>
+
+            <p class="acc-post-excerpt">Financial institutions are navigating an increasingly complex landscape. Their transformation, powered by cloud computing, artificial intelligence (AI), generative AI (gen AI) and agentic AI, has beco...</p>
+            <div class="acc-post-tags">
+                                    <a href="https://bankingblog.accenture.com/tag/core-banking-transformation">
+                        <h5>Core Banking Transformation<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/generative-ai">
+                        <h5>Generative AI<span class="separator">,</span></h5>
+                    </a>
+                            </div>
+        </div>
+
+        <div class="acc-post-footer">
+            <a class="read-more "  href="https://bankingblog.accenture.com/cloud-ai-banking-growth" target="_blank"  data-analytics-link-name="Why cloud and AI are the keys to banking’s long-term growth" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                            <span class="views">1271 Views</span>
+                    </div>
+		<div class="clearfix"></div>
+	</div>
+</article>
+</div></div>                </div>
+                            <div class="acc-latest-posts-carousel-block">
+                    <div class="widget widget_acc-post"><div
+			
+			class="so-widget-acc-post so-widget-acc-post-style-d75171398898"
+			
+		><article class="acc-post largertext ">
+    <div class="acc-post-top">
+        <img class="top-image" src="https://bankingblog.accenture.com/wp-content/uploads/2025/05/Banking-board-tq-ready-1200x728px-626x380.jpg" alt="Background Image"/>
+        <div class="acc-post-byline">
+                            <div class="author-thumb">
+                    <div class="author-mask">
+                        <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/254.thumbnail.jpg" alt="">
+                    </div>
+                                    </div>
+                <h6 class="author">
+                    <a title="Andy Young" href="https://bankingblog.accenture.com/author/andy-young"
+                         data-analytics-link-name="Andy Young" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Andy Young</a>
+                    				</h6>
+			
+							<div class="date"><time class="EN" datetime="2025-05-28T01:30:09+00:00"><span class="day">28</span> <span class="month">May</span> <span class="year">2025</span></time></div>
+			        </div>
+
+        <div class="acc-post-categories">
+                            <a href="https://bankingblog.accenture.com/category/digital-transformation">
+                    <h5>Digital Transformation<span class="separator">,</span></h5>
+                </a>
+                    </div>
+
+    </div>
+	<div class="acc-post-body">
+		<div class="acc-post-content">
+            <h3 class="acc-post-title">
+                <a class=""                    href="https://bankingblog.accenture.com/banks-board-tq-ready" target="_blank"
+                   title="Is your bank’s board TQ ready?"  data-analytics-link-name="Is your bank’s board TQ ready?" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    Is your bank’s board TQ ready?                </a>
+            </h3>
+
+            <p class="acc-post-excerpt">Technology is reshaping bank boardroom agendas A decade ago, we first studied the technology experience of board members across the banking sector.  Since then we have seen digital transformation, fin...</p>
+            <div class="acc-post-tags">
+                            </div>
+        </div>
+
+        <div class="acc-post-footer">
+            <a class="read-more "  href="https://bankingblog.accenture.com/banks-board-tq-ready" target="_blank"  data-analytics-link-name="Is your bank’s board TQ ready?" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                            <span class="views">1068 Views</span>
+                    </div>
+		<div class="clearfix"></div>
+	</div>
+</article>
+</div></div>                </div>
+                            <div class="acc-latest-posts-carousel-block">
+                    <div class="widget widget_acc-post"><div
+			
+			class="so-widget-acc-post so-widget-acc-post-style-d75171398898"
+			
+		><article class="acc-post  ">
+    <div class="acc-post-top">
+        <img class="top-image" src="https://bankingblog.accenture.com/wp-content/uploads/2025/05/611238320-532x380.jpg" alt="Background Image"/>
+        <div class="acc-post-byline">
+                            <div class="author-thumb multiple-authors">
+                    <div class="author-mask">
+                        <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/25.thumbnail.jpg" alt="">
+                    </div>
+                                                                        <div class="author-mask">
+                                                            </div>
+                                                            </div>
+                <h6 class="author">
+                    <a title="Sulabh Agarwal" href="https://bankingblog.accenture.com/author/sulabhagarwal"
+                         data-analytics-link-name="Sulabh Agarwal" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Sulabh Agarwal</a>
+                    & <a title="Dr. Nils Beier" href="https://bankingblog.accenture.com/author/dr-nils-beier"  data-analytics-link-name="Dr. Nils Beier" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Dr. Nils Beier</a>
+                                                    				</h6>
+			
+							<div class="date"><time class="EN" datetime="2025-05-22T09:30:27+00:00"><span class="day">22</span> <span class="month">May</span> <span class="year">2025</span></time></div>
+			        </div>
+
+        <div class="acc-post-categories">
+                            <a href="https://bankingblog.accenture.com/category/payments">
+                    <h5>Payments<span class="separator">,</span></h5>
+                </a>
+                    </div>
+
+    </div>
+	<div class="acc-post-body">
+		<div class="acc-post-content">
+            <h3 class="acc-post-title">
+                <a class=""                    href="https://bankingblog.accenture.com/digital-euro-monetary-sovereignty" target="_blank"
+                   title="The Digital Euro: A strategic step toward Europe’s monetary sovereignty?"  data-analytics-link-name="The Digital Euro: A strategic step toward Europe’s monetary sovereignty?" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    The Digital Euro: A strategic step toward Europe’s monetary sovereignty?                </a>
+            </h3>
+
+            <p class="acc-post-excerpt">In today’s fast-evolving digital landscape, where payments are becoming faster, smarter, and increasingly fragmented, cash is quietly losing ground. Consumer cash usage in Europe now accounts for only...</p>
+            <div class="acc-post-tags">
+                                    <a href="https://bankingblog.accenture.com/tag/cbdc">
+                        <h5>CBDC<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/digital-payments">
+                        <h5>Digital Payments<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/payments">
+                        <h5>Payments<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/payments-trends">
+                        <h5>Payments Trends<span class="separator">,</span></h5>
+                    </a>
+                            </div>
+        </div>
+
+        <div class="acc-post-footer">
+            <a class="read-more "  href="https://bankingblog.accenture.com/digital-euro-monetary-sovereignty" target="_blank"  data-analytics-link-name="The Digital Euro: A strategic step toward Europe’s monetary sovereignty?" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                            <span class="views">1042 Views</span>
+                    </div>
+		<div class="clearfix"></div>
+	</div>
+</article>
+</div></div>                </div>
+                            <div class="acc-latest-posts-carousel-block">
+                    <div class="widget widget_acc-post"><div
+			
+			class="so-widget-acc-post so-widget-acc-post-style-d75171398898"
+			
+		><article class="acc-post largertext ">
+    <div class="acc-post-top">
+        <img class="top-image" src="https://bankingblog.accenture.com/wp-content/uploads/2025/10/Cover-Image-Sibos-Takeaway-Blog-676x380.png" alt="Background Image"/>
+        <div class="acc-post-byline">
+                            <div class="author-thumb">
+                    <div class="author-mask">
+                        <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/25.thumbnail.jpg" alt="">
+                    </div>
+                                    </div>
+                <h6 class="author">
+                    <a title="Sulabh Agarwal" href="https://bankingblog.accenture.com/author/sulabhagarwal"
+                         data-analytics-link-name="Sulabh Agarwal" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Sulabh Agarwal</a>
+                    				</h6>
+			
+							<div class="date"><time class="EN" datetime="2025-10-14T18:17:32+00:00"><span class="day">14</span> <span class="month">Oct</span> <span class="year">2025</span></time></div>
+			        </div>
+
+        <div class="acc-post-categories">
+                            <a href="https://bankingblog.accenture.com/category/payments">
+                    <h5>Payments<span class="separator">,</span></h5>
+                </a>
+                    </div>
+
+    </div>
+	<div class="acc-post-body">
+		<div class="acc-post-content">
+            <h3 class="acc-post-title">
+                <a class=""                    href="https://bankingblog.accenture.com/sibos-2025-future-of-money" target="_blank"
+                   title="Sibos 2025 reveals where the future of money is heading"  data-analytics-link-name="Sibos 2025 reveals where the future of money is heading" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    Sibos 2025 reveals where the future of money is heading                </a>
+            </h3>
+
+            <p class="acc-post-excerpt">Each year, Sibos brings together banks, fintechs, regulators and infrastructure providers to discuss the forces shaping money movement. Sibos 2025, held in Frankfurt, marked a turning point where buzz...</p>
+            <div class="acc-post-tags">
+                                    <a href="https://bankingblog.accenture.com/tag/agentic-ai">
+                        <h5>Agentic AI<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/cbdc">
+                        <h5>CBDC<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/cryptocurrency">
+                        <h5>Cryptocurrency<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/future-of-payments">
+                        <h5>Future of Payments<span class="separator">,</span></h5>
+                    </a>
+                            </div>
+        </div>
+
+        <div class="acc-post-footer">
+            <a class="read-more "  href="https://bankingblog.accenture.com/sibos-2025-future-of-money" target="_blank"  data-analytics-link-name="Sibos 2025 reveals where the future of money is heading" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                            <span class="views">911 Views</span>
+                    </div>
+		<div class="clearfix"></div>
+	</div>
+</article>
+</div></div>                </div>
+                            <div class="acc-latest-posts-carousel-block">
+                    <div class="widget widget_acc-post"><div
+			
+			class="so-widget-acc-post so-widget-acc-post-style-d75171398898"
+			
+		><article class="acc-post  ">
+    <div class="acc-post-top">
+        <img class="top-image" src="https://bankingblog.accenture.com/wp-content/uploads/2025/10/Feature-image_Smarter-Not-Just-Faster_Blog-626x380.png" alt="Background Image"/>
+        <div class="acc-post-byline">
+                            <div class="author-thumb multiple-authors">
+                    <div class="author-mask">
+                        <img src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/405.thumbnail.jpg" alt="">
+                    </div>
+                                                                        <div class="author-mask">
+                                                            </div>
+                                                            </div>
+                <h6 class="author">
+                    <a title="Brian Shniderman" href="https://bankingblog.accenture.com/author/brian-shniderman"
+                         data-analytics-link-name="Brian Shniderman" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Brian Shniderman</a>
+                    & <a title="Gary Stein" href="https://bankingblog.accenture.com/author/gary-stein"  data-analytics-link-name="Gary Stein" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Gary Stein</a>
+                                                    				</h6>
+			
+							<div class="date"><time class="EN" datetime="2025-10-28T21:19:07+00:00"><span class="day">28</span> <span class="month">Oct</span> <span class="year">2025</span></time></div>
+			        </div>
+
+        <div class="acc-post-categories">
+                            <a href="https://bankingblog.accenture.com/category/payments">
+                    <h5>Payments<span class="separator">,</span></h5>
+                </a>
+                    </div>
+
+    </div>
+	<div class="acc-post-body">
+		<div class="acc-post-content">
+            <h3 class="acc-post-title">
+                <a class=""                    href="https://bankingblog.accenture.com/payments-roi-vertical-overlays" target="_blank"
+                   title="Smarter, not just faster: Unlocking instant payments ROI with vertical overlays"  data-analytics-link-name="Smarter, not just faster: Unlocking instant payments ROI with vertical overlays" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    Smarter, not just faster: Unlocking instant payments ROI with vertical overlays                </a>
+            </h3>
+
+            <p class="acc-post-excerpt">The RTP® network and FedNow® were launched to modernize the U.S. payments landscape, yet adoption remains surprisingly limited. Instant payments still represent just 0.39% of U.S. volume per an Accent...</p>
+            <div class="acc-post-tags">
+                                    <a href="https://bankingblog.accenture.com/tag/digital-payments">
+                        <h5>Digital Payments<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/money-2020">
+                        <h5>Money20/20<span class="separator">,</span></h5>
+                    </a>
+                                    <a href="https://bankingblog.accenture.com/tag/real-time-payments">
+                        <h5>Real-Time Payments<span class="separator">,</span></h5>
+                    </a>
+                            </div>
+        </div>
+
+        <div class="acc-post-footer">
+            <a class="read-more "  href="https://bankingblog.accenture.com/payments-roi-vertical-overlays" target="_blank"  data-analytics-link-name="Smarter, not just faster: Unlocking instant payments ROI with vertical overlays" data-analytics-module-name="abb-body" data-analytics-component-name="abb-body" data-analytics-template-zone="body" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Read more</a>
+                            <span class="views">297 Views</span>
+                    </div>
+		<div class="clearfix"></div>
+	</div>
+</article>
+</div></div>                </div>
+                    </div>
+    </div>
+</div></div></div>
+<div class="topics-tags-author-slider">
+<div class="widget widget_acc-author-slider"><div
+			
+			class="so-widget-acc-author-slider so-widget-acc-author-slider-style-d75171398898"
+			
+		><div class="acc-author-slider-base container">
+    <div class="acc-author-slider-heading">
+        <h1>cybersecurity Authors</h1>
+    </div>
+    <div class="acc-author-slider-wrapper" data-slick='{ "slidesToScroll": 1, "slidesToShow": 4, "autoplay": false, "autoplaySpeed": 3000, "speed": 400, "dots": false, "arrows": false, "responsive": [{ "breakpoint": 1200, "settings": { "slidesToShow": 3, "infinite": true } }, { "breakpoint": 992, "settings": { "slidesToShow": 2 } }, { "breakpoint": 768, "settings": { "slidesToShow": 1 } }, { "breakpoint": 576, "settings": { "slidesToShow": 1, "dots": false } }] }'>
+                                            <div  data-analytics-link-name="Amit Agashe" data-analytics-module-name="abb-meet-our-bloggers" data-analytics-component-name="abb-meet-our-bloggers" data-analytics-template-zone="meet-our-bloggers" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    <div class="acc-author-slider-block">
+                        <div class="acc-author-slider-content">
+                            <div class="acc-author-slider-img">
+                                <a href="https://bankingblog.accenture.com/author/amit-agashe" target="_self"><img class="acc-author-slider-img" src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/284.jpg" alt=""></a>
+                                                            </div>
+                            <div class="acc-author-slider-text">
+                                <a href="https://bankingblog.accenture.com/author/amit-agashe" target="_self">
+                                    <h4>Amit Agashe</h4>
+                                </a>
+                                <h5>Director – Financial Services, Technology Consulting</h5>
+                            </div>
+                            <div class="acc-author-slider-social-icons">
+                                                                        <a href="https://www.linkedin.com/in/amit-agashe/" target="_blank" title="View Author social profile for linkedin"
+                                             data-analytics-link-name="View Author social profile for" data-analytics-module-name="abb-author-widget" data-analytics-component-name="abb-author-widget" data-analytics-template-zone="author-widget" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1"><i class="icon-linkedin"></i></a>
+                                                                            <a href="mailto:amit.agashe@accenture.com" target="_blank" title="View Author social profile for mail"
+                                             data-analytics-link-name="View Author social profile for" data-analytics-module-name="abb-author-widget" data-analytics-component-name="abb-author-widget" data-analytics-template-zone="author-widget" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1"><i class="icon-mail"></i></a>
+                                                                </div>
+                        </div>
+                    </div>
+                </div>
+                                            <div  data-analytics-link-name="Accenture Banking" data-analytics-module-name="abb-meet-our-bloggers" data-analytics-component-name="abb-meet-our-bloggers" data-analytics-template-zone="meet-our-bloggers" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    <div class="acc-author-slider-block">
+                        <div class="acc-author-slider-content">
+                            <div class="acc-author-slider-img">
+                                <a href="https://bankingblog.accenture.com/author/accenturebanking" target="_self"><img class="acc-author-slider-img" src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/18.jpg" alt=""></a>
+                                                            </div>
+                            <div class="acc-author-slider-text">
+                                <a href="https://bankingblog.accenture.com/author/accenturebanking" target="_self">
+                                    <h4>Accenture Banking</h4>
+                                </a>
+                                <h5>Guest Blogger Series</h5>
+                            </div>
+                            <div class="acc-author-slider-social-icons">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                                            <div  data-analytics-link-name="Sulabh Agarwal" data-analytics-module-name="abb-meet-our-bloggers" data-analytics-component-name="abb-meet-our-bloggers" data-analytics-template-zone="meet-our-bloggers" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">
+                    <div class="acc-author-slider-block">
+                        <div class="acc-author-slider-content">
+                            <div class="acc-author-slider-img">
+                                <a href="https://bankingblog.accenture.com/author/sulabhagarwal" target="_self"><img class="acc-author-slider-img" src="https://bankingblog.accenture.com/wp-content/uploads/userphoto/25.jpg" alt=""></a>
+                                                            </div>
+                            <div class="acc-author-slider-text">
+                                <a href="https://bankingblog.accenture.com/author/sulabhagarwal" target="_self">
+                                    <h4>Sulabh Agarwal</h4>
+                                </a>
+                                <h5>Managing Director – Global Payments</h5>
+                            </div>
+                            <div class="acc-author-slider-social-icons">
+                                                                        <a href="https://twitter.com/sulabhlondon" target="_blank" title="View Author social profile for twitter"
+                                             data-analytics-link-name="View Author social profile for" data-analytics-module-name="abb-author-widget" data-analytics-component-name="abb-author-widget" data-analytics-template-zone="author-widget" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1"><i class="icon-twitter"></i></a>
+                                                                            <a href="https://www.linkedin.com/in/sulabh-agarwal-030818" target="_blank" title="View Author social profile for linkedin"
+                                             data-analytics-link-name="View Author social profile for" data-analytics-module-name="abb-author-widget" data-analytics-component-name="abb-author-widget" data-analytics-template-zone="author-widget" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1"><i class="icon-linkedin"></i></a>
+                                                                            <a href="https://info.accenture.com/bank-sulabh-agarwal" target="_blank" title="View Author social profile for mail"
+                                             data-analytics-link-name="View Author social profile for" data-analytics-module-name="abb-author-widget" data-analytics-component-name="abb-author-widget" data-analytics-template-zone="author-widget" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1"><i class="icon-mail"></i></a>
+                                                                </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+</div>
+</div></div></div>
+				</main><!-- /.main -->
+							</div><!-- /.content -->
+		</div><!-- /.wrap -->
+		        		
+<footer class="site-footer content-info">
+			<div id="marketo-predictive-content"><div class="RTP_RCMD2" data-rtp-template-id="template1"></div></div>
+				<div class="footer-widgets">
+            <div class="container">
+			<div id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><h1 style="text-align:left;margin-bottom:4rem">Popular topics</h1></div></div><div class="clear"></div><div id="xili_tidy_tags_cloud_widget-2" class="widget xili_tdtc_widget"><h3 class="widget-title"></h3><div class="xilitidytagscloud"><a href="https://bankingblog.accenture.com/tag/banking-innovation" class="tag-cloud-link tag-link-43 tag-link-position-1" style="font-size: 13.440860215054pt;" aria-label="Banking Innovation (4 items)"  data-analytics-link-name="Banking Innovation" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Banking Innovation</a>
+<a href="https://bankingblog.accenture.com/tag/banking-trends" class="tag-cloud-link tag-link-52 tag-link-position-2" style="font-size: 16.967741935484pt;" aria-label="Banking Trends (12 items)"  data-analytics-link-name="Banking Trends" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Banking Trends</a>
+<a href="https://bankingblog.accenture.com/tag/blockchain" class="tag-cloud-link tag-link-63 tag-link-position-3" style="font-size: 11.548387096774pt;" aria-label="Blockchain (2 items)"  data-analytics-link-name="Blockchain" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Blockchain</a>
+<a href="https://bankingblog.accenture.com/tag/compliance" class="tag-cloud-link tag-link-352 tag-link-position-4" style="font-size: 12.58064516129pt;" aria-label="Compliance (3 items)"  data-analytics-link-name="Compliance" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Compliance</a>
+<a href="https://bankingblog.accenture.com/tag/core-banking" class="tag-cloud-link tag-link-90 tag-link-position-5" style="font-size: 14.731182795699pt;" aria-label="Core Banking (6 items)"  data-analytics-link-name="Core Banking" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Core Banking</a>
+<a href="https://bankingblog.accenture.com/tag/covid-19" class="tag-cloud-link tag-link-1626 tag-link-position-6" style="font-size: 13.440860215054pt;" aria-label="COVID-19 (4 items)"  data-analytics-link-name="COVID-19" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">COVID-19</a>
+<a href="https://bankingblog.accenture.com/tag/digital-banking" class="tag-cloud-link tag-link-113 tag-link-position-7" style="font-size: 17.311827956989pt;" aria-label="Digital Banking (13 items)"  data-analytics-link-name="Digital Banking" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Digital Banking</a>
+<a href="https://bankingblog.accenture.com/tag/digital-payments" class="tag-cloud-link tag-link-126 tag-link-position-8" style="font-size: 18pt;" aria-label="Digital Payments (16 items)"  data-analytics-link-name="Digital Payments" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Digital Payments</a>
+<a href="https://bankingblog.accenture.com/tag/fintech" class="tag-cloud-link tag-link-174 tag-link-position-9" style="font-size: 16.021505376344pt;" aria-label="Fintech (9 items)"  data-analytics-link-name="Fintech" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Fintech</a>
+<a href="https://bankingblog.accenture.com/tag/innovation" class="tag-cloud-link tag-link-194 tag-link-position-10" style="font-size: 10pt;" aria-label="Innovation (1 item)"  data-analytics-link-name="Innovation" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Innovation</a>
+<a href="https://bankingblog.accenture.com/tag/money-2020" class="tag-cloud-link tag-link-7781 tag-link-position-11" style="font-size: 15.161290322581pt;" aria-label="Money20/20 (7 items)"  data-analytics-link-name="Money20/20" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Money20/20</a>
+<a href="https://bankingblog.accenture.com/tag/real-time-payments" class="tag-cloud-link tag-link-255 tag-link-position-12" style="font-size: 13.440860215054pt;" aria-label="Real-Time Payments (4 items)"  data-analytics-link-name="Real-Time Payments" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Real-Time Payments</a>
+<a href="https://bankingblog.accenture.com/tag/risk-management" class="tag-cloud-link tag-link-264 tag-link-position-13" style="font-size: 12.58064516129pt;" aria-label="Risk management (3 items)"  data-analytics-link-name="Risk management" data-analytics-module-name="abb-tag-cloud" data-analytics-component-name="abb-tag-cloud" data-analytics-template-zone="tag-cloud" data-analytics-link-type="cta" data-analytics-content-class="Content" data-analytics-engagement="1">Risk management</a></div></div><div class="clear"></div>            </div>
+		</div>
+		<div class="footer-menu">
+		<div class="menu-primary-footer-container"><ul id="menu-primary-footer" class="nav"><li id="menu-item-3137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3137"><a target="_blank" href="https://www.accenture.com/us-en/privacy-policy.aspx" data-ps2id-api="true" data-analytics-link-name="Privacy Policy" data-analytics-module-name="abb-footer" data-analytics-component-name="abb-footer" data-analytics-template-zone="footer" data-analytics-content-type="footer" data-analytics-link-type="footer" data-analytics-content-class="Content">Privacy Policy</a></li>
+<li id="menu-item-3138" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3138"><a target="_blank" href="https://www.accenture.com/us-en/terms-of-use" data-ps2id-api="true" data-analytics-link-name="Terms Of Use" data-analytics-module-name="abb-footer" data-analytics-component-name="abb-footer" data-analytics-template-zone="footer" data-analytics-content-type="footer" data-analytics-link-type="footer" data-analytics-content-class="Content">Terms Of Use</a></li>
+<li id="menu-item-3250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3250"><a target="_blank" href="https://bankingblog.accenture.com/community-guidelines" data-ps2id-api="true" data-analytics-link-name="Community Guidelines" data-analytics-module-name="abb-footer" data-analytics-component-name="abb-footer" data-analytics-template-zone="footer" data-analytics-content-type="footer" data-analytics-link-type="footer" data-analytics-content-class="Content">Community Guidelines</a></li>
+<li id="menu-item-8989" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8989"><a href="https://www.accenture.com/us-en/form-do-not-sell-my-personal-information" data-ps2id-api="true" data-analytics-link-name="Do Not Sell My Personal Information" data-analytics-module-name="abb-footer" data-analytics-component-name="abb-footer" data-analytics-template-zone="footer" data-analytics-content-type="footer" data-analytics-link-type="footer" data-analytics-content-class="Content">Do Not Sell My Personal Information</a></li>
+</ul></div>		<!-- Cookie Button -->
+		<div id="optanon-minimize-wrapper" class="optanon-toggle-display cookie-settings" data-analytics-template-zone="consent manager" data-analytics-module-name="consent manager">
+			<a id="optanon-minimize-button" class="text-white show-inline-mobile" title="Cookie Settings" data-analytics-link-name="cookie settings" data-analytics-content-type="cta" aria-label="Cookie Settings">
+				<h5>Cookie Settings <i class="icon-settings text-white show-inline-mobile"></i></h5>
+			</a>
+		</div>
+		<p>&copy; 2025 Accenture. All Rights Reserved.</p>
+	</div>
+</footer>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/accenturepress\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<link rel='stylesheet' id='acc-grid-style-d75171398898-css' href='https://bankingblog.accenture.com/wp-content/uploads/siteorigin-widgets/acc-grid-style-d75171398898.css?ver=c4cef2' type='text/css' media='all' />
+<link rel='stylesheet' id='acc-latest-posts-carousel-style-60b3dcfd9c87-css' href='https://bankingblog.accenture.com/wp-content/uploads/siteorigin-widgets/acc-latest-posts-carousel-style-60b3dcfd9c87.css?ver=67a73c' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-slider-styles-css' href='https://bankingblog.accenture.com/wp-content/themes/accenturepress/widgets/latest-posts-carousel/styles/slick.css?ver=518e88' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-slider-theme-css' href='https://bankingblog.accenture.com/wp-content/themes/accenturepress/widgets/latest-posts-carousel/styles/slick-theme.css?ver=443f9c' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-modal-styles-css' href='https://bankingblog.accenture.com/wp-content/themes/accenturepress/widgets/latest-posts-carousel/styles/jquery.modal.min.css?ver=8267eb' type='text/css' media='all' />
+<link rel='stylesheet' id='acc-author-slider-style-d75171398898-css' href='https://bankingblog.accenture.com/wp-content/uploads/siteorigin-widgets/acc-author-slider-style-d75171398898.css?ver=d2e9e4' type='text/css' media='all' />
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/plugins/brave-syndication/js/js.cookie.js?ver=544363" id="js-cookie-js"></script>
+<script type="text/javascript" id="brave-syndication-front-end-js-extra">
+/* <![CDATA[ */
+var syndicationVariables = {"siteName":"Accenture Banking Blog","siteUrl":"https:\/\/bankingblog.accenture.com"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/plugins/brave-syndication/js/front-end.js?ver=e86b40" id="brave-syndication-front-end-js"></script>
+<script type="text/javascript" id="page-scroll-to-id-plugin-script-js-extra">
+/* <![CDATA[ */
+var mPS2id_params = {"instances":{"mPS2id_instance_0":{"selector":"a[href*='#']:not([href='#'])","autoSelectorMenuLinks":"true","excludeSelector":"a[href^='#tab-'], a[href^='#tabs-'], a[data-toggle]:not([data-toggle='tooltip']), a[data-slide], a[data-vc-tabs], a[data-vc-accordion], a.screen-reader-text.skip-link","scrollSpeed":800,"autoScrollSpeed":"true","scrollEasing":"easeInOutQuint","scrollingEasing":"easeOutQuint","forceScrollEasing":"false","pageEndSmoothScroll":"true","stopScrollOnUserAction":"false","autoCorrectScroll":"false","autoCorrectScrollExtend":"false","layout":"vertical","offset":".acc-nav-container, #wpadminbar","dummyOffset":"false","highlightSelector":"","clickedClass":"mPS2id-clicked","targetClass":"mPS2id-target","highlightClass":"mPS2id-highlight","forceSingleHighlight":"false","keepHighlightUntilNext":"false","highlightByNextTarget":"false","appendHash":"false","scrollToHash":"true","scrollToHashForAll":"true","scrollToHashDelay":0,"scrollToHashUseElementData":"true","scrollToHashRemoveUrlHash":"false","disablePluginBelow":0,"adminDisplayWidgetsId":"true","adminTinyMCEbuttons":"true","unbindUnrelatedClickEvents":"false","unbindUnrelatedClickEventsSelector":"","normalizeAnchorPointTargets":"false","encodeLinks":"false"}},"total_instances":"1","shortcode_class":"_ps2id"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/plugins/page-scroll-to-id/js/page-scroll-to-id.min.js?ver=df9a55" id="page-scroll-to-id-plugin-script-js"></script>
+<script type="text/javascript" id="accgridwidget-js-extra">
+/* <![CDATA[ */
+var accgrid = {"ajaxurl":"https:\/\/bankingblog.accenture.com\/wp-admin\/admin-ajax.php?lang=en_US"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/plugins/brave-accentureblog/widgets/grid/assets/js/grid.min.js?ver=776ec8" id="accgridwidget-js"></script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/themes/accenturepress/widgets/latest-posts-carousel/js/jquery.modal.min.js?ver=325ee5" id="jquery.modal-js"></script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/themes/accenturepress/widgets/latest-posts-carousel/js/slick.min.js?ver=52f91e" id="slick-js"></script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/themes/accenturepress/widgets/latest-posts-carousel/js/latest-posts-carousel.js?ver=3fc340" id="acc-latest-posts-carousel-js"></script>
+<script type="text/javascript" src="https://bankingblog.accenture.com/wp-content/themes/accenturepress/widgets/author-slider/js/author-slider.js?ver=16b809" id="acc-author-slider-js"></script>
+<script type="text/JavaScript">
+	if (typeof(_satellite) !== "undefined") {
+		_satellite.pageBottom();
+	}
+</script>	</body>
+</html>
+
+<!-- WP Optimize page cache - https://teamupdraft.com/wp-optimize/ - page NOT cached -->

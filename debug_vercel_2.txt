@@ -1,0 +1,43 @@
+Vercel CLI 48.10.4
+Retrieving project…
+> NOTE: Requested port 3000 is already in use
+> Running Dev Command “ng serve --port $PORT”
+[33m❯[39m Building...
+[32m✔[39m Building...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 146.59 kB | 
+styles.css          | styles        |  24.32 kB | 
+
+                    | Initial total | 170.91 kB
+
+Application bundle generation complete. [1.226 seconds] - 2025-11-19T17:43:13.613Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:3001/
+  ➜  press h + enter to show help
+> Ready! Available at http://localhost:3001
+node:internal/modules/cjs/loader:1424
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\Users\Eric'
+Require stack:
+- internal/preload
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at node:internal/modules/cjs/loader:2046:12
+    at loadPreloadModules (node:internal/process/pre_execution:697:5)
+    at initializeModuleLoaders (node:internal/process/pre_execution:238:5) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ 'internal/preload' ]
+}
+
+Node.js v24.11.1
+Error: Function `api/content.ts` failed with exit code 1
+Terminate batch job (Y/N)? 

@@ -36,6 +36,7 @@ export class DashboardComponent {
   selectedTopic = signal<TopicFilter>('All');
   sortBy = signal<SortOption>('Date');
   layout = signal<Layout>('grid');
+  minScore = signal<number>(0);
   visibleItemCount = signal<number>(this.initialItemCount);
 
   readonly topics: TopicFilter[] = ['All', 'Security', 'Technology', 'Humans'];
@@ -44,9 +45,11 @@ export class DashboardComponent {
   filteredContent = computed(() => {
     const topic = this.selectedTopic();
     const sort = this.sortBy();
+    const minScore = this.minScore();
 
     let items = this.allContent()
-      .filter(item => topic === 'All' || item.category === topic);
+      .filter(item => topic === 'All' || item.category === topic)
+      .filter(item => (item.totalScore || 0) >= minScore);
 
     // Sorting logic
     switch (sort) {
@@ -61,30 +64,40 @@ export class DashboardComponent {
         items = items.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
         break;
     }
-    
+
     return items;
   });
 
+  currentPage = signal<number>(1);
+
   paginatedContent = computed(() => {
-    return this.filteredContent().slice(0, this.visibleItemCount());
+    // For server-side pagination, we show all filtered content
+    // The "pagination" happens by appending to the list via loadMore
+    return this.filteredContent();
   });
-  
+
   selectTopic(topic: TopicFilter) {
     this.selectedTopic.set(topic);
-    this.visibleItemCount.set(this.initialItemCount); // Reset pagination on filter change
+    // We don't reset page here because we are filtering the *loaded* content.
+    // Ideally, we should refetch from server with filter, but for now we filter client-side.
   }
 
   setSortBy(option: SortOption) {
     this.sortBy.set(option);
-    this.visibleItemCount.set(this.initialItemCount); // Reset pagination on sort change
   }
 
   setLayout(layout: Layout) {
     this.layout.set(layout);
   }
 
+  setMinScore(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.minScore.set(Number(value));
+  }
+
   loadMore() {
-    this.visibleItemCount.update(count => count + this.initialItemCount);
+    this.currentPage.update(p => p + 1);
+    this.contentService.loadMore(this.currentPage());
   }
 
   onItemClicked(item: ContentItem) {

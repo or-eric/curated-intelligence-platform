@@ -2,9 +2,9 @@ import { ChangeDetectionStrategy, Component, effect, inject, input, OnDestroy, o
 import { CommonModule, DatePipe } from '@angular/common';
 import { ContentItem } from '../../models/content-item.model';
 import { LibraryService } from '../../services/library.service';
-import { GeminiService } from '../../services/gemini.service';
 
-type Tab = 'executive' | 'lessons';
+
+type Tab = 'executive' | 'lessons' | 'scoring';
 
 @Component({
   selector: 'app-detailed-view',
@@ -18,7 +18,6 @@ export class DetailedViewComponent implements OnDestroy {
   closeModal = output<void>();
 
   private libraryService = inject(LibraryService);
-  private geminiService = inject(GeminiService);
 
   // Component State
   isSaved = signal(false);
@@ -33,15 +32,11 @@ export class DetailedViewComponent implements OnDestroy {
 
   constructor() {
     effect(() => {
-        const item = this.contentItem();
-        this.displayedItem.set(item);
-        this.activeTab.set('executive');
-        this.isSaved.set(this.libraryService.isSaved(item.id));
-        this.analysisError.set(null);
-        
-        if (!item.executiveSummary) {
-          this.generateAnalysis(item);
-        }
+      const item = this.contentItem();
+      this.displayedItem.set(item);
+      this.activeTab.set('executive');
+      this.isSaved.set(this.libraryService.isSaved(item.id));
+      this.analysisError.set(null);
     });
   }
 
@@ -49,32 +44,13 @@ export class DetailedViewComponent implements OnDestroy {
     clearTimeout(this.tooltipTimeout);
   }
 
-  private async generateAnalysis(item: ContentItem) {
-    this.loadingAnalysis.set(true);
-    this.analysisError.set(null);
-    try {
-      // Generate Executive Summary
-      const summary = await this.geminiService.generateExecutiveSummary(item);
-      this.displayedItem.update(current => ({ ...current!, executiveSummary: summary }));
-
-      // Generate Lessons for C-Suite
-      const lessons = await this.geminiService.generateLessonsForCSuite(item, summary);
-      this.displayedItem.update(current => ({ ...current!, lessonsForCSuite: lessons }));
-
-    } catch (error: any) {
-      this.analysisError.set(error.message || 'An unexpected error occurred while generating the analysis.');
-      console.error(error);
-    } finally {
-      this.loadingAnalysis.set(false);
-    }
-  }
 
   toggleSave() {
     const item = this.contentItem();
     this.libraryService.toggleItem(item.id);
     this.isSaved.set(this.libraryService.isSaved(item.id));
   }
-  
+
   share() {
     clearTimeout(this.tooltipTimeout);
     const item = this.contentItem();
@@ -90,7 +66,7 @@ export class DetailedViewComponent implements OnDestroy {
   }
 
   getStakeholderColor(stakeholder: string): string {
-    const colors: {[key: string]: string} = {
+    const colors: { [key: string]: string } = {
       'Civil Society': 'bg-green-500/20 text-green-300',
       'Enterprises': 'bg-sky-500/20 text-sky-300',
       'Global & Multilateral': 'bg-indigo-500/20 text-indigo-300',
@@ -116,7 +92,13 @@ export class DetailedViewComponent implements OnDestroy {
     if (judgement === 'Important - Monitor') return 'bg-yellow-500 text-black';
     return 'bg-green-600 text-white';
   }
-  
+
+  getConfidenceColor(score: number): string {
+    if (score >= 80) return 'text-green-400';
+    if (score >= 50) return 'text-yellow-400';
+    return 'text-red-400';
+  }
+
   close() {
     this.closeModal.emit();
   }

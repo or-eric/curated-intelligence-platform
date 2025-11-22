@@ -1,0 +1,20 @@
+[dotenv@17.2.3] injecting env (18) from .env.production -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+Testing ENHANCED ingestion with Selection + Deep Analysis...
+Collecting candidates from feeds...
+Found 70 new candidates.
+Asking Gemini to select strategic stories from 5 candidates...
+Error during story selection: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (file:///C:/Users/Eric%20Haupt/Documents/Projects/Curated%20Intelligence%20Platform/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async makeRequest (file:///C:/Users/Eric%20Haupt/Documents/Projects/Curated%20Intelligence%20Platform/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContent (file:///C:/Users/Eric%20Haupt/Documents/Projects/Curated%20Intelligence%20Platform/node_modules/@google/generative-ai/dist/index.mjs:865:22)
+    at async GeminiService.selectStrategicStories (C:\Users\Eric Haupt\Documents\Projects\Curated Intelligence Platform\src\backend\services\gemini.service.ts:105:24)
+    at async runIngestion (C:\Users\Eric Haupt\Documents\Projects\Curated Intelligence Platform\src\backend\workflows\ingestion.ts:64:27)
+    at async testIngestProd (C:\Users\Eric Haupt\Documents\Projects\Curated Intelligence Platform\scripts\test-ingest-prod.ts:14:25) {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+Ingestion complete!
+Results: { processed: 0, added: 0, errors: 0, details: [] }
+Total duration: 2668ms
