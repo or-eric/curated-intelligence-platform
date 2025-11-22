@@ -38,7 +38,7 @@ async function readSources(): Promise<SourceConfig[]> {
     }
 }
 
-export async function runIngestion() {
+export async function runIngestion(limit: number = 5) {
     console.log('Starting ingestion phase...');
     const sources = await readSources();
     console.log(`Found ${sources.length} sources in configuration.`);
@@ -96,7 +96,7 @@ export async function runIngestion() {
 
             if (isRss) {
                 // Process RSS Items
-                for (const item of feedItems.slice(0, 5)) { // Limit to 5 recent items
+                for (const item of feedItems.slice(0, limit)) { // Limit items per source
                     if (!item.link || !item.title) continue;
 
                     // Check if exists
