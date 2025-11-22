@@ -1,0 +1,1043 @@
+{
+    "schema_version": "1.0",
+    "sources": [
+        {
+            "id": "krebsonsecurity",
+            "name": "KrebsOnSecurity",
+            "url": "https://krebsonsecurity.com",
+            "source_type": "blog",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "threat-intel",
+                "crime",
+                "infrastructure"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "schneier_on_security",
+            "name": "Schneier on Security",
+            "url": "https://www.schneier.com",
+            "source_type": "blog",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "policy",
+                "cryptography",
+                "privacy"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "the_record",
+            "name": "The Record by Recorded Future",
+            "url": "https://therecord.media",
+            "source_type": "news",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "threat-intel",
+                "nation-state",
+                "ransomware"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "dark_reading",
+            "name": "Dark Reading",
+            "url": "https://www.darkreading.com",
+            "source_type": "news",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "enterprise",
+                "vulnerabilities"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "cisa_alerts",
+            "name": "CISA Alerts and Advisories",
+            "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+            "source_type": "gov_alerts",
+            "domains": [
+                "cybersecurity",
+                "critical_infrastructure"
+            ],
+            "topics": [
+                "vulnerabilities",
+                "alerts"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "sans_isc_diary",
+            "name": "SANS Internet Storm Center Diary",
+            "url": "https://isc.sans.edu/diary.html",
+            "source_type": "blog",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "operations",
+                "blue-team"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "trail_of_bits",
+            "name": "Trail of Bits Blog",
+            "url": "https://blog.trailofbits.com",
+            "source_type": "blog",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "research",
+                "engineering"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "mandiant_google_cloud_security",
+            "name": "Mandiant / Google Cloud Security Blog",
+            "url": "https://cloud.google.com/blog/products/identity-security",
+            "source_type": "blog",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "threat-intel",
+                "incident-response",
+                "cloud"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "microsoft_security_blog",
+            "name": "Microsoft Security Blog",
+            "url": "https://www.microsoft.com/en-us/security/blog",
+            "source_type": "blog",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "threat-intel",
+                "enterprise",
+                "cloud"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "the_hacker_news",
+            "name": "The Hacker News",
+            "url": "https://thehackernews.com",
+            "source_type": "news",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "vulnerabilities",
+                "breaches"
+            ],
+            "tier": "secondary",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "import_ai",
+            "name": "Import AI",
+            "url": "https://jack-clark.net",
+            "source_type": "newsletter",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "research",
+                "policy",
+                "industry"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "rss_or_email",
+                "media_types": [
+                    "html",
+                    "text"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "cset_policy_ai",
+            "name": "policy.ai (CSET)",
+            "url": "https://www.cset.tech/policy-ai",
+            "source_type": "newsletter",
+            "domains": [
+                "ai",
+                "national_security"
+            ],
+            "topics": [
+                "emerging-tech",
+                "policy",
+                "data"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "rss_or_email",
+                "media_types": [
+                    "html",
+                    "text"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "ai_safety_newsletter",
+            "name": "AI Safety Newsletter",
+            "url": "https://www.safe.ai/newsletter",
+            "source_type": "newsletter",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "safety",
+                "governance"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "rss_or_email",
+                "media_types": [
+                    "html",
+                    "text"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "ai_supremacy",
+            "name": "AI Supremacy",
+            "url": "https://aisupremacy.substack.com",
+            "source_type": "newsletter",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "business",
+                "trends",
+                "society"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "rss_or_email",
+                "media_types": [
+                    "html",
+                    "text"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "bens_bites",
+            "name": "Ben's Bites",
+            "url": "https://www.bensbites.co",
+            "source_type": "newsletter",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "products",
+                "tools",
+                "industry"
+            ],
+            "tier": "secondary",
+            "language": "en",
+            "ingest": {
+                "method": "rss_or_email",
+                "media_types": [
+                    "html",
+                    "text"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "mit_ai_news",
+            "name": "MIT News – Artificial Intelligence",
+            "url": "https://news.mit.edu/topic/artificial-intelligence2",
+            "source_type": "news",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "research",
+                "applications"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "google_deepmind_blog",
+            "name": "Google DeepMind Blog",
+            "url": "https://deepmind.google/discover/blog",
+            "source_type": "blog",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "research",
+                "frontier-models"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "openai_blog",
+            "name": "OpenAI Blog",
+            "url": "https://openai.com/blog",
+            "source_type": "blog",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "research",
+                "frontier-models",
+                "safety"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "ai_governance_library",
+            "name": "AI Governance Library",
+            "url": "https://aigovernancelibrary.org",
+            "source_type": "curated_library",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "governance",
+                "law",
+                "regulation"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html",
+                    "pdf"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "ai_policy_bulletin",
+            "name": "AI Policy Bulletin",
+            "url": "https://aipolicybulletin.org",
+            "source_type": "newsletter",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "policy",
+                "governance"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "rss_or_email",
+                "media_types": [
+                    "html",
+                    "text",
+                    "pdf"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "war_on_the_rocks",
+            "name": "War on the Rocks",
+            "url": "https://warontherocks.com",
+            "source_type": "magazine",
+            "domains": [
+                "national_security"
+            ],
+            "topics": [
+                "strategy",
+                "defense",
+                "technology"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "lawfare_blog",
+            "name": "Lawfare",
+            "url": "https://www.lawfaremedia.org",
+            "source_type": "magazine",
+            "domains": [
+                "national_security",
+                "cybersecurity"
+            ],
+            "topics": [
+                "law",
+                "policy",
+                "tech"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "atlantic_council_cyber_statecraft",
+            "name": "Atlantic Council – Cyber Statecraft Initiative",
+            "url": "https://www.atlanticcouncil.org/programs/scowcroft-center-for-strategy-and-security/cyber-statecraft-initiative",
+            "source_type": "think_tank",
+            "domains": [
+                "national_security",
+                "cybersecurity"
+            ],
+            "topics": [
+                "geopolitics",
+                "policy",
+                "cyber-statecraft"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html",
+                    "pdf"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "rand_cast",
+            "name": "RAND – AI, Security, and Technology",
+            "url": "https://www.rand.org/topics/artificial-intelligence.html",
+            "source_type": "think_tank",
+            "domains": [
+                "national_security",
+                "ai"
+            ],
+            "topics": [
+                "emerging-tech",
+                "risk",
+                "policy"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html",
+                    "pdf"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "cset_main",
+            "name": "Center for Security and Emerging Technology (CSET)",
+            "url": "https://cset.georgetown.edu",
+            "source_type": "think_tank",
+            "domains": [
+                "national_security",
+                "ai"
+            ],
+            "topics": [
+                "emerging-tech",
+                "policy",
+                "data"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html",
+                    "pdf"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "future_of_life_ai_policy",
+            "name": "Future of Life Institute – AI Policy",
+            "url": "https://futureoflife.org/ai-policy",
+            "source_type": "ngo",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "policy",
+                "ethics",
+                "risk"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html",
+                    "pdf"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "tech_policy_press",
+            "name": "Tech Policy Press",
+            "url": "https://techpolicy.press",
+            "source_type": "magazine",
+            "domains": [
+                "technology_policy"
+            ],
+            "topics": [
+                "platforms",
+                "democracy",
+                "governance"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "mit_technology_review",
+            "name": "MIT Technology Review",
+            "url": "https://www.technologyreview.com",
+            "source_type": "magazine",
+            "domains": [
+                "technology"
+            ],
+            "topics": [
+                "ai",
+                "cybersecurity",
+                "future-tech"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "wired_security",
+            "name": "WIRED – Security",
+            "url": "https://www.wired.com/category/security",
+            "source_type": "magazine",
+            "domains": [
+                "cybersecurity",
+                "technology"
+            ],
+            "topics": [
+                "security",
+                "culture"
+            ],
+            "tier": "secondary",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "ieee_spectrum_ai",
+            "name": "IEEE Spectrum – AI",
+            "url": "https://spectrum.ieee.org/artificial-intelligence",
+            "source_type": "magazine",
+            "domains": [
+                "ai",
+                "engineering"
+            ],
+            "topics": [
+                "hardware",
+                "robotics"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "auto",
+                "media_types": [
+                    "html"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "stratechery",
+            "name": "Stratechery",
+            "url": "https://stratechery.com",
+            "source_type": "newsletter",
+            "domains": [
+                "technology",
+                "business"
+            ],
+            "topics": [
+                "strategy",
+                "platforms",
+                "economics"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "rss_or_email",
+                "media_types": [
+                    "html",
+                    "text"
+                ],
+                "transcript_required": false
+            }
+        },
+        {
+            "id": "darknet_diaries",
+            "name": "Darknet Diaries",
+            "url": "https://darknetdiaries.com",
+            "source_type": "podcast",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "operations",
+                "crime",
+                "stories"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "podcast_rss",
+                "media_types": [
+                    "audio"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "risky_business",
+            "name": "Risky Business",
+            "url": "https://risky.biz",
+            "source_type": "podcast",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "news",
+                "industry"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "podcast_rss",
+                "media_types": [
+                    "audio"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "lawfare_podcast",
+            "name": "The Lawfare Podcast",
+            "url": "https://www.lawfaremedia.org/podcasts/lawfare-podcast",
+            "source_type": "podcast",
+            "domains": [
+                "national_security"
+            ],
+            "topics": [
+                "law",
+                "policy",
+                "cyber"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "podcast_rss",
+                "media_types": [
+                    "audio"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "wotr_podcast",
+            "name": "War on the Rocks Podcast",
+            "url": "https://warontherocks.com/podcasts",
+            "source_type": "podcast",
+            "domains": [
+                "national_security"
+            ],
+            "topics": [
+                "strategy",
+                "defense",
+                "technology"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "podcast_rss",
+                "media_types": [
+                    "audio"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "cognitive_revolution",
+            "name": "The Cognitive Revolution",
+            "url": "https://www.cognitiverevolution.ai",
+            "source_type": "podcast",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "frontier-models",
+                "industry"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "podcast_rss",
+                "media_types": [
+                    "audio"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "latent_space",
+            "name": "Latent Space",
+            "url": "https://www.latent.space",
+            "source_type": "podcast",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "builders",
+                "infra"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "podcast_rss",
+                "media_types": [
+                    "audio"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "twiml",
+            "name": "TWIML AI Podcast",
+            "url": "https://twimlai.com",
+            "source_type": "podcast",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "ml",
+                "applied-ai"
+            ],
+            "tier": "secondary",
+            "language": "en",
+            "ingest": {
+                "method": "podcast_rss",
+                "media_types": [
+                    "audio"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "in_machines_we_trust",
+            "name": "In Machines We Trust",
+            "url": "https://www.technologyreview.com/topic/podcasts/in-machines-we-trust",
+            "source_type": "podcast",
+            "domains": [
+                "ai",
+                "society"
+            ],
+            "topics": [
+                "surveillance",
+                "governance"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "podcast_rss",
+                "media_types": [
+                    "audio"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "axrp",
+            "name": "AXRP – The AI X-risk Research Podcast",
+            "url": "https://axrp.net",
+            "source_type": "podcast",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "safety",
+                "x-risk"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "podcast_rss",
+                "media_types": [
+                    "audio"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "john_hammond_youtube",
+            "name": "John Hammond",
+            "url": "https://www.youtube.com/@JohnHammond010",
+            "source_type": "youtube_channel",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "offense",
+                "ctf",
+                "malware"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "youtube",
+                "media_types": [
+                    "video"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "liveoverflow_youtube",
+            "name": "LiveOverflow",
+            "url": "https://www.youtube.com/@LiveOverflow",
+            "source_type": "youtube_channel",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "offense",
+                "reverse-engineering"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "youtube",
+                "media_types": [
+                    "video"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "bhis_youtube",
+            "name": "Black Hills Information Security",
+            "url": "https://www.youtube.com/@BlackHillsInfoSec",
+            "source_type": "youtube_channel",
+            "domains": [
+                "cybersecurity"
+            ],
+            "topics": [
+                "red-team",
+                "blue-team",
+                "webinars"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "youtube",
+                "media_types": [
+                    "video"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "two_minute_papers",
+            "name": "Two Minute Papers",
+            "url": "https://www.youtube.com/@TwoMinutePapers",
+            "source_type": "youtube_channel",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "research",
+                "explainers"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "youtube",
+                "media_types": [
+                    "video"
+                ],
+                "transcript_required": true
+            }
+        },
+        {
+            "id": "deeplearning_ai_youtube",
+            "name": "DeepLearning.AI",
+            "url": "https://www.youtube.com/@DeeplearningAI",
+            "source_type": "youtube_channel",
+            "domains": [
+                "ai"
+            ],
+            "topics": [
+                "education",
+                "interviews"
+            ],
+            "tier": "core",
+            "language": "en",
+            "ingest": {
+                "method": "youtube",
+                "media_types": [
+                    "video"
+                ],
+                "transcript_required": true
+            }
+        }
+    ]
+}

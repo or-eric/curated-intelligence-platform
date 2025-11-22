@@ -95,7 +95,7 @@ export class ApiService {
         return {
             id: backendItem.id.toString(),
             title: summaryData.title || backendItem.title,
-            source: summaryData.source_url ? new URL(summaryData.source_url).hostname.replace('www.', '') : 'Unknown Source',
+            source: this.safeGetHostname(summaryData.source_url || backendItem.url),
             category: 'Technology', // Default, could infer from tags/content
             format: 'Article',
             publishedDate: summaryData.date || backendItem.published_at,
@@ -197,6 +197,15 @@ export class ApiService {
         }
 
         return this.pickRandom(images['tech'], title);
+    }
+
+    private safeGetHostname(url: string): string {
+        if (!url) return 'Unknown Source';
+        try {
+            return new URL(url).hostname.replace('www.', '');
+        } catch (e) {
+            return 'Unknown Source';
+        }
     }
 
     private pickRandom(arr: string[], seed: string): string {

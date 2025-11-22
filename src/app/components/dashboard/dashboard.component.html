@@ -87,13 +87,13 @@
   } @else {
   @if (layout() === 'grid') {
   <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-    @for (item of filteredItems(); track item.id) {
+    @for (item of filteredContent(); track item.id) {
     <app-content-card [item]="item" [layout]="'grid'"></app-content-card>
     }
   </div>
   } @else {
   <div class="space-y-4">
-    @for (item of filteredItems(); track item.id) {
+    @for (item of filteredContent(); track item.id) {
     <app-content-card [item]="item" [layout]="'list'"></app-content-card>
     }
   </div>
