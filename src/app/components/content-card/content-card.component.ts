@@ -14,6 +14,7 @@ import { LibraryService } from '../../services/library.service';
 export class ContentCardComponent {
   item = input.required<ContentItem>();
   index = input<number>(0);
+  layout = input<'grid' | 'list'>('grid');
   saveToggled = output<string>();
 
   private libraryService = inject(LibraryService);
