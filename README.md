@@ -1,5 +1,8 @@
 # Curated Intelligence Platform
 
+Last Updated: 2025-11-23
+
+
 A sophisticated intelligence platform designed for C-suite executives, providing AI-curated insights on AI, Technology, Security, and Governance.
 
 ## Overview
