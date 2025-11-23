@@ -17,18 +17,18 @@ async function runPipeline() {
 
     try {
         // Phase 1: Ingestion
-        console.log('\n--- PHASE 1: INGESTION ---');
-        const ingestResults = await runIngestion(10); // Limit 10 new items
-        console.log('Ingestion Results:', ingestResults);
+        // console.log('\n--- PHASE 1: INGESTION ---');
+        // const ingestResults = await runIngestion(50); // Increased limit
+        // console.log('Ingestion Results:', ingestResults);
 
         // Phase 2: Extraction
         console.log('\n--- PHASE 2: EXTRACTION ---');
-        const extractResults = await runExtraction(10);
+        const extractResults = await runExtraction(50);
         console.log('Extraction Results:', extractResults);
 
         // Phase 3: Scoring
         console.log('\n--- PHASE 3: SCORING ---');
-        const scoreResults = await runScoring(10);
+        const scoreResults = await runScoring(50);
         console.log('Scoring Results:', scoreResults);
 
     } catch (error) {
