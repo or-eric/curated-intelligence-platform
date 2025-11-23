@@ -103,7 +103,7 @@ export class ApiService {
             id: backendItem.id.toString(),
             title: summaryData.title || backendItem.title,
             source: this.safeGetHostname(summaryData.source_url || backendItem.url),
-            category: 'Technology', // Default, could infer from tags/content
+            category: backendItem.category || 'Technology', // Default to Technology if missing
             format: 'Article',
             publishedDate: summaryData.date || backendItem.published_at,
             url: summaryData.source_url || backendItem.url,

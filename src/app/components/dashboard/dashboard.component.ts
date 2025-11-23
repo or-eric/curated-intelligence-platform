@@ -64,7 +64,7 @@ export class DashboardComponent {
       .filter(item => {
         if (domains.has('All')) return true;
         // Check if item has ANY of the selected domains in its topics
-        return item.tags?.some(tag => domains.has(tag)) || item.category && domains.has(item.category);
+        return item.topics?.some(topic => domains.has(topic)) || item.category && domains.has(item.category);
       })
       .filter(item => (item.totalScore || 0) >= threshold);
 
