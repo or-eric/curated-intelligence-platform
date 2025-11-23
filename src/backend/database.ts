@@ -10,6 +10,7 @@ export const database = {
         url: string;
         title: string;
         source: string;
+        source_id: string;
         published_date: string;
         raw_content: string;
         summary: string;
@@ -19,13 +20,14 @@ export const database = {
         topics?: string[];
     }) {
         await db.query(
-            `INSERT INTO content_items (url, title, source, published_at, normalized_text, summary, image_url, status, tags, topics)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+            `INSERT INTO content_items (url, title, source, source_id, published_at, normalized_text, summary, image_url, status, tags, topics)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
        ON CONFLICT (url) DO NOTHING`,
             [
                 item.url,
                 item.title,
                 item.source,
+                item.source_id,
                 item.published_date,
                 item.raw_content, // Maps to normalized_text
                 item.summary,

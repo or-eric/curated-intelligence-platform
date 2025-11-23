@@ -38,6 +38,7 @@ export class DashboardComponent {
   layout = signal<Layout>('grid');
   qualityThreshold = signal<number>(0);
   visibleItemCount = signal<number>(this.initialItemCount);
+  timeRange = signal<string>('all');
 
   readonly domains: string[] = [
     'All', 'AI', 'Books', 'Business', 'Creativity', 'Culture', 'Cybersecurity',
@@ -47,6 +48,12 @@ export class DashboardComponent {
   ];
 
   readonly sortOptions: SortOption[] = ['Date', 'Judgement', 'Source'];
+  readonly timeRanges: { label: string, value: string }[] = [
+    { label: '24h', value: '24h' },
+    { label: '7d', value: '7d' },
+    { label: '30d', value: '30d' },
+    { label: 'All', value: 'all' }
+  ];
 
   filteredContent = computed(() => {
     const domains = this.selectedDomains();
@@ -58,11 +65,6 @@ export class DashboardComponent {
         if (domains.has('All')) return true;
         // Check if item has ANY of the selected domains in its topics
         return item.tags?.some(tag => domains.has(tag)) || item.category && domains.has(item.category);
-        // Note: Backend saves domains to 'topics' which maps to 'tags' in frontend model? 
-        // Wait, 'topics' in DB maps to 'tags' in model? No, let's check model.
-        // Model has 'tags' (Personas) and 'category'. 
-        // Actually, 'topics' from Gemini are saved to 'topics' column.
-        // I need to check if ContentItem model has 'topics'.
       })
       .filter(item => (item.totalScore || 0) >= threshold);
 
@@ -88,6 +90,12 @@ export class DashboardComponent {
   paginatedContent = computed(() => {
     return this.filteredContent();
   });
+
+  setTimeRange(range: string) {
+    this.timeRange.set(range);
+    this.currentPage.set(1);
+    this.contentService.refresh(range);
+  }
 
   toggleDomain(domain: string) {
     this.selectedDomains.update(current => {
@@ -133,7 +141,7 @@ export class DashboardComponent {
 
   loadMore() {
     this.currentPage.update(p => p + 1);
-    this.contentService.loadMore(this.currentPage());
+    this.contentService.loadMore(this.currentPage(), this.timeRange());
   }
 
   onItemClicked(item: ContentItem) {

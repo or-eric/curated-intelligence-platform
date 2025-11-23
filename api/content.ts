@@ -13,17 +13,34 @@ export default async function handler(request: Request) {
 
     try {
         const url = new URL(request.url);
+        const id = url.searchParams.get('id');
+        const timeRange = url.searchParams.get('timeRange') || 'all';
         const limit = parseInt(url.searchParams.get('limit') || '20');
         const page = parseInt(url.searchParams.get('page') || '1');
         const offset = (page - 1) * limit;
 
         console.log('Connecting to database via neon serverless...');
-        // Note: in edge, we don't need explicit connect(), query() handles it, but let's be safe
-        const result = await pool.query(`
-            SELECT * FROM content_items 
-            ORDER BY published_at DESC 
-            LIMIT $1 OFFSET $2
-        `, [limit, offset]);
+
+        let result;
+        if (id) {
+            result = await pool.query(`SELECT * FROM content_items WHERE id = $1`, [id]);
+        } else {
+            let timeFilter = '';
+            if (timeRange === '24h') {
+                timeFilter = `WHERE published_at >= NOW() - INTERVAL '24 hours'`;
+            } else if (timeRange === '7d') {
+                timeFilter = `WHERE published_at >= NOW() - INTERVAL '7 days'`;
+            } else if (timeRange === '30d') {
+                timeFilter = `WHERE published_at >= NOW() - INTERVAL '30 days'`;
+            }
+
+            result = await pool.query(`
+                SELECT * FROM content_items 
+                ${timeFilter}
+                ORDER BY published_at DESC 
+                LIMIT $1 OFFSET $2
+            `, [limit, offset]);
+        }
 
         console.log(`Found ${result.rows.length} items.`);
 
@@ -45,9 +62,6 @@ export default async function handler(request: Request) {
             headers: { 'Content-Type': 'application/json' }
         });
     } finally {
-        // In edge, we might not strictly need to end, but good practice
-        // However, for serverless driver over HTTP, it's stateless mostly.
-        // But let's call end() to be clean.
         await pool.end();
     }
 }

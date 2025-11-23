@@ -18,11 +18,11 @@ export class ApiService {
         this.fetchContent();
     }
 
-    fetchContent(page: number = 1, limit: number = 20) {
+    fetchContent(page: number = 1, limit: number = 20, timeRange: string = 'all') {
         this.isLoading.set(true);
         this.error.set(null);
 
-        this.http.get<any[]>(`/api/content?page=${page}&limit=${limit}`)
+        this.http.get<any[]>(`/api/content?page=${page}&limit=${limit}&timeRange=${timeRange}`)
             .pipe(
                 map(items => items.map(item => this.mapToContentItem(item)))
             )
@@ -41,6 +41,13 @@ export class ApiService {
                     this.isLoading.set(false);
                 }
             });
+    }
+
+    getItem(id: string) {
+        return this.http.get<any[]>(`/api/content?id=${id}`)
+            .pipe(
+                map(items => items.length > 0 ? this.mapToContentItem(items[0]) : null)
+            );
     }
 
     private mapToContentItem(backendItem: any): ContentItem {

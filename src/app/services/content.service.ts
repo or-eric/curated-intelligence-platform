@@ -17,11 +17,11 @@ export class ContentService {
     return this.apiService.contentItems;
   }
 
-  refresh() {
-    this.apiService.fetchContent(1);
+  refresh(timeRange: string = 'all') {
+    this.apiService.fetchContent(1, 20, timeRange);
   }
 
-  loadMore(page: number) {
-    this.apiService.fetchContent(page);
+  loadMore(page: number, timeRange: string = 'all') {
+    this.apiService.fetchContent(page, 20, timeRange);
   }
 }

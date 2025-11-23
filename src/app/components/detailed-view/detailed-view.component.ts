@@ -54,7 +54,7 @@ export class DetailedViewComponent implements OnDestroy {
   share() {
     clearTimeout(this.tooltipTimeout);
     const item = this.contentItem();
-    const url = `${window.location.origin}${window.location.pathname}#item/${item.id}`;
+    const url = `${window.location.origin}${window.location.pathname}?shareId=${item.id}`;
     navigator.clipboard.writeText(url).then(() => {
       this.showCopiedTooltip.set(true);
       this.tooltipTimeout = setTimeout(() => {

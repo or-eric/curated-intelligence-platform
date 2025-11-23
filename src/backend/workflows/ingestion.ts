@@ -38,19 +38,16 @@ async function readSources(): Promise<SourceConfig[]> {
     }
 }
 
-export async function runIngestion(limit: number = 5) {
+export async function runIngestion(limit: number = 5, sourceFilter?: string) {
     console.log('Starting ingestion phase...');
     const sources = await readSources();
     console.log(`Found ${sources.length} sources in configuration.`);
 
     for (const source of sources) {
-        console.log(`Processing source: ${source.name} (${source.url})`);
-
-        // Skip unsupported ingestion methods for now
-        if (source.ingest.method === 'podcast_rss' || source.ingest.method === 'youtube') {
-            console.log(`Skipping ${source.name}: Ingestion method '${source.ingest.method}' not yet supported.`);
+        if (sourceFilter && !source.name.toLowerCase().includes(sourceFilter.toLowerCase())) {
             continue;
         }
+        console.log(`Processing source: ${source.name} (${source.url})`);
 
         try {
             let feedItems: any[] = [];
@@ -72,8 +69,8 @@ export async function runIngestion(limit: number = 5) {
             // 1. Try the URL exactly as provided
             let feed = await tryParse(source.url);
 
-            // 2. If that fails, try common RSS suffixes
-            if (!feed) {
+            // 2. If that fails, try common RSS suffixes (only for 'auto' or 'rss_or_email')
+            if (!feed && (source.ingest.method === 'auto' || source.ingest.method === 'rss_or_email')) {
                 const suffixes = ['/feed', '/rss', '/rss.xml', '/feed.xml', '/atom.xml'];
                 for (const suffix of suffixes) {
                     // Ensure we don't double slash
@@ -106,21 +103,46 @@ export async function runIngestion(limit: number = 5) {
                         continue;
                     }
 
-                    // Scrape full content
-                    const scrapedData = await scraperService.fetchArticleContent(item.link);
+                    let rawContent = '';
+                    let imageUrl = item.image?.url || item.itunes?.image;
+
+                    // Handle specific types
+                    if (source.ingest.method === 'podcast_rss') {
+                        // For podcasts, raw_content is the description + audio link
+                        rawContent = `[PODCAST] ${item.contentSnippet || item.content || ''}\n\nAudio: ${item.enclosure?.url || ''}`;
+                        if (!imageUrl && item.itunes?.image) imageUrl = item.itunes.image;
+                    } else if (source.ingest.method === 'youtube') {
+                        // For YouTube, raw_content is description + video link
+                        rawContent = `[YOUTUBE] ${item.contentSnippet || item.content || ''}\n\nVideo: ${item.link}`;
+                        // YouTube RSS often has media:group with media:thumbnail
+                        if (!imageUrl && item['media:group'] && item['media:group']['media:thumbnail']) {
+                            imageUrl = item['media:group']['media:thumbnail'][0]?.$.url;
+                        }
+                    } else {
+                        // Standard Web Scrape
+                        try {
+                            const scrapedData = await scraperService.fetchArticleContent(item.link);
+                            rawContent = scrapedData.content;
+                            if (!imageUrl) imageUrl = scrapedData.image;
+                        } catch (err) {
+                            console.warn(`    - Failed to scrape ${item.link}, using RSS summary.`);
+                            rawContent = item.content || item.contentSnippet || '';
+                        }
+                    }
 
                     // Save to DB
                     await database.addContentItem({
                         url: item.link,
                         title: item.title,
                         source: source.name,
+                        source_id: source.id,
                         published_date: item.isoDate || new Date().toISOString(),
-                        raw_content: scrapedData.content, // Save the full scraped content
-                        summary: JSON.stringify({ content: item.contentSnippet || '' }), // Initial RSS summary as JSON
-                        image_url: scrapedData.image || item.enclosure?.url || item.image?.url, // Capture image
+                        raw_content: rawContent,
+                        summary: JSON.stringify({ content: item.contentSnippet || '' }),
+                        image_url: imageUrl || item.enclosure?.url,
                         status: 'raw',
-                        tags: source.topics, // Use source topics as initial tags
-                        topics: source.domains // Use source domains as initial topics
+                        tags: source.topics,
+                        topics: source.domains
                     });
                     console.log(`  - Ingested: ${item.title}`);
                 }

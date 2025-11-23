@@ -95,7 +95,7 @@
         {
             "id": "cisa_alerts",
             "name": "CISA Alerts and Advisories",
-            "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+            "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
             "source_type": "gov_alerts",
             "domains": [
                 "cybersecurity",
@@ -728,7 +728,7 @@
         {
             "id": "darknet_diaries",
             "name": "Darknet Diaries",
-            "url": "https://darknetdiaries.com",
+            "url": "https://feeds.megaphone.fm/darknetdiaries",
             "source_type": "podcast",
             "domains": [
                 "cybersecurity"
@@ -930,7 +930,7 @@
         {
             "id": "john_hammond_youtube",
             "name": "John Hammond",
-            "url": "https://www.youtube.com/@JohnHammond010",
+            "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw",
             "source_type": "youtube_channel",
             "domains": [
                 "cybersecurity"

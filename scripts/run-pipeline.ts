@@ -1,7 +1,6 @@
 import dotenv from 'dotenv';
 import path from 'path';
 
-// Load production env vars
 // Load env vars
 dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
@@ -23,12 +22,12 @@ async function runPipeline() {
 
         // Phase 2: Extraction
         console.log('\n--- PHASE 2: EXTRACTION ---');
-        const extractResults = await runExtraction(20);
+        const extractResults = await runExtraction(60);
         console.log('Extraction Results:', extractResults);
 
         // Phase 3: Scoring
         console.log('\n--- PHASE 3: SCORING ---');
-        const scoreResults = await runScoring(20);
+        const scoreResults = await runScoring(60);
         console.log('Scoring Results:', scoreResults);
 
     } catch (error) {
