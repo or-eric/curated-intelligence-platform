@@ -91,11 +91,7 @@
   </div>
 
   <!-- Content Feed -->
-  @if (contentService.loading()) {
-  <div class="flex justify-center py-12">
-    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-  </div>
-  } @else {
+  <!-- Content Feed -->
   @if (layout() === 'grid') {
   <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
     @for (item of filteredContent(); track item.id) {
@@ -111,5 +107,11 @@
     }
   </div>
   }
+
+  <!-- Loading Indicator -->
+  @if (contentService.loading()) {
+  <div class="flex justify-center py-12">
+    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+  </div>
   }
 </div>

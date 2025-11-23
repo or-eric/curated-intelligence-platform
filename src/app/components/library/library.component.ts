@@ -32,6 +32,10 @@ export class LibraryComponent {
     this.itemSelected.emit(item);
   }
 
+  onToggleSave(id: string) {
+    this.libraryService.toggleItem(id);
+  }
+
   exportBoardPack() {
     const items = this.savedItems();
     if (items.length === 0) return;

@@ -37,7 +37,7 @@ export class ContentCardComponent {
   evidenceLabel = computed(() => {
     const score = this.item().evidenceQuality || 0;
     if (score >= 80) return 'High Evidence';
-    if (score >= 50) return 'Med Evidence';
+    if (score >= 50) return 'Moderate Evidence';
     return 'Low Evidence';
   });
 

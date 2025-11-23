@@ -15,7 +15,8 @@
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
     @for (item of savedItems(); track item.id; let i = $index) {
-    <app-content-card [item]="item" [index]="i" (click)="onItemClicked(item)"></app-content-card>
+    <app-content-card [item]="item" [index]="i" (click)="onItemClicked(item)"
+      (saveToggled)="onToggleSave($event)"></app-content-card>
     } @empty {
     <div class="col-span-full text-center py-16 bg-slate-800/50 rounded-lg border border-dashed border-slate-700">
       <svg class="mx-auto h-12 w-12 text-slate-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
