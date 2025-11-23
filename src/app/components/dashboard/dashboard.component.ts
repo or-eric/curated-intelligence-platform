@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, output, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, output, signal, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContentService } from '../../services/content.service';
 import { ContentItem } from '../../models/content-item.model';
@@ -9,7 +9,7 @@ import { LibraryService } from '../../services/library.service';
 
 type TopicFilter = 'All' | 'Security' | 'Technology' | 'Humans';
 type Layout = 'grid' | 'list';
-type SortOption = 'Date' | 'Judgement' | 'Source';
+type SortOption = 'Newest' | 'Score' | 'Oldest';
 
 const JUDGEMENT_ORDER: { [key in ContentItem['advisoryJudgement']]: number } = {
   'Critical - Act': 3,
@@ -34,7 +34,7 @@ export class DashboardComponent {
 
   // Filter and view state signals
   selectedDomains = signal<Set<string>>(new Set(['All']));
-  sortBy = signal<SortOption>('Date');
+  sortBy = signal<SortOption>('Newest');
   layout = signal<Layout>('grid');
   qualityThreshold = signal<number>(0);
   visibleItemCount = signal<number>(this.initialItemCount);
@@ -47,7 +47,7 @@ export class DashboardComponent {
     'Technology', 'Writing'
   ];
 
-  readonly sortOptions: SortOption[] = ['Date', 'Judgement', 'Source'];
+  readonly sortOptions: SortOption[] = ['Newest', 'Score', 'Oldest'];
   readonly timeRanges: { label: string, value: string }[] = [
     { label: '24h', value: '24h' },
     { label: '7d', value: '7d' },
@@ -66,21 +66,19 @@ export class DashboardComponent {
         // Check if item has ANY of the selected domains in its topics
         return item.topics?.some(topic => domains.has(topic)) || item.category && domains.has(item.category);
       })
-      .filter(item => (item.totalScore || 0) >= threshold);
-
-    // Sorting logic
-    switch (sort) {
-      case 'Judgement':
-        items = items.sort((a, b) => JUDGEMENT_ORDER[b.advisoryJudgement] - JUDGEMENT_ORDER[a.advisoryJudgement]);
-        break;
-      case 'Source':
-        items = items.sort((a, b) => a.source.localeCompare(b.source));
-        break;
-      case 'Date':
-      default:
-        items = items.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
-        break;
-    }
+      .filter(item => (item.totalScore || 0) >= threshold)
+      .sort((a, b) => {
+        switch (this.sortBy()) {
+          case 'Newest':
+            return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
+          case 'Oldest':
+            return new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime();
+          case 'Score':
+            return (b.totalScore || 0) - (a.totalScore || 0);
+          default:
+            return 0;
+        }
+      });
 
     return items;
   });
@@ -142,6 +140,19 @@ export class DashboardComponent {
   loadMore() {
     this.currentPage.update(p => p + 1);
     this.contentService.loadMore(this.currentPage(), this.timeRange());
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    if (this.contentService.loading()) return;
+
+    const threshold = 500;
+    const position = window.scrollY + window.innerHeight;
+    const height = document.body.scrollHeight;
+
+    if (position > height - threshold) {
+      this.loadMore();
+    }
   }
 
   onItemClicked(item: ContentItem) {

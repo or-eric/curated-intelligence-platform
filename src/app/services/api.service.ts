@@ -102,7 +102,7 @@ export class ApiService {
         return {
             id: backendItem.id.toString(),
             title: summaryData.title || backendItem.title,
-            source: this.safeGetHostname(summaryData.source_url || backendItem.url),
+            source: this.safeGetHostname(summaryData.source_url || backendItem.url, backendItem.url),
             category: backendItem.category || 'Technology', // Default to Technology if missing
             format: 'Article',
             publishedDate: summaryData.date || backendItem.published_at,
@@ -206,13 +206,22 @@ export class ApiService {
         return this.pickRandom(images['tech'], title);
     }
 
-    private safeGetHostname(url: string): string {
-        if (!url) return 'Unknown Source';
-        try {
-            return new URL(url).hostname.replace('www.', '');
-        } catch (e) {
-            return 'Unknown Source';
-        }
+    private safeGetHostname(url: string, fallbackUrl?: string): string {
+        const tryParse = (u: string) => {
+            if (!u || u === 'null' || u === 'undefined') return null;
+            try {
+                let hostname = new URL(u).hostname.replace('www.', '');
+                // Handle specific cases like 'darkreading.com' -> 'Dark Reading'
+                if (hostname === 'darkreading.com') return 'Dark Reading';
+                if (hostname === 'krebsonsecurity.com') return 'KrebsOnSecurity';
+                if (hostname === 'schneier.com') return 'Schneier on Security';
+                return hostname.charAt(0).toUpperCase() + hostname.slice(1);
+            } catch (e) {
+                return null;
+            }
+        };
+
+        return tryParse(url) || tryParse(fallbackUrl) || 'Unknown Source';
     }
 
     private pickRandom(arr: string[], seed: string): string {

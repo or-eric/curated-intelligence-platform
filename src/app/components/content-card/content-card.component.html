@@ -47,25 +47,35 @@
     <!-- Meta Header -->
     <div class="flex justify-between items-center mb-3">
       <div class="flex items-center gap-2 text-xs font-medium text-slate-400">
-        <span class="uppercase tracking-wider">{{ item.source }}</span>
+        <span class="uppercase tracking-wider font-bold text-slate-300">{{ item.source }}</span>
         <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
         <span>{{ item.publishedDate | date:'MMM d' }}</span>
       </div>
 
-      <!-- Score Band Label -->
-      @if (item.scoreBand) {
-      <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded border"
-        [class.bg-slate-800]="item.scoreBand === 'Ignore'" [class.text-slate-500]="item.scoreBand === 'Ignore'"
-        [class.border-slate-700]="item.scoreBand === 'Ignore'" [class.bg-gray-800]="item.scoreBand === 'Skim'"
-        [class.text-gray-400]="item.scoreBand === 'Skim'" [class.border-gray-700]="item.scoreBand === 'Skim'"
-        [class.bg-blue-900/30]="item.scoreBand === 'Good'" [class.text-blue-300]="item.scoreBand === 'Good'"
-        [class.border-blue-800]="item.scoreBand === 'Good'" [class.bg-green-900/30]="item.scoreBand === 'Strong'"
-        [class.text-green-300]="item.scoreBand === 'Strong'" [class.border-green-800]="item.scoreBand === 'Strong'"
-        [class.bg-purple-900/30]="item.scoreBand === 'Top-tier'" [class.text-purple-300]="item.scoreBand === 'Top-tier'"
-        [class.border-purple-800]="item.scoreBand === 'Top-tier'">
-        {{ item.scoreBand }}
-      </span>
-      }
+      <!-- Score Band & Evidence Label -->
+      <div class="flex gap-2">
+        @if (item.scoreBand) {
+        <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded border"
+          [class.bg-slate-800]="item.scoreBand === 'Ignore'" [class.text-slate-500]="item.scoreBand === 'Ignore'"
+          [class.border-slate-700]="item.scoreBand === 'Ignore'" [class.bg-gray-800]="item.scoreBand === 'Skim'"
+          [class.text-gray-400]="item.scoreBand === 'Skim'" [class.border-gray-700]="item.scoreBand === 'Skim'"
+          [class.bg-blue-900/30]="item.scoreBand === 'Good'" [class.text-blue-300]="item.scoreBand === 'Good'"
+          [class.border-blue-800]="item.scoreBand === 'Good'" [class.bg-green-900/30]="item.scoreBand === 'Strong'"
+          [class.text-green-300]="item.scoreBand === 'Strong'" [class.border-green-800]="item.scoreBand === 'Strong'"
+          [class.bg-purple-900/30]="item.scoreBand === 'Top-tier'"
+          [class.text-purple-300]="item.scoreBand === 'Top-tier'"
+          [class.border-purple-800]="item.scoreBand === 'Top-tier'">
+          {{ item.scoreBand }}
+        </span>
+        }
+
+        @if (item.evidenceQuality) {
+        <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded border"
+          [class]="evidenceColor()">
+          {{ evidenceLabel() }}
+        </span>
+        }
+      </div>
     </div>
 
     <!-- Title -->
@@ -73,6 +83,16 @@
       class="text-lg font-bold text-slate-100 mb-2 leading-snug group-hover:text-blue-400 transition-colors line-clamp-2">
       {{ item.title }}
     </h3>
+
+    <!-- Why it Matters -->
+    @if (item.executiveSummary?.whyWeHighlightThis) {
+    <div class="mb-3 p-2 bg-blue-900/20 border-l-2 border-blue-500 rounded-r">
+      <p class="text-xs font-medium text-blue-200 uppercase tracking-wide mb-1">Why it Matters</p>
+      <p class="text-xs text-slate-300 line-clamp-2 italic">
+        "{{ item.executiveSummary?.whyWeHighlightThis }}"
+      </p>
+    </div>
+    }
 
     <!-- Summary -->
     <p class="text-sm text-slate-400 leading-relaxed line-clamp-3 mb-4 flex-grow">
@@ -118,7 +138,7 @@
         {{ item.title }}
       </h3>
       <div class="flex items-center gap-3 text-xs text-slate-400 mt-1">
-        <span class="font-medium text-slate-300">{{ item.source }}</span>
+        <span class="font-bold text-slate-200">{{ item.source }}</span>
         <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
         <span>{{ item.publishedDate | date:'MMM d' }}</span>
         <span class="w-1 h-1 bg-slate-600 rounded-full"></span>

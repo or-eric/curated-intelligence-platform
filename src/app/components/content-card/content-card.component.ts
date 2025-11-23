@@ -34,6 +34,20 @@ export class ContentCardComponent {
     return `${minutes} min read`;
   });
 
+  evidenceLabel = computed(() => {
+    const score = this.item().evidenceQuality || 0;
+    if (score >= 80) return 'High Evidence';
+    if (score >= 50) return 'Med Evidence';
+    return 'Low Evidence';
+  });
+
+  evidenceColor = computed(() => {
+    const score = this.item().evidenceQuality || 0;
+    if (score >= 80) return 'bg-green-900/30 text-green-300 border-green-800';
+    if (score >= 50) return 'bg-yellow-900/30 text-yellow-300 border-yellow-800';
+    return 'bg-red-900/30 text-red-300 border-red-800';
+  });
+
   getTagColor(tag: string): string {
     const lowerTag = tag.toLowerCase();
     if (lowerTag.includes('ciso') || lowerTag.includes('cro')) {
