@@ -27,6 +27,12 @@ export class ContentCardComponent {
     return 'bg-green-600 text-white';
   });
 
+  readingTime = computed(() => {
+    const words = (this.item().summary || '').split(/\s+/).length + (this.item().executiveSummary?.eventAnalysis || '').split(/\s+/).length;
+    const minutes = Math.ceil(words / 200);
+    return `${minutes} min read`;
+  });
+
   getTagColor(tag: string): string {
     const lowerTag = tag.toLowerCase();
     if (lowerTag.includes('ciso') || lowerTag.includes('cro')) {
@@ -35,7 +41,7 @@ export class ContentCardComponent {
     if (lowerTag.includes('caio') || lowerTag.includes('cto')) {
       return 'bg-orange-500 text-white';
     }
-     if (lowerTag.includes('board')) {
+    if (lowerTag.includes('board')) {
       return 'bg-purple-600 text-white';
     }
     return 'bg-slate-600 text-white';

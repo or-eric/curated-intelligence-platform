@@ -17,19 +17,19 @@
             [class.hover:text-slate-200]="activeTab() !== 'executive'">
             Executive Summary
           </button>
+          <button (click)="activeTab.set('analysis')"
+            class="px-3 py-2 font-medium text-sm rounded-t-md border-b-2 transition-colors"
+            [class.border-blue-500]="activeTab() === 'analysis'" [class.text-white]="activeTab() === 'analysis'"
+            [class.border-transparent]="activeTab() !== 'analysis'" [class.text-slate-400]="activeTab() !== 'analysis'"
+            [class.hover:text-slate-200]="activeTab() !== 'analysis'">
+            Analysis
+          </button>
           <button (click)="activeTab.set('lessons')"
             class="px-3 py-2 font-medium text-sm rounded-t-md border-b-2 transition-colors"
             [class.border-blue-500]="activeTab() === 'lessons'" [class.text-white]="activeTab() === 'lessons'"
             [class.border-transparent]="activeTab() !== 'lessons'" [class.text-slate-400]="activeTab() !== 'lessons'"
             [class.hover:text-slate-200]="activeTab() !== 'lessons'">
             Lessons for the C-Suites
-          </button>
-          <button (click)="activeTab.set('scoring')"
-            class="px-3 py-2 font-medium text-sm rounded-t-md border-b-2 transition-colors"
-            [class.border-blue-500]="activeTab() === 'scoring'" [class.text-white]="activeTab() === 'scoring'"
-            [class.border-transparent]="activeTab() !== 'scoring'" [class.text-slate-400]="activeTab() !== 'scoring'"
-            [class.hover:text-slate-200]="activeTab() !== 'scoring'">
-            Scoring Analysis
           </button>
         </nav>
         <button (click)="close()" class="text-slate-400 hover:text-white transition-colors" title="Close">
@@ -70,7 +70,7 @@
       <!-- Executive Summary Tab -->
       @if (activeTab() === 'executive') {
       @if (item.executiveSummary; as summary) {
-      <div class="space-y-6">
+      <div class="space-y-6 animate-fadeIn">
         <h1 class="text-3xl font-bold text-white">{{ item.title }}</h1>
         <div class="flex items-center gap-4 text-sm text-slate-400">
           <span>{{ item.publishedDate | date:'longDate' }}</span>
@@ -144,109 +144,142 @@
       }
       }
 
+      <!-- Analysis Tab -->
+      @if (activeTab() === 'analysis') {
+      <div class="space-y-8 animate-fadeIn">
+
+        <!-- Extracted Metadata Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="bg-slate-900/50 p-3 rounded border border-slate-700">
+            <dt class="text-xs text-slate-400 uppercase tracking-wider">Category</dt>
+            <dd class="text-slate-200 font-medium mt-1">{{ item.category }}</dd>
+          </div>
+          <div class="bg-slate-900/50 p-3 rounded border border-slate-700">
+            <dt class="text-xs text-slate-400 uppercase tracking-wider">Format</dt>
+            <dd class="text-slate-200 font-medium mt-1">{{ item.format }}</dd>
+          </div>
+          <div class="bg-slate-900/50 p-3 rounded border border-slate-700">
+            <dt class="text-xs text-slate-400 uppercase tracking-wider">Source</dt>
+            <dd class="text-slate-200 font-medium mt-1">{{ item.source }}</dd>
+          </div>
+        </div>
+
+        <!-- Domains -->
+        <div>
+          <h3 class="text-sm font-semibold text-slate-300 mb-3">Detected Domains</h3>
+          <div class="flex flex-wrap gap-2">
+            @for(topic of item.topics; track topic) {
+            <span class="px-2.5 py-1 rounded-full bg-slate-700 text-slate-300 text-xs border border-slate-600">
+              {{ topic }}
+            </span>
+            }
+          </div>
+        </div>
+
+        <!-- Detailed Quality Scores -->
+        <div class="space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-700 pb-4">
+            <h3 class="text-lg font-bold text-slate-100">Quality Scoring</h3>
+            <div class="text-right">
+              <span class="text-3xl font-bold text-white">{{ item.totalScore }}</span>
+              <span class="text-sm text-slate-400">/100</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Helper Template for Progress Bars -->
+            <ng-template #progressBar let-label="label" let-score="score" let-color="color">
+              <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-slate-300">{{ label }}</span>
+                  <span class="text-sm font-bold text-slate-100">{{ score }}/100</span>
+                </div>
+                <div class="w-full bg-slate-700 rounded-full h-2">
+                  <div class="h-2 rounded-full transition-all duration-500" [style.width.%]="score" [class]="color">
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+
+            <ng-container
+              *ngTemplateOutlet="progressBar; context: { label: 'Insight Density', score: item.insightDensity, color: 'bg-blue-500' }"></ng-container>
+            <ng-container
+              *ngTemplateOutlet="progressBar; context: { label: 'Conceptual Depth', score: item.conceptualDepth, color: 'bg-purple-500' }"></ng-container>
+            <ng-container
+              *ngTemplateOutlet="progressBar; context: { label: 'Originality', score: item.originality, color: 'bg-pink-500' }"></ng-container>
+            <ng-container
+              *ngTemplateOutlet="progressBar; context: { label: 'Evidence Quality', score: item.evidenceQuality, color: 'bg-green-500' }"></ng-container>
+            <ng-container
+              *ngTemplateOutlet="progressBar; context: { label: 'Clarity', score: item.clarity, color: 'bg-yellow-500' }"></ng-container>
+            <ng-container
+              *ngTemplateOutlet="progressBar; context: { label: 'Strategic Alignment', score: item.alignment, color: 'bg-red-500' }"></ng-container>
+          </div>
+        </div>
+      </div>
+      }
+
       <!-- Lessons for C-Suite Tab -->
       @if (activeTab() === 'lessons') {
       @if (item.lessonsForCSuite; as lessons) {
-      <div class="space-y-8">
-        <h1 class="text-3xl font-bold text-white leading-tight">{{ lessons.title }}</h1>
-
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-6 pt-6">
-          <div class="lg:col-span-1">
-            <h3 class="font-semibold text-slate-300">Governance Owners</h3>
-          </div>
-          <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
-            <div>
-              <dt class="font-medium text-slate-400">Primary</dt>
-              <dd class="mt-2 flex flex-wrap gap-2">
-                <span class="text-slate-400">{{ item.evidenceQuality || 0 }}/100</span>
-            </div>
-            <div class="w-full bg-slate-700 rounded-full h-2.5">
-              <div class="bg-green-600 h-2.5 rounded-full" [style.width.%]="item.evidenceQuality || 0"></div>
-            </div>
-            <p class="text-xs text-slate-500 mt-2">Strength of data, citations, and logical reasoning.</p>
-          </div>
-
-          <!-- Metric: Clarity -->
-          <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
-            <div class="flex justify-between mb-2">
-              <span class="font-medium text-slate-200">Clarity & Structure</span>
-              <span class="text-slate-400">{{ item.clarity || 0 }}/100</span>
-            </div>
-            <div class="w-full bg-slate-700 rounded-full h-2.5">
-              <div class="bg-yellow-600 h-2.5 rounded-full" [style.width.%]="item.clarity || 0"></div>
-            </div>
-            <p class="text-xs text-slate-500 mt-2">Readability and logical flow of the content.</p>
-          </div>
-
-          <!-- Metric: Alignment -->
-          <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
-            <div class="flex justify-between mb-2">
-              <span class="font-medium text-slate-200">Strategic Alignment</span>
-              <span class="text-slate-400">{{ item.alignment || 0 }}/100</span>
-            </div>
-            <div class="w-full bg-slate-700 rounded-full h-2.5">
-              <div class="bg-indigo-600 h-2.5 rounded-full" [style.width.%]="item.alignment || 0"></div>
-            </div>
-            <p class="text-xs text-slate-500 mt-2">Relevance to core organizational priorities.</p>
-          </div>
-        </div>
-      </div>
-      }
-      }
-
-      <!-- Scoring Analysis Tab -->
-      @if (activeTab() === 'scoring') {
       <div class="space-y-8 animate-fadeIn">
+        <h1 class="text-2xl font-bold text-white leading-tight">{{ lessons.title }}</h1>
 
-        <!-- Top Level Score -->
-        <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 flex items-center justify-between">
-          <div>
-            <h3 class="text-lg font-bold text-slate-100">Total Quality Score</h3>
-            <p class="text-sm text-slate-400">Aggregated from 6 key dimensions</p>
-          </div>
-          <div class="text-right">
-            <div class="text-4xl font-bold text-white">{{ item.totalScore }}</div>
-            <div class="text-sm font-bold px-2 py-1 rounded mt-1 inline-block"
-              [class.bg-slate-700]="item.scoreBand === 'Ignore'" [class.text-slate-400]="item.scoreBand === 'Ignore'"
-              [class.bg-gray-700]="item.scoreBand === 'Skim'" [class.text-gray-300]="item.scoreBand === 'Skim'"
-              [class.bg-blue-900]="item.scoreBand === 'Good'" [class.text-blue-300]="item.scoreBand === 'Good'"
-              [class.bg-indigo-900]="item.scoreBand === 'Strong'" [class.text-indigo-300]="item.scoreBand === 'Strong'"
-              [class.bg-purple-900]="item.scoreBand === 'Top-tier'"
-              [class.text-purple-300]="item.scoreBand === 'Top-tier'">
-              {{ item.scoreBand }}
-            </div>
-          </div>
-        </div>
-
-        <!-- Detailed Breakdown -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Helper Template for Progress Bars -->
-          <ng-template #progressBar let-label="label" let-score="score" let-color="color">
-            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
-              <div class="flex justify-between mb-2">
-                <span class="text-sm font-medium text-slate-300">{{ label }}</span>
-                <span class="text-sm font-bold text-slate-100">{{ score }}/100</span>
-              </div>
-              <div class="w-full bg-slate-700 rounded-full h-2">
-                <div class="h-2 rounded-full transition-all duration-500" [style.width.%]="score" [class]="color"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Left Column: Governance & Impact -->
+          <div class="space-y-6 lg:col-span-1">
+            <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
+              <h3 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-3">Governance Owners</h3>
+              <div class="space-y-4">
+                <div>
+                  <span class="text-xs text-slate-500 block mb-1">Primary</span>
+                  <div class="flex flex-wrap gap-2">
+                    @for(owner of lessons.primaryOwners; track owner) {
+                    <span
+                      class="px-2 py-1 bg-blue-900/30 text-blue-300 border border-blue-800 rounded text-xs font-medium">{{
+                      owner }}</span>
+                    }
+                  </div>
+                </div>
               </div>
             </div>
-          </ng-template>
 
-          <ng-container
-            *ngTemplateOutlet="progressBar; context: { label: 'Insight Density', score: item.insightDensity, color: 'bg-blue-500' }"></ng-container>
-          <ng-container
-            *ngTemplateOutlet="progressBar; context: { label: 'Conceptual Depth', score: item.conceptualDepth, color: 'bg-purple-500' }"></ng-container>
-          <ng-container
-            *ngTemplateOutlet="progressBar; context: { label: 'Originality', score: item.originality, color: 'bg-pink-500' }"></ng-container>
-          <ng-container
-            *ngTemplateOutlet="progressBar; context: { label: 'Evidence Quality', score: item.evidenceQuality, color: 'bg-green-500' }"></ng-container>
-          <ng-container
-            *ngTemplateOutlet="progressBar; context: { label: 'Clarity', score: item.clarity, color: 'bg-yellow-500' }"></ng-container>
-          <ng-container
-            *ngTemplateOutlet="progressBar; context: { label: 'Strategic Alignment', score: item.alignment, color: 'bg-red-500' }"></ng-container>
+            <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
+              <h3 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-3">Potential Impact</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">{{ lessons.accountableEntityImpact }}</p>
+            </div>
+          </div>
+
+          <!-- Right Column: Requirements, Risks, Best Practices -->
+          <div class="lg:col-span-2 space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold text-slate-200 mb-2">Stakeholder Requirements</h3>
+              <p class="text-slate-300 leading-relaxed bg-slate-800/50 p-4 rounded border border-slate-700/50">
+                {{ lessons.stakeholderRequirements }}
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-red-300 mb-2">Risks of Inaction</h3>
+              <p class="text-slate-300 leading-relaxed bg-red-900/10 p-4 rounded border border-red-900/30">
+                {{ lessons.risksWithoutAssurance }}
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-green-300 mb-4">Best Practices & Recommendations</h3>
+              <div class="grid grid-cols-1 gap-4">
+                @for(practice of lessons.bestPractices; track practice.title) {
+                <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-green-500 shadow-sm">
+                  <h4 class="font-bold text-slate-100 mb-1">{{ practice.title }}</h4>
+                  <p class="text-sm text-slate-400">{{ practice.description }}</p>
+                </div>
+                }
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      }
       }
       }
     </div>

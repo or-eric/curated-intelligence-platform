@@ -1,64 +1,150 @@
 @if (item(); as item) {
-<!-- Force redeploy for image fix -->
 <div
-  class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden border border-gray-100 h-full flex flex-col cursor-pointer transition-all duration-300 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-900/50 overflow-hidden relative">
+  class="group bg-slate-800 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden border border-slate-700 hover:border-blue-500/50 h-full flex flex-col cursor-pointer relative">
 
+  <!-- Bookmark Button (Absolute) -->
   <button (click)="toggleSave($event)" title="Save to Library"
-    class="absolute top-3 right-3 z-10 p-2 rounded-full bg-slate-900/50 hover:bg-slate-700/75 transition-colors">
+    class="absolute top-3 right-3 z-20 p-2 rounded-full bg-slate-900/80 hover:bg-slate-700 transition-colors backdrop-blur-sm border border-slate-700/50">
     @if(isSaved()) {
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-400" viewBox="0 0 20 20" fill="currentColor">
       <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
     </svg>
     } @else {
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-300" fill="none" viewBox="0 0 24 24"
-      stroke-width="1.5" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 group-hover:text-white transition-colors"
+      fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round"
         d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.5 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
     </svg>
     }
   </button>
 
-  <!-- Image -->
-  @if (item.imageUrl) {
-  <div class="h-48 w-full relative">
-    <img [src]="item.imageUrl" [alt]="item.title" class="w-full h-full object-cover">
+  @if (layout() === 'grid') {
+  <!-- GRID VIEW -->
+  <!-- Image Header -->
+  <div class="h-48 w-full relative overflow-hidden">
+    @if (item.imageUrl) {
+    <img [src]="item.imageUrl" [alt]="item.title"
+      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+    }
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60"></div>
+
+    <!-- Quality Score Badge (Top Left) -->
+    <div class="absolute top-3 left-3 z-10">
+      <div
+        class="flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700/50 shadow-lg">
+        <span class="text-lg font-bold" [class.text-blue-400]="(item.totalScore || 0) >= 60"
+          [class.text-green-400]="(item.totalScore || 0) >= 80" [class.text-purple-400]="(item.totalScore || 0) >= 90"
+          [class.text-gray-400]="(item.totalScore || 0) < 60">
+          {{ item.totalScore || 0 }}
+        </span>
+        <span class="text-[10px] font-medium text-slate-400 uppercase tracking-wide">Score</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Body -->
+  <div class="p-5 flex-grow flex flex-col">
+    <!-- Meta Header -->
+    <div class="flex justify-between items-center mb-3">
+      <div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+        <span class="uppercase tracking-wider">{{ item.source }}</span>
+        <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+        <span>{{ item.publishedDate | date:'MMM d' }}</span>
+      </div>
+
+      <!-- Score Band Label -->
+      @if (item.scoreBand) {
+      <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded border"
+        [class.bg-slate-800]="item.scoreBand === 'Ignore'" [class.text-slate-500]="item.scoreBand === 'Ignore'"
+        [class.border-slate-700]="item.scoreBand === 'Ignore'" [class.bg-gray-800]="item.scoreBand === 'Skim'"
+        [class.text-gray-400]="item.scoreBand === 'Skim'" [class.border-gray-700]="item.scoreBand === 'Skim'"
+        [class.bg-blue-900/30]="item.scoreBand === 'Good'" [class.text-blue-300]="item.scoreBand === 'Good'"
+        [class.border-blue-800]="item.scoreBand === 'Good'" [class.bg-green-900/30]="item.scoreBand === 'Strong'"
+        [class.text-green-300]="item.scoreBand === 'Strong'" [class.border-green-800]="item.scoreBand === 'Strong'"
+        [class.bg-purple-900/30]="item.scoreBand === 'Top-tier'" [class.text-purple-300]="item.scoreBand === 'Top-tier'"
+        [class.border-purple-800]="item.scoreBand === 'Top-tier'">
+        {{ item.scoreBand }}
+      </span>
+      }
+    </div>
+
+    <!-- Title -->
+    <h3
+      class="text-lg font-bold text-slate-100 mb-2 leading-snug group-hover:text-blue-400 transition-colors line-clamp-2">
+      {{ item.title }}
+    </h3>
+
+    <!-- Summary -->
+    <p class="text-sm text-slate-400 leading-relaxed line-clamp-3 mb-4 flex-grow">
+      {{ item.summary }}
+    </p>
+
+    <!-- Footer: Reading Time & Tags -->
+    <div class="mt-auto pt-4 border-t border-slate-700/50 flex flex-col gap-3">
+      <div class="flex items-center gap-2 text-xs text-slate-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>{{ readingTime() }}</span>
+      </div>
+
+      <div class="flex flex-wrap gap-1.5">
+        @for(tag of item.tags; track tag) {
+        <span class="px-2 py-0.5 text-[10px] font-semibold rounded bg-slate-700 text-slate-300 border border-slate-600">
+          {{ tag }}
+        </span>
+        }
+      </div>
+    </div>
+  </div>
+
+  } @else {
+  <!-- LIST VIEW -->
+  <div class="flex items-center p-4 gap-4 h-20">
+    <!-- Score Badge (Left) -->
+    <div
+      class="flex-shrink-0 w-12 h-12 rounded-lg bg-slate-900 border border-slate-700 flex flex-col items-center justify-center">
+      <span class="text-lg font-bold leading-none" [class.text-blue-400]="(item.totalScore || 0) >= 60"
+        [class.text-green-400]="(item.totalScore || 0) >= 80" [class.text-purple-400]="(item.totalScore || 0) >= 90"
+        [class.text-gray-400]="(item.totalScore || 0) < 60">
+        {{ item.totalScore || 0 }}
+      </span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-grow min-w-0 flex flex-col justify-center">
+      <h3 class="text-base font-bold text-slate-100 truncate group-hover:text-blue-400 transition-colors">
+        {{ item.title }}
+      </h3>
+      <div class="flex items-center gap-3 text-xs text-slate-400 mt-1">
+        <span class="font-medium text-slate-300">{{ item.source }}</span>
+        <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+        <span>{{ item.publishedDate | date:'MMM d' }}</span>
+        <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+        <span>{{ readingTime() }}</span>
+      </div>
+    </div>
+
+    <!-- Right Side: Band & Actions -->
+    <div class="flex-shrink-0 flex items-center gap-4">
+      @if (item.scoreBand) {
+      <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded border hidden sm:inline-block"
+        [class.bg-slate-800]="item.scoreBand === 'Ignore'" [class.text-slate-500]="item.scoreBand === 'Ignore'"
+        [class.border-slate-700]="item.scoreBand === 'Ignore'" [class.bg-gray-800]="item.scoreBand === 'Skim'"
+        [class.text-gray-400]="item.scoreBand === 'Skim'" [class.border-gray-700]="item.scoreBand === 'Skim'"
+        [class.bg-blue-900/30]="item.scoreBand === 'Good'" [class.text-blue-300]="item.scoreBand === 'Good'"
+        [class.border-blue-800]="item.scoreBand === 'Good'" [class.bg-green-900/30]="item.scoreBand === 'Strong'"
+        [class.text-green-300]="item.scoreBand === 'Strong'" [class.border-green-800]="item.scoreBand === 'Strong'"
+        [class.bg-purple-900/30]="item.scoreBand === 'Top-tier'" [class.text-purple-300]="item.scoreBand === 'Top-tier'"
+        [class.border-purple-800]="item.scoreBand === 'Top-tier'">
+        {{ item.scoreBand }}
+      </span>
+      }
+      <!-- Spacer for absolute save button -->
+      <div class="w-8"></div>
+    </div>
   </div>
   }
-
-  <div class="p-5 flex-grow flex flex-col">
-    <div class="flex justify-between items-center mb-2">
-      <p class="text-sm text-slate-400">{{ item.publishedDate | date:'MM/dd/yyyy' }}</p>
-      <div class="flex items-center gap-2">
-        @if (item.totalScore) {
-        <span class="text-xs font-bold text-slate-500">{{ item.totalScore }}/100</span>
-        }
-        @if (item.scoreBand) {
-        <span class="px-2 py-0.5 text-xs font-bold rounded-md" [class.bg-slate-800]="item.scoreBand === 'Ignore'"
-          [class.text-slate-400]="item.scoreBand === 'Ignore'" [class.bg-gray-800]="item.scoreBand === 'Skim'"
-          [class.text-gray-300]="item.scoreBand === 'Skim'" [class.bg-blue-900]="item.scoreBand === 'Good'"
-          [class.text-blue-300]="item.scoreBand === 'Good'" [class.bg-indigo-900]="item.scoreBand === 'Strong'"
-          [class.text-indigo-300]="item.scoreBand === 'Strong'" [class.bg-purple-900]="item.scoreBand === 'Top-tier'"
-          [class.text-purple-300]="item.scoreBand === 'Top-tier'">
-          {{ item.scoreBand }}
-        </span>
-        } @else {
-        <span class="px-2 py-0.5 text-xs font-bold rounded-md" [class]="advisoryColor()">
-          {{ item.advisoryJudgement.split(' - ')[1] }}
-        </span>
-        }
-      </div>
-    </div>
-
-    <h3 class="text-lg font-bold text-slate-100 mb-3 leading-snug">{{ item.title }}</h3>
-    <p class="text-sm text-slate-300 leading-relaxed flex-grow">{{ item.summary }}</p>
-
-    <div class="mt-4 pt-4 border-t border-slate-700">
-      <div class="flex flex-wrap gap-2">
-        @for(tag of item.tags; track tag) {
-        <span class="px-2 py-1 text-xs font-medium rounded-md" [class]="getTagColor(tag)">{{ tag }}</span>
-        }
-      </div>
-    </div>
-  </div>
 </div>
 }
