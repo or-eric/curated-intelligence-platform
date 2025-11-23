@@ -21,6 +21,19 @@ export class ContentService {
     this.apiService.fetchContent(1, 20, timeRange);
   }
 
+  getBriefingItems() {
+    return computed(() => {
+      const all = this.apiService.contentItems();
+      const oneDayAgo = new Date();
+      oneDayAgo.setDate(oneDayAgo.getDate() - 1);
+
+      return all
+        .filter(item => new Date(item.publishedDate) >= oneDayAgo)
+        .sort((a, b) => (b.totalScore || 0) - (a.totalScore || 0))
+        .slice(0, 5);
+    });
+  }
+
   loadMore(page: number, timeRange: string = 'all') {
     this.apiService.fetchContent(page, 20, timeRange);
   }

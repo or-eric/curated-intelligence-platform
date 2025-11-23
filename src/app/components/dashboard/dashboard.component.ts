@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, output, signal, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { ContentService } from '../../services/content.service';
 import { ContentItem } from '../../models/content-item.model';
 import { ContentCardComponent } from '../content-card/content-card.component';
@@ -27,7 +28,10 @@ const JUDGEMENT_ORDER: { [key in ContentItem['advisoryJudgement']]: number } = {
 export class DashboardComponent {
   itemSelected = output<ContentItem>();
 
-  public contentService = inject(ContentService);
+  protected contentService = inject(ContentService);
+  private router = inject(Router);
+
+  // Constantse libraryService = inject(LibraryService);
   private libraryService = inject(LibraryService);
   private allContent = this.contentService.getContent();
   readonly initialItemCount = 6;
@@ -153,6 +157,10 @@ export class DashboardComponent {
     if (position > height - threshold) {
       this.loadMore();
     }
+  }
+
+  startBriefing() {
+    this.router.navigate(['/briefing']);
   }
 
   onItemClicked(item: ContentItem) {

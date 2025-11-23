@@ -1,0 +1,115 @@
+<div class="fixed inset-0 bg-slate-950 text-slate-100 z-50 flex flex-col overflow-hidden">
+    <!-- Header / Progress -->
+    <div class="h-16 flex items-center justify-between px-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md">
+        <div class="flex items-center gap-4">
+            <button (click)="exit()" class="text-slate-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <span class="text-sm font-medium tracking-widest uppercase text-slate-500">Daily Briefing</span>
+        </div>
+
+        @if (!isFinished() && briefingItems().length > 0) {
+        <div class="flex items-center gap-4">
+            <span class="text-sm font-mono text-slate-400">
+                {{ currentIndex() + 1 }} <span class="text-slate-600">/</span> {{ briefingItems().length }}
+            </span>
+            <div class="w-32 h-1 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-500 transition-all duration-500 ease-out" [style.width.%]="progress()"></div>
+            </div>
+        </div>
+        }
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="flex-grow flex items-center justify-center p-6 relative">
+
+        @if (briefingItems().length === 0) {
+        <div class="text-center max-w-md">
+            <h2 class="text-2xl font-light text-slate-300 mb-4">No critical updates yet.</h2>
+            <p class="text-slate-500 mb-8">We haven't found any high-priority items in the last 24 hours. Check back
+                later.</p>
+            <button (click)="exit()"
+                class="px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg text-white transition-colors">
+                Return to Dashboard
+            </button>
+        </div>
+        } @else if (isFinished()) {
+        <!-- Finished State -->
+        <div class="text-center max-w-lg animate-fade-in">
+            <div class="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-400" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <h2 class="text-4xl font-bold text-white mb-4">You're all caught up.</h2>
+            <p class="text-lg text-slate-400 mb-12 leading-relaxed">
+                You've reviewed the most critical intelligence for today.
+            </p>
+            <button (click)="exit()"
+                class="px-8 py-4 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-200 transition-colors shadow-lg shadow-white/10">
+                Return to Dashboard
+            </button>
+        </div>
+        } @else {
+        <!-- Card Content -->
+        <div class="max-w-3xl w-full animate-slide-up">
+            <!-- Meta -->
+            <div class="flex items-center gap-3 mb-6 text-sm font-medium tracking-wider text-blue-400 uppercase">
+                <span>{{ currentItem().source }}</span>
+                <span class="w-1 h-1 bg-blue-500/50 rounded-full"></span>
+                <span>Score: {{ currentItem().totalScore }}</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+                {{ currentItem().title }}
+            </h1>
+
+            <!-- Why it Matters (Hero) -->
+            @if (currentItem().executiveSummary?.whyWeHighlightThis) {
+            <div class="mb-10 p-6 bg-blue-900/10 border-l-4 border-blue-500 rounded-r-xl backdrop-blur-sm">
+                <h3 class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-2">Why it Matters</h3>
+                <p class="text-xl text-slate-200 italic font-serif leading-relaxed">
+                    "{{ currentItem().executiveSummary?.whyWeHighlightThis }}"
+                </p>
+            </div>
+            }
+
+            <!-- Summary -->
+            <div class="prose prose-lg prose-invert text-slate-300 leading-relaxed">
+                <p>{{ currentItem().executiveSummary?.eventSummary || currentItem().summary }}</p>
+            </div>
+        </div>
+        }
+    </div>
+
+    <!-- Footer Navigation -->
+    @if (!isFinished() && briefingItems().length > 0) {
+    <div
+        class="h-20 border-t border-slate-800 bg-slate-900/50 backdrop-blur-md flex items-center justify-between px-6 md:px-12">
+        <button (click)="previous()" [disabled]="currentIndex() === 0"
+            class="flex items-center gap-2 text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            <span class="hidden md:inline font-medium">Previous</span>
+        </button>
+
+        <span class="text-xs text-slate-600 font-mono hidden md:inline">Use Arrow Keys to Navigate</span>
+
+        <button (click)="next()"
+            class="flex items-center gap-2 px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all shadow-lg shadow-blue-900/20">
+            <span>{{ currentIndex() === briefingItems().length - 1 ? 'Finish' : 'Next' }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+    }
+</div>
