@@ -98,74 +98,73 @@
       </div>
     </div>
   </div>
-</div>
 
-<!-- Premium Briefing Banner -->
-<div
-  class="relative overflow-hidden rounded-xl bg-gradient-to-r from-blue-900 to-slate-900 border border-blue-800 shadow-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 group cursor-pointer"
-  (click)="startBriefing()">
-
-  <!-- Background Glow -->
+  <!-- Premium Briefing Banner -->
   <div
-    class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-500/20 transition-all duration-700">
-  </div>
+    class="relative overflow-hidden rounded-xl bg-gradient-to-r from-blue-900 to-slate-900 border border-blue-800 shadow-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 group cursor-pointer"
+    (click)="startBriefing()">
 
-  <div class="relative z-10">
-    <div class="flex items-center gap-2 mb-2">
-      <span
-        class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest bg-blue-500 text-white">Premium</span>
-      <span class="text-xs font-medium text-blue-200">Daily Intelligence</span>
+    <!-- Background Glow -->
+    <div
+      class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-500/20 transition-all duration-700">
     </div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-1">Your Daily Briefing</h2>
-    <p class="text-blue-200/80 text-sm max-w-lg">
-      The top 5 critical updates you need to know today. Curated, concise, and distraction-free.
-    </p>
+
+    <div class="relative z-10">
+      <div class="flex items-center gap-2 mb-2">
+        <span
+          class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest bg-blue-500 text-white">Premium</span>
+        <span class="text-xs font-medium text-blue-200">Daily Intelligence</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-1">Your Daily Briefing</h2>
+      <p class="text-blue-200/80 text-sm max-w-lg">
+        The top 5 critical updates you need to know today. Curated, concise, and distraction-free.
+      </p>
+    </div>
+
+    <button
+      class="relative z-10 flex items-center gap-2 px-6 py-3 bg-white text-blue-900 font-bold rounded-lg shadow-lg hover:bg-blue-50 transition-all transform group-hover:scale-105">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      Start Briefing
+    </button>
   </div>
 
-  <button
-    class="relative z-10 flex items-center gap-2 px-6 py-3 bg-white text-blue-900 font-bold rounded-lg shadow-lg hover:bg-blue-50 transition-all transform group-hover:scale-105">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-    Start Briefing
-  </button>
-</div>
-
-<!-- Content Feed -->
-@if (layout() === 'grid') {
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-  @for (item of filteredContent(); track item.id) {
-  <app-content-card [item]="item" [layout]="'grid'" (click)="onItemClicked(item)"
-    (saveToggled)="toggleSave($event)"></app-content-card>
-  }
-</div>
-} @else {
-<div class="space-y-4">
-  @for (item of filteredContent(); track item.id) {
-  <app-content-card [item]="item" [layout]="'list'" (click)="onItemClicked(item)"
-    (saveToggled)="toggleSave($event)"></app-content-card>
-  }
-</div>
-}
-
-<!-- Loading Indicator / End Message -->
-@if (contentService.loading()) {
-<div class="flex justify-center py-12">
-  <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-</div>
-} @else if (!contentService.hasMore()) {
-<div class="flex flex-col items-center justify-center py-16 text-center animate-fade-in">
-  <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-4">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-    </svg>
+  <!-- Content Feed -->
+  @if (layout() === 'grid') {
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+    @for (item of filteredContent(); track item.id) {
+    <app-content-card [item]="item" [layout]="'grid'" (click)="onItemClicked(item)"
+      (saveToggled)="toggleSave($event)"></app-content-card>
+    }
   </div>
-  <h3 class="text-xl font-bold text-white mb-2">Congratulations!</h3>
-  <p class="text-slate-400">You've reached the end of the Internet.</p>
-</div>
-}
+  } @else {
+  <div class="space-y-4">
+    @for (item of filteredContent(); track item.id) {
+    <app-content-card [item]="item" [layout]="'list'" (click)="onItemClicked(item)"
+      (saveToggled)="toggleSave($event)"></app-content-card>
+    }
+  </div>
+  }
+
+  <!-- Loading Indicator / End Message -->
+  @if (contentService.loading()) {
+  <div class="flex justify-center py-12">
+    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+  </div>
+  } @else if (!contentService.hasMore()) {
+  <div class="flex flex-col items-center justify-center py-16 text-center animate-fade-in">
+    <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+      </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">Congratulations!</h3>
+    <p class="text-slate-400">You've reached the end of the Internet.</p>
+  </div>
+  }
 </div>
