@@ -6,6 +6,13 @@ export const database = {
         return result.rows[0];
     },
 
+    async getContentItemByTitle(title: string) {
+        // Simple case-insensitive exact match for now. 
+        // Could use Levenshtein distance in Postgres (pg_trgm) if needed later.
+        const result = await db.query('SELECT * FROM content_items WHERE LOWER(title) = LOWER($1)', [title]);
+        return result.rows[0];
+    },
+
     async addContentItem(item: {
         url: string;
         title: string;

@@ -96,10 +96,32 @@ export async function runIngestion(limit: number = 5, sourceFilter?: string) {
                 for (const item of feedItems.slice(0, limit)) { // Limit items per source
                     if (!item.link || !item.title) continue;
 
-                    // Check if exists
-                    const existing = await database.getContentItem(item.link);
-                    if (existing) {
-                        console.log(`  - Skipping existing item: ${item.title}`);
+                    // 1. Normalize URL (remove query params, trailing slashes)
+                    const normalizeUrl = (u: string) => {
+                        try {
+                            const urlObj = new URL(u);
+                            // Remove common tracking params
+                            ['utm_source', 'utm_medium', 'utm_campaign', 'ref', 'source'].forEach(p => urlObj.searchParams.delete(p));
+                            // Remove trailing slash
+                            return urlObj.href.replace(/\/$/, '');
+                        } catch (e) {
+                            return u;
+                        }
+                    };
+
+                    const cleanLink = normalizeUrl(item.link);
+
+                    // 2. Check by URL
+                    const existingUrl = await database.getContentItem(cleanLink);
+                    if (existingUrl) {
+                        console.log(`  - Skipping existing item (URL match): ${item.title}`);
+                        continue;
+                    }
+
+                    // 3. Check by Title (Fuzzy-ish: exact match case-insensitive)
+                    const existingTitle = await database.getContentItemByTitle(item.title);
+                    if (existingTitle) {
+                        console.log(`  - Skipping existing item (Title match): ${item.title}`);
                         continue;
                     }
 
@@ -132,7 +154,7 @@ export async function runIngestion(limit: number = 5, sourceFilter?: string) {
 
                     // Save to DB
                     await database.addContentItem({
-                        url: item.link,
+                        url: cleanLink,
                         title: item.title,
                         source: source.name,
                         source_id: source.id,
