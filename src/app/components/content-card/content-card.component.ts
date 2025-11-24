@@ -9,6 +9,7 @@ import { LibraryService } from '../../services/library.service';
   standalone: true,
   imports: [CommonModule, NgOptimizedImage, DatePipe],
   templateUrl: './content-card.component.html',
+  styles: [':host { display: block; height: 100%; }'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContentCardComponent {

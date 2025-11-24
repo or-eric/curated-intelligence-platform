@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, effect, inject, input, OnDestroy, output, signal } from '@angular/core';
-import { CommonModule, DatePipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component, computed, effect, inject, input, OnDestroy, output, signal } from '@angular/core';
+import { CommonModule, DatePipe, Location } from '@angular/common';
 import { ContentItem } from '../../models/content-item.model';
 import { LibraryService } from '../../services/library.service';
+import { ContentService } from '../../services/content.service';
 
 
 type Tab = 'executive' | 'lessons' | 'scoring';
@@ -14,10 +15,15 @@ type Tab = 'executive' | 'lessons' | 'scoring';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DetailedViewComponent implements OnDestroy {
-  contentItem = input.required<ContentItem>();
+  // Inputs
+  contentItem = input<ContentItem>(); // Optional for modal mode
+  id = input<string>(); // Optional for route mode
+
   closeModal = output<void>();
 
   private libraryService = inject(LibraryService);
+  private contentService = inject(ContentService);
+  private location = inject(Location);
 
   // Component State
   isSaved = signal(false);
@@ -28,15 +34,24 @@ export class DetailedViewComponent implements OnDestroy {
   // AI Generation State
   loadingAnalysis = signal<boolean>(false);
   analysisError = signal<string | null>(null);
-  displayedItem = signal<ContentItem | null>(null);
+
+  // Computed Item
+  displayedItem = computed(() => {
+    if (this.contentItem()) return this.contentItem()!;
+    if (this.id()) {
+      return this.contentService.getContent()().find(i => i.id === this.id()) || null;
+    }
+    return null;
+  });
 
   constructor() {
     effect(() => {
-      const item = this.contentItem();
-      this.displayedItem.set(item);
-      this.activeTab.set('executive');
-      this.isSaved.set(this.libraryService.isSaved(item.id));
-      this.analysisError.set(null);
+      const item = this.displayedItem();
+      if (item) {
+        this.activeTab.set('executive');
+        this.isSaved.set(this.libraryService.isSaved(item.id));
+        this.analysisError.set(null);
+      }
     });
   }
 
@@ -100,6 +115,10 @@ export class DetailedViewComponent implements OnDestroy {
   }
 
   close() {
-    this.closeModal.emit();
+    if (this.id()) {
+      this.location.back();
+    } else {
+      this.closeModal.emit();
+    }
   }
 }
