@@ -24,12 +24,23 @@ const server = http.createServer(async (req, res) => {
         try {
             const limit = parseInt(url.searchParams.get('limit') || '20');
             const page = parseInt(url.searchParams.get('page') || '1');
+            const timeRange = url.searchParams.get('timeRange') || 'all';
             const offset = (page - 1) * limit;
 
-            console.log(`Fetching content: page=${page}, limit=${limit}`);
+            console.log(`Fetching content: page=${page}, limit=${limit}, timeRange=${timeRange}`);
+
+            let timeFilter = '';
+            if (timeRange === '24h') {
+                timeFilter = `WHERE published_at >= NOW() - INTERVAL '24 hours'`;
+            } else if (timeRange === '7d') {
+                timeFilter = `WHERE published_at >= NOW() - INTERVAL '7 days'`;
+            } else if (timeRange === '30d') {
+                timeFilter = `WHERE published_at >= NOW() - INTERVAL '30 days'`;
+            }
 
             const result = await db.query(`
                 SELECT * FROM content_items 
+                ${timeFilter}
                 ORDER BY published_at DESC 
                 LIMIT $1 OFFSET $2
             `, [limit, offset]);
