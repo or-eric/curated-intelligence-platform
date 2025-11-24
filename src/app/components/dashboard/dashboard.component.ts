@@ -159,9 +159,7 @@ export class DashboardComponent {
     }
   }
 
-  startBriefing() {
-    this.router.navigate(['/briefing']);
-  }
+
 
   toggleTheme() {
     document.documentElement.classList.toggle('dark');
