@@ -55,6 +55,15 @@ export class ContentCardComponent {
     return 'bg-red-900/30 text-red-300 border-red-800';
   });
 
+  scoreBandClass = computed(() => {
+    const band = this.item().scoreBand;
+    if (band === 'Top-tier') return 'bg-purple-900/30 text-purple-300 border-purple-800';
+    if (band === 'Strong') return 'bg-green-900/30 text-green-300 border-green-800';
+    if (band === 'Good') return 'bg-blue-900/30 text-blue-300 border-blue-800';
+    if (band === 'Skim') return 'bg-yellow-900/30 text-yellow-300 border-yellow-800';
+    return 'bg-gray-800 text-gray-400 border-gray-700';
+  });
+
   getTagColor(tag: string): string {
     const lowerTag = tag.toLowerCase();
     if (lowerTag.includes('ciso') || lowerTag.includes('cro')) {
