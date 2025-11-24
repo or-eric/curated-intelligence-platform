@@ -22,25 +22,33 @@ export class ApiService {
         this.isLoading.set(true);
         this.error.set(null);
 
-        this.http.get<any[]>(`/api/content?page=${page}&limit=${limit}&timeRange=${timeRange}`)
+        const request$ = this.http.get<any[]>(`/api/content?page=${page}&limit=${limit}&timeRange=${timeRange}`)
             .pipe(
-                map(items => items.map(item => this.mapToContentItem(item)))
-            )
-            .subscribe({
-                next: (newItems) => {
+                map(items => items.map(item => this.mapToContentItem(item))),
+                tap(newItems => {
                     if (page === 1) {
                         this.contentItems.set(newItems);
                     } else {
-                        this.contentItems.update(current => [...current, ...newItems]);
+                        this.contentItems.update(current => {
+                            // Deduplication
+                            const existingIds = new Set(current.map(i => i.id));
+                            const uniqueNewItems = newItems.filter(i => !existingIds.has(i.id));
+                            return [...current, ...uniqueNewItems];
+                        });
                     }
                     this.isLoading.set(false);
-                },
-                error: (err) => {
-                    console.error('Error fetching content:', err);
-                    this.error.set('Failed to load content. Please try again later.');
-                    this.isLoading.set(false);
-                }
-            });
+                })
+            );
+
+        request$.subscribe({
+            error: (err) => {
+                console.error('Error fetching content:', err);
+                this.error.set('Failed to load content. Please try again later.');
+                this.isLoading.set(false);
+            }
+        });
+
+        return request$;
     }
 
     getItem(id: string) {

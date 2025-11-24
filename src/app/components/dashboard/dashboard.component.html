@@ -86,6 +86,15 @@
             </svg>
           </button>
         </div>
+
+        <!-- Theme Toggle -->
+        <button (click)="toggleTheme()"
+          class="ml-2 p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-white transition-colors" title="Toggle Theme">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -141,10 +150,22 @@
 </div>
 }
 
-<!-- Loading Indicator -->
+<!-- Loading Indicator / End Message -->
 @if (contentService.loading()) {
 <div class="flex justify-center py-12">
   <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+</div>
+} @else if (!contentService.hasMore()) {
+<div class="flex flex-col items-center justify-center py-16 text-center animate-fade-in">
+  <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+    </svg>
+  </div>
+  <h3 class="text-xl font-bold text-white mb-2">Congratulations!</h3>
+  <p class="text-slate-400">You've reached the end of the Internet.</p>
 </div>
 }
 </div>

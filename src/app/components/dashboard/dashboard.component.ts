@@ -163,6 +163,10 @@ export class DashboardComponent {
     this.router.navigate(['/briefing']);
   }
 
+  toggleTheme() {
+    document.documentElement.classList.toggle('dark');
+  }
+
   onItemClicked(item: ContentItem) {
     this.itemSelected.emit(item);
   }

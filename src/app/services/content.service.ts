@@ -1,4 +1,4 @@
-import { Injectable, inject, computed } from '@angular/core';
+import { Injectable, inject, computed, signal } from '@angular/core';
 import { ApiService } from './api.service';
 
 @Injectable({ providedIn: 'root' })
@@ -12,12 +12,14 @@ export class ContentService {
   // Expose signals directly to match previous API
   loading = this.apiService.isLoading;
   error = this.apiService.error;
+  hasMore = signal(true);
 
   getContent() {
     return this.apiService.contentItems;
   }
 
   refresh(timeRange: string = 'all') {
+    this.hasMore.set(true);
     this.apiService.fetchContent(1, 20, timeRange);
   }
 
@@ -35,6 +37,12 @@ export class ContentService {
   }
 
   loadMore(page: number, timeRange: string = 'all') {
-    this.apiService.fetchContent(page, 20, timeRange);
+    if (!this.hasMore()) return;
+
+    this.apiService.fetchContent(page, 20, timeRange).subscribe(newItems => {
+      if (newItems.length < 20) {
+        this.hasMore.set(false);
+      }
+    });
   }
 }

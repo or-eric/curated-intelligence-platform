@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input, output, signal } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { ContentItem } from '../../models/content-item.model';
 import { NgOptimizedImage } from '@angular/common';
@@ -40,6 +40,12 @@ export class ContentCardComponent {
     if (score >= 50) return 'Moderate Evidence';
     return 'Low Evidence';
   });
+
+  imageError = signal(false);
+
+  onImageError() {
+    this.imageError.set(true);
+  }
 
   evidenceColor = computed(() => {
     const score = this.item().evidenceQuality || 0;
