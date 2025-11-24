@@ -7,6 +7,10 @@ export const routes: Routes = [
         loadComponent: () => import('./components/briefing/briefing.component').then(m => m.BriefingComponent)
     },
     {
+        path: 'content/:id',
+        loadComponent: () => import('./components/detailed-view/detailed-view.component').then(m => m.DetailedViewComponent)
+    },
+    {
         path: '',
         component: DashboardComponent
     }
