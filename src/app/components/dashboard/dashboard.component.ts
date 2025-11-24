@@ -26,7 +26,7 @@ const JUDGEMENT_ORDER: { [key in ContentItem['advisoryJudgement']]: number } = {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent {
-  itemSelected = output<ContentItem>();
+
 
   protected contentService = inject(ContentService);
   private router = inject(Router);
@@ -166,7 +166,7 @@ export class DashboardComponent {
   }
 
   onItemClicked(item: ContentItem) {
-    this.itemSelected.emit(item);
+    this.router.navigate(['/content', item.id]);
   }
 
   toggleSave(id: string) {

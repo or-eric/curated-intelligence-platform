@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, output } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LibraryService } from '../../services/library.service';
 import { ContentService } from '../../services/content.service';
@@ -13,7 +14,7 @@ import { ContentCardComponent } from '../content-card/content-card.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LibraryComponent {
-  itemSelected = output<ContentItem>();
+
 
   private libraryService = inject(LibraryService);
   private contentService = inject(ContentService);
@@ -28,8 +29,10 @@ export class LibraryComponent {
       .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
   });
 
+  private router = inject(Router);
+
   onItemClicked(item: ContentItem) {
-    this.itemSelected.emit(item);
+    this.router.navigate(['/content', item.id]);
   }
 
   onToggleSave(id: string) {
