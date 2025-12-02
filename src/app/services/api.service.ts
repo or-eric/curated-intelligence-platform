@@ -1,13 +1,16 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ContentItem, ExecutiveSummary, LessonsForCSuite } from '../models/content-item.model';
-import { map, tap } from 'rxjs/operators';
+import { SupabaseService } from './supabase.service';
+import { map, tap, switchMap } from 'rxjs/operators';
+import { from } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ApiService {
     private http = inject(HttpClient);
+    private supabase = inject(SupabaseService);
 
     // Signal to hold the content items
     contentItems = signal<ContentItem[]>([]);
@@ -18,11 +21,17 @@ export class ApiService {
         this.fetchContent();
     }
 
-    fetchContent(page: number = 1, limit: number = 20, timeRange: string = 'all') {
+    async fetchContent(page: number = 1, limit: number = 20, timeRange: string = 'all') {
         this.isLoading.set(true);
         this.error.set(null);
 
-        const request$ = this.http.get<any[]>(`/api/content?page=${page}&limit=${limit}&timeRange=${timeRange}`)
+        const session = await this.supabase.getSession();
+        const token = session?.access_token;
+
+        const headers = token ? { Authorization: `Bearer ${token}` } : {};
+
+        // Use relative URL - handled by proxy in dev and Render rewrite in prod
+        const request$ = this.http.get<any[]>(`/api/feeds?page=${page}&limit=${limit}`, { headers })
             .pipe(
                 map(items => items.map(item => this.mapToContentItem(item))),
                 tap(newItems => {
@@ -138,6 +147,47 @@ export class ApiService {
             clarity: backendItem.clarity,
             alignment: backendItem.alignment_score
         };
+    }
+
+    // Source Management
+    getSources() {
+        return from(this.supabase.getSession()).pipe(
+            switchMap(session => {
+                const token = session?.access_token;
+                const headers = token ? { Authorization: `Bearer ${token}` } : {};
+                return this.http.get<any[]>('/api/sources', { headers });
+            })
+        );
+    }
+
+    addSource(source: any) {
+        return from(this.supabase.getSession()).pipe(
+            switchMap(session => {
+                const token = session?.access_token;
+                const headers = token ? { Authorization: `Bearer ${token}` } : {};
+                return this.http.post<any>('/api/sources', source, { headers });
+            })
+        );
+    }
+
+    updateSource(id: number, source: any) {
+        return from(this.supabase.getSession()).pipe(
+            switchMap(session => {
+                const token = session?.access_token;
+                const headers = token ? { Authorization: `Bearer ${token}` } : {};
+                return this.http.put<any>(`/api/sources/${id}`, source, { headers });
+            })
+        );
+    }
+
+    deleteSource(id: number) {
+        return from(this.supabase.getSession()).pipe(
+            switchMap(session => {
+                const token = session?.access_token;
+                const headers = token ? { Authorization: `Bearer ${token}` } : {};
+                return this.http.delete<any>(`/api/sources/${id}`, { headers });
+            })
+        );
     }
 
     private parseOwners(owners: string | string[]): string[] {

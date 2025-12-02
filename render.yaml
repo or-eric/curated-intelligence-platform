@@ -1,0 +1,35 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: curated-intel-api
+    env: node
+    root: server
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_DB_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+
+  # Frontend Static Site
+  - type: static
+    name: curated-intel-web
+    env: static
+    buildCommand: npm install && npm run build
+    publish: dist
+    routes:
+      # Rewrite API requests to the Backend Service
+      - type: rewrite
+        source: /api/*
+        destination: https://curated-intel-api.onrender.com/api/*
+      # SPA Fallback
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -1,0 +1,32 @@
+{
+    "name": "curated-intel-server",
+    "version": "1.0.0",
+    "description": "Backend for Curated Intelligence Platform",
+    "main": "dist/server.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "dev": "nodemon src/server.ts",
+        "ingest": "ts-node src/services/ingest.service.ts"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.0.0",
+        "@supabase/supabase-js": "^2.46.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "rss-parser": "^3.13.0",
+        "cheerio": "^1.0.0",
+        "jsdom": "^25.0.1",
+        "@google/generative-ai": "^0.21.0"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.17",
+        "@types/express": "^5.0.0",
+        "@types/node": "^22.9.0",
+        "nodemon": "^3.1.7",
+        "prisma": "^6.0.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.3"
+    }
+}
